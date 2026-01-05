@@ -1,0 +1,12 @@
+@media screen and (max-width:600px) {
+    .excellence-hero-heading {
+    font-size: 50px !important;
+    font-weight: 700;
+    line-height: 0.94;
+    letter-spacing: -3.6px;
+    color: #fff;
+    margin-bottom: 34px;
+    opacity: 0;
+    animation: excellenceHeroSlideUp 1s var(--excellence-hero-transition-easing) 0.7s forwards;
+}
+}
