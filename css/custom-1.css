@@ -2802,11 +2802,11 @@ header.main-header.scroll-up .main-menu ul li a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     270deg,
     rgba(4, 42, 45, 0) 22.28%,
     #000 100%
-  );
+  ); */
   z-index: 0;
 }
 .page-header-content {
