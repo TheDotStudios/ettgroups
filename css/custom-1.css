@@ -397,7 +397,8 @@ body {
 }
 
 .section-title {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+  margin-bottom: 100px;
 }
 
 .section-title h3 {
@@ -2789,7 +2790,7 @@ header.main-header.scroll-up .main-menu ul li a {
   background-position: center center;
   background-size: cover;
   overflow: hidden;
-  padding: 250px 0 140px;
+  padding: 100px 0 100px;
   /* margin-top: -120px; */
 }
 
@@ -2808,7 +2809,9 @@ header.main-header.scroll-up .main-menu ul li a {
   );
   z-index: 0;
 }
-
+.page-header-content {
+  padding-top: 40px;
+}
 .page-header-box {
   position: relative;
   width: 100%;
@@ -11543,4 +11546,7 @@ right: 27%;
     padding-right: var(--bs-breadcrumb-item-padding-x);
     color: var(--bs-breadcrumb-divider-color);
     content: '';
+}
+.service-right-top{
+  max-width: 600px;
 }

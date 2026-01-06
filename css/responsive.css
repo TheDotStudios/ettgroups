@@ -10,3 +10,12 @@
     animation: excellenceHeroSlideUp 1s var(--excellence-hero-transition-easing) 0.7s forwards;
 }
 }
+@media screen and (min-width:1200px) and (max-width:1599px) {
+    .container {
+    max-width: 1200px !important;
+}
+.main-header .container-fluid {
+    position: relative;
+    max-width: 1200px !important;
+}
+}
