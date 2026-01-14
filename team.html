@@ -31,7 +31,7 @@
     <!-- Font Awesome Icon Css-->
     <link href="css/all.css" rel="stylesheet" media="screen" />
     <!-- Animated Css -->
-    <link href="css/animate.css" rel="stylesheet" />
+    <!-- <link href="css/animate.css" rel="stylesheet" /> -->
     <!-- Magnific Popup Core Css File -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
     <!-- Mouse Cursor Css File -->
@@ -43,7 +43,6 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
     <style>
    :root {
@@ -652,8 +651,6 @@
     </div> -->
     <!-- Preloader End -->
 
-    <!-- Header Start -->
-
    <!-- Header Top -->
     <div class="header-top">
         <div class="container">
@@ -697,7 +694,7 @@
         </div>
     </div>
 
-   <header class="main-header">
+     <header class="main-header">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -1067,6 +1064,8 @@
     </header>
 
 
+
+
     <script>
         // Segment tabs functionality - Switch on hover
         const tabs = document.querySelectorAll('.segment-tab');
@@ -1109,11 +1108,11 @@
                     <div class="col-lg-12">
                         <!-- Page Header Content Start -->
                         <div class="page-header-content text-center">
-                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Contact <span>us</span></h1>
+                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Team</span></h1>
                             <nav class="wow fadeInUp" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
                                 <ol class="breadcrumb" style="justify-content: center !important;">
                                     <li class="breadcrumb-item"><a href="index.html">home /</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">contact us</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Team</li>
                                 </ol>
                             </nav>
                         </div>
@@ -1124,199 +1123,523 @@
         </div>	
         <!-- Page Header Box End -->	
 	</div>
-    <div class="contact-down comman-padding-2 sm-ps-20px sm-pe-20px md-pe-20px md-ps-20px" id="contact-section">
-      <div class="container">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-6 faq-color">
-              <div
-                class="faqs-cta-box wow fadeInUp"
-                data-wow-delay="0.75s"
-                style="
-                  visibility: visible;
-                  animation-delay: 0.75s;
-                  animation-name: fadeInUp;
-                "
-              >
-                <!-- Company Client Images Start -->
+ 
+    
+    <style>
+           :root {
+            --tp-theme-primary: var(--color-primary-2);
+            --tp-common-white: #ffffff;
+            --bg-color: #EBF3ED;
+        }
 
-                <!-- Company Client Images End -->
-                <div class="faqs-cta-content section-title">
-                  <h3 >
-                    Still have you any question?
-                  </h3>
-                  <h2 >Get in touch to explore our innovative solutions</h2>
-                
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <p >Visit us</p>
-                    <a href="#" class="btn-phone" 
-                      >Survey No 77/3, Gram, Ujjain - Indore Rd, Tehsil Sanwer, Mundla Husain, Indore, Madhya Pradesh 453555
-                   </a
-                    >
-                  </div>
-                  <div class="col-lg-6">
-                    <p>Customer Care Number</p>
-                    <a href="tel:6269802756" class="btn-phone"
-                    >
-         +91 62698 02756
-                    </a
-                  ><br>
-                  <!-- <a href="tel:+91 9424733000" class="btn-phone">+91 9424733000</a> -->
-                  </div>
-                </div>
-                <div class="row mt-5">
-                  <div class="col-lg-6">
-                    <p>IndiaCIN</p>
-                    <a href="#" class="btn-phone" 
-                      >U31103MP2014PTC032221<br>
-                      
-                      </a
-                    >
-                  </div>
-                  <div class="col-lg-6">
-                    <p>Mail Us</p>
-                    <!-- <a href="tel:+91 9424733000"  class="btn-phone" >+91 9424733000</a> -->
-                    <a href="mailto:info@ettgroups.in" class="btn-phone"
-                    >info@ettgroups.in</a
-                  >
-                  </div>
-                </div>
+
+        .tp-team-3-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .tp-section-title-pre {
+            display: block;
+            color: var(--tp-theme-primary);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .tp-section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+
+        .team-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tp-team-3-item {
+            position: relative;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .tp-team-3-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tp-team-3-thumb {
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .tp-team-3-thumb img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 1.3s;
+            border-radius: 10px;
+        }
+
+        .tp-team-3-item:hover .tp-team-3-thumb img {
+            transform: scale(1.1);
+        }
+
+        .tp-team-3-content {
+            position: absolute;
+            width: 245px;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease-out;
+            z-index: 1;
+            background: var(--tp-theme-primary);
+        }
+
+        .tp-team-3-item:hover .tp-team-3-content {
+            opacity: 1;
+            visibility: visible;
+            bottom: -100px;
+        }
+
+        .tp-team-3-social {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tp-team-3-social a {
+            color: rgba(255, 255, 255, 0.4);
+            margin: 0 7.5px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .tp-team-3-social a:hover {
+            color: var(--tp-common-white);
+        }
+
+        .tp-team-3-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: -0.48px;
+            color: var(--tp-common-white);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .tp-team-3-content p {
+            letter-spacing: -0.32px;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            /* margin-bottom: 15px; */
+            font-size: 14px;
+        }
+
+        .read-more-btn {
+               background: unset;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    /* border: none; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: none;
+    padding: 0px 20px;
+    /* border-radius: 5px; */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+        }
+
+        .read-more-btn:hover {
+            /* background: #1a1a1a; */
+            color: var(--tp-common-white);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: #ebebeb;
+            color: white;
+            padding: 30px;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: #000;
+            font-weight: 600;
+            font-size: 32px;
+        }
+
+        .modal-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            color: #000;
+            font-size: 18px;
+        }
+
+        .close {
+            color: #000;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 40px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .modal-body h3 {
+           color: var(--tp-theme-primary);
+    /* margin-top: 25px; */
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 19px;
+        }
+
+        .modal-body p {
+            margin-bottom: 15px;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        .modal-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body ul li {
+            margin-bottom: 8px;
+        }
+
+        .quote {
+            background: #f8f9fa;
+            border-left: 4px solid var(--tp-theme-primary);
+            padding: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            border-radius: 5px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        @media (max-width: 768px) {
+            .tp-section-title {
+                font-size: 32px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+
+            .modal-body {
+                padding: 25px;
+            }
+
+            .modal-header h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+     <section class="tp-team-3-ptb pt-200px pb-200px">
+        <div class="container">
+          <div class="blog-heading">
+             <div class="section-title mb-5">
+                <h3 class="">Team</h3>
+                <h2 class="tp-section-title">
+                Our Team
+                </h2>
+                <p class="max-width">The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
+</p>
               </div>
             </div>
-            <div class="col-md-6 ">
-              <div class="contact-us-form">
-                <!-- Contact Us Title Start -->
-                <div class="contact-us-title">
-                  <h3
-                    class="wow fadeInUp"
-                    style="visibility: visible; animation-name: fadeInUp"
-                  >
-                    send a message
-                  </h3>
-                  <p
-                    class="wow fadeInUp"
-                    data-wow-delay="0.2s"
-                    style="
-                      visibility: visible;
-                      animation-delay: 0.2s;
-                      animation-name: fadeInUp;
-                    "
-                  >
-                  Drop us a message and our team will get in touch with you
-                  </p>
+            <div class="team-row">
+                <!-- Rohit Jain - Managing Director -->
+                <div class="tp-team-3-item" onclick="openModal('rohit')">
+                    <div class="tp-team-3-thumb">
+                        <img src="./images/dummy-person-testi.png" alt="Rohit Jain">
+                    </div>
+                    <div class="tp-team-3-content">
+                        <!-- <div class="tp-team-3-social">
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
+                        </div> -->
+                        <h4 class="tp-team-3-title">Rohit Jain</h4>
+                        <p>Managing Director</p>
+                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('rohit')">Read More</button>
+                    </div>
                 </div>
-                <!-- Contact Us Title End -->
 
-                <!-- Contact Us Form Start -->
-                <form
-                  id="contactForm"
-                  action="#"
-                  method="POST"
-                  data-toggle="validator"
-                  class="wow fadeInUp"
-                  data-wow-delay="0.4s"
-                  novalidate="true"
-                  style="
-                    visibility: visible;
-                    animation-delay: 0.4s;
-                    animation-name: fadeInUp;
-                  "
-                >
-                  <div class="row">
-                    <div class="form-group col-md-6 mb-4">
-                      <input
-                        type="text"
-                        name="fname"
-                        class="form-control"
-                        id="fname"
-                        placeholder="First Name"
-                        required=""
-                      />
-                      <div class="help-block with-errors"></div>
+                <!-- Prachi Jain - Director -->
+                <div class="tp-team-3-item" onclick="openModal('prachi')">
+                    <div class="tp-team-3-thumb">
+                        <img src="./images/dummy-person-testi.png" alt="Prachi Jain">
                     </div>
+                    <div class="tp-team-3-content">
+                        <!-- <div class="tp-team-3-social">
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
+                        </div> -->
+                        <h4 class="tp-team-3-title">Prachi Jain</h4>
+                        <p>Director</p>
+                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('prachi')">Read More</button>
+                    </div>
+                </div>
 
-                    <div class="form-group col-md-6 mb-4">
-                      <input
-                        type="text"
-                        name="lname"
-                        class="form-control"
-                        id="lname"
-                        placeholder="Last Name"
-                        required=""
-                      />
-                      <div class="help-block with-errors"></div>
+                <!-- Amit Kumar Gautam - CCO -->
+                <div class="tp-team-3-item" onclick="openModal('amit')">
+                    <div class="tp-team-3-thumb">
+                        <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam">
                     </div>
+                    <div class="tp-team-3-content">
+                        <!-- <div class="tp-team-3-social">
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
+                        </div> -->
+                        <h4 class="tp-team-3-title">Amit Kumar Gautam</h4>
+                        <p>Chief Commercial Officer</p>
+                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('amit')">Read More</button>
+                    </div>
+                </div>
 
-                    <div class="form-group col-md-6 mb-4">
-                      <input
-                        type="email"
-                        name="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Email Address"
-                        required=""
-                      />
-                      <div class="help-block with-errors"></div>
+                <!-- Bhavya Jain - COO -->
+                <div class="tp-team-3-item" onclick="openModal('bhavya')">
+                    <div class="tp-team-3-thumb">
+                        <img src="./images/dummy-person-testi.png" alt="Bhavya Jain">
                     </div>
-
-                    <div class="form-group col-md-6 mb-4">
-                      <input
-                        type="text"
-                        name="phone"
-                        class="form-control"
-                        id="phone"
-                        placeholder="Phone Number"
-                        required=""
-                      />
-                      <div class="help-block with-errors"></div>
+                    <div class="tp-team-3-content">
+                        <!-- <div class="tp-team-3-social">
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
+                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
+                        </div> -->
+                        <h4 class="tp-team-3-title">Bhavya Jain</h4>
+                        <p>Chief Operating Officer</p>
+                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('bhavya')">Read More</button>
                     </div>
-
-                    <div class="form-group col-md-12 mb-5">
-                      <textarea
-                        name="message"
-                        class="form-control"
-                        id="message"
-                        rows="4"
-                        placeholder="Message"
-                      ></textarea>
-                      <div class="help-block with-errors"></div>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <div class="contact-form-btn">
-                        <a href="#" class="custom-button">
-                          Submit
-                          <svg class="arrow" viewBox="0 0 24 24">
-                            <line x1="7" y1="12" x2="21" y2="12"></line>
-                            <polyline points="14 5 21 12 14 19"></polyline>
-                          </svg>
-                          <svg class="right-arrow" viewBox="0 0 24 24">
-                            <line x1="7" y1="12" x2="21" y2="12"></line>
-                            <polyline points="14 5 21 12 14 19"></polyline>
-                          </svg>
-                        </a>
-                        <div id="msgSubmit" class="h3 hidden"></div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <!-- Contact Us Form End -->
-              </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-12 map-section sm-ps-20px sm-pe-20px pb-150px">
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4507666174964!2d80.23732447507706!3d13.006941787311693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52679ed4fdee7b%3A0x22322c998c8b4ef0!2sSardar%20Patel%20Rd%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1731148301134!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-       
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d62544.896803017735!2d78.63791754999998!3d11.5478371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3babf1b65c940927%3A0x78da427bc0b0384d!2sBTR%20Nagar%2C%20BTR%20Layout%2C%20Ayothiapattinam%2C%20Salem%2C%20Tamil%20Nadu%20636103!3m2!1d11.6698565!2d78.23662329999999!5e0!3m2!1sen!2sin!4v1767436755291!5m2!1sen!2sin" width="100%" height="300" style="border:0;border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1838.0304447299266!2d75.877583!3d22.874209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396303bdb02094a3%3A0xdfa870738eb33023!2sElectro-Tech%20Transmission%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1767697358119!5m2!1sen!2sin" width="100%" height="300" style="border:0;border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div> 
-      </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Rohit Jain Modal -->
+    <div id="rohit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('rohit')">&times;</span>
+                <h2>Rohit Jain</h2>
+                <p>Managing Director, ETT Groups</p>
+            </div>
+            <div class="modal-body">
+                <div class="quote">
+                    "Do not wait; the time will never be just right. Begin now, with what you have. The rest will follow."
+                </div>
+                
+                <p>This belief has shaped ETT since its inception. We started small, with limited resources but a clear vision - to build reliable and efficient transformer solutions for India's growing energy needs.</p>
+
+                <h3>Our Journey</h3>
+                <p>Over the years, we have:</p>
+                <ul>
+                    <li>Expanded our product portfolio</li>
+                    <li>Modernized our manufacturing infrastructure</li>
+                    <li>Strengthened our technical capabilities</li>
+                    <li>Built strong customer relationships based on trust</li>
+                </ul>
+
+                <p>Our success comes from a committed team, continuous innovation, and our focus on sustainability. We aim to deliver energy-efficient transformers that meet industry standards while minimizing environmental impact.</p>
+
+                <p>At ETT, quality is not just a priority - it is part of our culture. We learn, adapt, and innovate to stay ahead in a competitive industry.</p>
+
+                <p>With our technology-driven approach and commitment to excellence, I believe we will continue to build milestones in power and distribution technologies - not just for India, but across international markets as well.</p>
+
+                <p class="signature">– Rohit Jain<br>Managing Director, ETT Groups</p>
+            </div>
+        </div>
     </div>
+
+    <!-- Prachi Jain Modal -->
+    <div id="prachi-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('prachi')">&times;</span>
+                <h2>Prachi Jain</h2>
+                <p>Director, Electro-Tech Transmission Pvt. Ltd.</p>
+            </div>
+            <div class="modal-body">
+                <p>At Electro-Tech Transmission Pvt. Ltd. (ETT), our journey is not defined only by the transformers we manufacture - it is shaped by the people who build them, the relationships we nurture, and the values we uphold every day.</p>
+
+                <h3>Our People-First Philosophy</h3>
+                <p>From our engineers and office teams to technicians and shop-floor workers, every individual at ETT contributes meaningfully to our success. I truly believe that teamwork, respect, and shared purpose are the pillars of a progressive organization. When people collaborate with trust and dedication, excellence naturally becomes the outcome.</p>
+
+                <p>We work hard to maintain a workplace culture built on fairness, transparency, and equal opportunity. At ETT, growth and respect are not limited to designations - everyone's voice matters, and every contribution is valued, irrespective of role, background, or gender.</p>
+
+                <h3>Our Commitment</h3>
+                <p>Our deepest responsibility lies with the backbone of our operations - our labour force. Their safety, well-being, and dignity are priorities we will never compromise. Through training, skill development, and a safe environment, we aim to uplift the people who are integral to our success.</p>
+
+                <p>As we continue to grow and expand, our mission remains clear - to build a company rooted in human values, engineering excellence, and long-term trust. Together, we aspire to create a responsible, inclusive, and people-centric organization that stands strong today and for the generations to come.</p>
+
+                <p class="signature">– Prachi Jain<br>Director, Electro-Tech Transmission Pvt. Ltd.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Amit Kumar Gautam Modal -->
+    <div id="amit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('amit')">&times;</span>
+                <h2>Amit Kumar Gautam</h2>
+                <p>Chief Commercial Officer, Electro-Tech Transmission Pvt. Ltd.</p>
+            </div>
+            <div class="modal-body">
+                <h3>Professional Background</h3>
+                <p>With over 14 years of diverse professional experience spanning financial consultancy, corporate finance, banking, and audit, Mr. Amit Gautam brings strong commercial acumen and strategic leadership to Electro-Tech Transmission Pvt. Ltd. He holds an MBA in Banking and Finance, supported by a robust foundation in audit practices and financial controls.</p>
+
+                <h3>Career Journey</h3>
+                <p>Mr. Gautam began his career with a three-year internship at a reputed Chartered Accountancy firm, gaining extensive hands-on exposure to revenue audits, concurrent audits, tax audits, and statutory audits. This early experience strengthened his understanding of compliance, risk management, and financial discipline—elements that continue to guide his professional approach.</p>
+
+                <p>He subsequently joined a leading financial consultancy firm in Indore, where he spent four years and rose to the position of Team Leader. Working closely with several corporates, banks, and NBFCs across Indore and Bhopal, he developed deep expertise in credit evaluation, financial structuring, and lender coordination.</p>
+
+                <p>Further advancing his career, Mr. Gautam served as Chief Financial Officer (CFO) of an EPC company for nearly three years, where he led financial planning, budgeting, commercial operations, and strategic decision-making initiatives. He then transitioned into the banking sector, gaining valuable exposure in the SME divisions of Yes Bank and HDFC Bank. His experience includes handling credit appraisals under sole banking, multiple banking, and consortium arrangements, along with effective portfolio and risk management.</p>
+
+                <h3>Role at ETT</h3>
+                <p>As Chief Commercial Officer at Electro-Tech Transmission, Mr. Gautam plays a critical role in shaping the company's commercial and operational growth strategy. His multidimensional experience enables him to evaluate opportunities with a balanced perspective—combining financial prudence, risk assessment, and long-term sustainability. He believes that structured decision-making, strong financial controls, and agile commercial strategies are key to building a resilient and scalable organization.</p>
+
+                <p>By leveraging his deep understanding of finance, banking, and corporate operations, Mr. Gautam contributes to informed leadership decisions that support business expansion, strengthen stakeholder confidence, and ensure sustainable growth. His forward-looking approach continues to help ETT navigate market dynamics while aligning growth initiatives with the company's vision and values.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bhavya Jain Modal -->
+    <div id="bhavya-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('bhavya')">&times;</span>
+                <h2>Bhavya Jain</h2>
+                <p>Chief Operating Officer, Electro-Tech Transmission Pvt. Ltd.</p>
+            </div>
+            <div class="modal-body">
+                <h3>Academic Excellence</h3>
+                <p>Bhavya Jain serves as the Chief Operating Officer at Electro-Tech Transmission Pvt. Ltd., equipped with a strong academic foundation and a dynamic multi-disciplinary skill set. She holds an MBA in Business Economics and Finance from DAVV Indore, along with a Diploma in Security Analysis and Portfolio Management from Maharaja Sayajirao University of Baroda.</p>
+
+                <h3>Unique Expertise</h3>
+                <p>With diverse experience across corporate finance, investment analysis, and digital marketing, Bhavya brings a balanced and insightful perspective to business leadership. Her unique ability to combine analytical precision with creative problem-solving empowers her to drive operational efficiency, enhance financial performance, and contribute meaningfully to the company's long-term growth strategy.</p>
+
+                <h3>Leadership Role</h3>
+                <p>As COO, Bhavya leads the company's day-to-day operations, streamlines processes, and drives key initiatives aimed at strengthening Electro-Tech Transmission's position in a rapidly evolving and competitive industry.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(person) {
+            document.getElementById(person + '-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(person) {
+            document.getElementById(person + '-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.getElementsByClassName('modal');
+                for (let modal of modals) {
+                    modal.style.display = 'none';
+                }
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+   
+   
     <style>
       .form-control::placeholder {
     color: #3131313d !important;
@@ -1373,7 +1696,8 @@
     border-color: #97979733;
 }
     </style>
-       <div class="floating-buttons">
+
+      <div class="floating-buttons">
         <a href="https://api.whatsapp.com/send?phone=916269802756&text=Hello%20ETT%2C%20want%20to%20connect%20with%20you%20for%20a%20chat" class="floating-btn whatsapp-btn" target="_blank" title="Chat on WhatsApp">
             <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 0C7.163 0 0 7.163 0 16c0 2.825.745 5.478 2.041 7.771L0 32l8.408-2.041C10.7 31.255 13.353 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm7.903 22.666c-.326.92-1.616 1.687-2.644 1.918-.704.157-1.62.283-4.707-.994-3.94-1.63-6.485-5.64-6.682-5.902-.19-.262-1.582-2.096-1.582-4.002 0-1.905 1.006-2.844 1.358-3.23.354-.387.77-.484 1.026-.484.255 0 .512.003.736.014.236.012.552-.09.864.658.326.78 1.106 2.686 1.204 2.88.097.196.162.423.032.684-.13.262-.195.423-.39.652-.195.228-.409.51-.586.684-.195.195-.397.408-.17.8.226.387.998 1.64 2.141 2.658 1.472 1.309 2.713 1.715 3.1 1.908.388.196.614.164.84-.097.227-.262.968-1.122 1.226-1.508.26-.387.516-.323.87-.194.355.13 2.262 1.065 2.652 1.258.387.196.645.292.742.454.097.164.097.942-.228 1.863z" fill="white"/>
@@ -1488,7 +1812,7 @@
             }
         });
     </script>
-    <!-- Footer Start -->
+      <!-- Footer Start -->
     <footer class="main-footer sm-ps-20px sm-pe-20px  md-pe-20px md-ps-20px pt-100px">
       <div class="container">
         <div class="row">
