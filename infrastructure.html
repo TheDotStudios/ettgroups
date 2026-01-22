@@ -44,602 +44,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-   :root {
-            --color-primary-11: #1c1f3b;
-            --color-primary-22: #ffdc69;
-            --color-primary-33: #c5ceff;
-            --color-secondary-2: #fff9ed;
-            --color-white: white;
-      
-        }
-.section-line-white {
-    border: 1px dashed #fff;
-    opacity: .05;
-    width: 2px;
-    height: 100%;
-}
-      
-        .service-section {
-            position: relative;
-            overflow: clip;
-            /* background-color: #191919; */
-        }
-        /* .service-section .service-inner-wrap{
-            background-color: #0a0a0c;
 
-        } */
-
-         /* .swiper {
-            width: 100%;
-            padding-bottom: 80px;
-        } */
-
-        /* .swiper-slide {
-            width: 440px !important;
-            height: 600px;
-        } */
-
-        .service-slider-wrapper {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .service-slider-wrapper .swiper{
-          overflow: visible !important;
-        }
-
-        .service-slider {
-            flex: 1;
-            /* overflow: hidden; */
-            /* padding-bottom: 80px; */
-        }
-
-        .service-mask {
-            display: flex;
-            gap: 40px;
-            transition: transform 0.5s ease;
-        }
-
-        .service-slide {
-            min-width: 440px;
-            height: 600px;
-        }
-
-        .service-inline-item {
-            border-radius: 20px;
-            background-color: var(--color-primary-11);
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .service-inline-item:hover {
-            transform: translateY(-8px);
-        }
-
-        .service-inline-item.two {
-            background-color: var(--color-primary-22);
-        }
-
-        .service-inline-item.three {
-            background-color: var(--color-secondary-2);
-        }
-
-        .service-inline-item.four {
-            background-color: #c5ceff;
-        }
-
-        .service-inline-image-wrap {
-            width: auto;
-            margin: 30px;
-            padding: 2px;
-            position: relative;
-            transform: translate3d(130px, -60px, 0px);
-            transition: transform 0.4s ease;
-        }
-
-        .service-inline-item:hover .service-inline-image-wrap {
-            transform: translate3d(0px, 0px, 0px);
-        }
-
-        .service-inline-image-wrap.one {
-            background-color: var(--color-primary-11);
-        }
-
-        .service-inline-image-wrap.two {
-            background-color: var(--color-primary-22);
-        }
-
-        .service-inline-image-wrap.three {
-            background-color: var(--color-secondary-22);
-        }
-
-        .service-inline-image-wrap.four {
-            background-color: #c5ceff;
-        }
-
-        .service-inline-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 16px;
-        }
-
-        .service-inline-image-shape {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .service-inline-content {
-            padding: 0 40px 40px;
-            flex-grow: 1;
-        }
-
-        .service-inline-content.one {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-title {
-            font-family: var(--font-family-heading);
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--color-white);
-        }
-
-        .service-inline-title.one {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-title.two,
-        .service-inline-title.three,
-        .service-inline-title.four {
-            color: var(--color-primary-11);
-        }
-
-        .service-inline-content p {
-            font-size: 14px;
-            line-height: 20px;
-            margin: 0;
-            color: inherit;
-        }
-
-        .service-inline-content.one p {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-content.two p,
-        .service-inline-content.three p,
-        .service-inline-content.four p {
-            color: var(--color-primary-11);
-        }
-
-        .service-slider-arrow {
-            border-radius: 12px;
-            background-color: var(--color-primary-22);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: absolute;
-            bottom: 80px;
-            z-index: 10;
-        }
-
-        .service-slider-arrow.left {
-            left: -60px;
-        }
-
-        .service-slider-arrow.right {
-            right: -60px;
-        }
-
-        .service-slider-arrow:hover {
-            background-color: var(--color-primary-11);
-        }
-
-        .service-slider-arrow:hover .service-slider-icon {
-            color: var(--color-white);
-        }
-
-        .service-slider-icon {
-            color: #000;
-            font-size: 24px !important;
-            font-weight: 600;
-        }
-        .servicesSwiper .swiper-wrapper{
-          overflow: visible;
-        }
-  /* Custom Swiper Navigation Buttons */
-        .swiper-button-prev,
-        .swiper-button-next {
-            border-radius: 12px;
-            background-color: var(--white);
-            width: 50px;
-            height: 50px;
-            position: relative;
-            transition: all 0.3s ease;
-            /* bottom: 80px; */
-            top: 0;
-            /* right: 0; */
-        }
-        .pos-relative{
-          position: relative;
-    display: flex;
-   position: relative;
-    display: flex;
-    /* justify-content: center; */
-    gap: 10px;
-    padding-top: 25px;
-        }
-        /* .swiper-button-prev {
-            left: -60px;
-        }
-
-        .swiper-button-next {
-            right: -60px;
-        } */
-
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            background-color: var(--color-primary-1);
-        }
-
-        .swiper-button-prev:after,
-        .swiper-button-next:after {
-            font-size: 14px;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .swiper-button-prev:hover:after,
-        .swiper-button-next:hover:after {
-            color: var(--color-white);
-        }
-
-        @media (max-width: 1200px) {
-            .service-slide {
-                min-width: 380px;
-            }
-            .swiper-slide {
-                width: 380px;
-            }
-
-            .swiper-button-prev {
-                left: 10px;
-            }
-
-            .swiper-button-next {
-                right: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .service-section {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .section-title h2 {
-                font-size: 36px;
-            }
-
-            .service-slide {
-                min-width: 320px;
-            }
- .swiper-slide {
-                width: 320px;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 40px;
-                height: 40px;
-            }
-
-            .swiper-button-prev:after,
-            .swiper-button-next:after {
-                font-size: 18px;
-            }
-            .service-slider-arrow {
-                display: none;
-            }
-        }
-        .service-inline-image-shape {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0%;
-}
-.service-pos-absolute{
-    position: absolute;
-    display: flex;
-    gap: 20px;
-    bottom: -100px;
-   
-    justify-content: center;
-}
-
-  .service-slider-wrapper {
-            display: flex;
-            justify-content: flex-start;
-            align-items: stretch;
-        }
-
-        .service-slider-wrap {
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 100px;
-            position: relative;
-        }
-
-        .service-slider {
-            background-color: transparent;
-            height: 100%;
-            overflow: visible;
-            position: relative;
-        }
-
-        .service-mask {
-            width: 30%;
-            height: 600px;
-            margin-bottom: 80px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: visible;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slides-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            perspective: 1200px;
-            white-space: nowrap;
-            transition: transform 500ms ease-in-out;
-        }
-
-        .service-slide {
-            display: inline-block;
-            width: 100%;
-            height: 550px;
-            perspective: 800px;
-            vertical-align: top;
-            white-space: normal;
-            flex-shrink: 0;
-            transition: all 500ms ease-in-out;
-        }
-
-        .service-slide-inner {
-            transform-style: preserve-3d;
-            width: 100%;
-            height: 100%;
-            transition: all 500ms ease-in-out;
-        }
-
-        /* Center slide - full opacity, no rotation */
-        .service-slide.center .service-slide-inner {
-            opacity: 1;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        /* Side slides - reduced opacity, rotated */
-        .service-slide:not(.center) .service-slide-inner {
-            opacity: 0.5;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-30deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        /* Left side slides get positive Y rotation */
-        .service-slide.left .service-slide-inner {
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(30deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        .service-item1 {
-            /* border: 1px solid #1a1a1a; */
-            /* border-radius: 20px; */
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: #dedede;
-            transform: rotate(0);
-        }
-
-        .service-item1:hover {
-            transform: scale(1.02);
-        }
-
-        .service-image-wrap {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .service-image {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .service-content-wrap {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 25px 20px;
-        }
-
-        .service-content-title {
-            color: #ffffff;
-            margin-bottom: 0;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        /* Arrow buttons */
-        .service-arrow {
-            border-radius: 50%;
-            /* background-color: #ffffff; */
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            /* position: absolute; */
-            z-index: 10;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            /* border: 1px solid #e0e0e0; */
-            /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
-        }
-
-        .service-arrow:hover {
-            background-color: #000;
-            transform: scale(1.1);
-        }
-        .service-arrow-icon.left{
-          transform: rotate(180deg);
-        }
-        /* .service-left-arrow {
-            left: -60px;
-            bottom: 40px;
-        }
-
-        .service-right-arrow {
-            right: -60px;
-            bottom: 40px;
-        } */
-
-        .service-arrow-icon {
-            width: 20px;
-            height: 20px;
-            color: #fff;
-        }
-
-        /* Navigation dots */
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #d0d0d0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .slider-dot.active {
-            background-color: #1a1a1a;
-            transform: scale(1.3);
-        }
-
-        .slider-dot:hover {
-            background-color: #666;
-        }
-
-        @media (max-width: 1200px) {
-            .service-mask {
-                width: 40%;
-            }
-
-            .service-left-arrow {
-                left: 20px;
-            }
-
-            .service-right-arrow {
-                right: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section-title h1,
-            .section-title .services-text {
-                font-size: 36px;
-            }
-
-            .service-mask {
-                width: 80%;
-                /* height: 450px; */
-                height: 310px;
-            }
-
-            .service-slide {
-                height: 400px;
-            }
-
-            .service-slide[data-position="-1"],
-            .service-slide[data-position="1"] {
-                transform: translateX(0) translateZ(-200px) scale(0.7);
-                opacity: 0.3;
-            }
-
-            .service-slide[data-position="-2"],
-            .service-slide[data-position="2"] {
-                display: none;
-            }
-        }
-
-
-      .text {
-        font-weight: 800;
-        font-size: 280px;
-        line-height: 0.9;
-        text-transform: uppercase;
-        background-image: url("images/text-img.jpg"); /* Explicitly set background-image */
-        background-size: cover; /* Ensures the background covers the text */
-        background-repeat: no-repeat; /* Prevent tiling */
-        background-position: center; /* Centers the image on the text */
-        -webkit-text-fill-color: transparent; /* Makes text transparent to show the background */
-        -webkit-background-clip: text; /* Clips the background to the text area */
-        color: transparent; /* Fallback for browsers not supporting background-clip */
-        display: inline-block;
-      }
-      /* Update the active state to match hover state opacity */
-      .award-item.active::before {
-        opacity: 0.15;
-      }
-
-      /* Remove hover effect since we're using click instead */
-      .award-item:hover::before {
-        opacity: 0; /* Remove the hover effect */
-      }
-     
-    </style>
   </head>
   <body>
     <!-- Preloader Start -->
@@ -711,7 +116,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
-                              <li class="nav-item mega-menu-item submenu submenu-n">
+                               <li class="nav-item mega-menu-item submenu submenu-n">
                                     <a class="nav-link" href="about.html">Pages</a>
                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -1032,11 +437,11 @@
                     <div class="col-lg-12">
                         <!-- Page Header Content Start -->
                         <div class="page-header-content text-center">
-                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Team</span></h1>
+                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Infrastructure</span></h1>
                             <nav class="wow fadeInUp" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
                                 <ol class="breadcrumb" style="justify-content: center !important;">
                                     <li class="breadcrumb-item"><a href="index.html">home /</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Team</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Infrastructure</li>
                                 </ol>
                             </nav>
                         </div>
@@ -1337,85 +742,138 @@
     </style>
      <section class="tp-team-3-ptb pt-200px pb-200px">
         <div class="container">
-          <div class="blog-heading">
-             <div class="section-title mb-5">
-                <h3 class="">Team</h3>
-                <h2 class="tp-section-title">
-                Our Team
-                </h2>
-                <p class="max-width">The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
-</p>
-              </div>
+   
+        <!-- Introduction -->
+        <div class="infra-intro-section col-md-12">
+           <div class="row">
+            <div class="col-md-6">
+                 <div class="section-title mb-5">
+                    <h3>Infrastructure</h3>
+                    <h2 class="tp-section-title">Manufacturing that Defines Reliability</h2>
+             
+                   
+                
+                </div>
+             
             </div>
-            <div class="team-row">
-                <!-- Rohit Jain - Managing Director -->
-                <div class="tp-team-3-item" onclick="openModal('rohit')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Rohit Jain">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Rohit Jain</h4>
-                        <p>Managing Director</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('rohit')">Read More <span class="fa  fa-arrow-right"></span></button>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                    <p class="history-desc">Our 1,00,000 sq. ft. advanced facility ensures precision engineering, strict quality control, and fast delivery timelines. Every transformer undergoes rigorous testing using modern equipment such as Vacuum Plants, Oil Filtration Units, Air Compressors, Electric Ovens, and QC Systems, ensuring dependable and long-lasting performance. <br><br>
+                At ETT, our strength lies in modern infrastructure and advanced machinery that ensure precision engineering, consistent quality, and reliable performance. Our facility is designed to support end-to-end transformer manufacturing backed by technology-driven processes.</p>
+            </div>
+           </div>
+            <!-- <h2 class="infra-intro-title">Manufacturing that Defines Reliability</h2>
+            <p class="infra-intro-description">Our 1,00,000 sq. ft. advanced facility ensures precision engineering, strict quality control, and fast delivery timelines. Every transformer undergoes rigorous testing using modern equipment such as Vacuum Plants, Oil Filtration Units, Air Compressors, Electric Ovens, and QC Systems, ensuring dependable and long-lasting performance. <br><br>
+                At ETT, our strength lies in modern infrastructure and advanced machinery that ensure precision engineering, consistent quality, and reliable performance. Our facility is designed to support end-to-end transformer manufacturing backed by technology-driven processes.</p> -->
+        </div>
 
-                <!-- Prachi Jain - Director -->
-                <div class="tp-team-3-item" onclick="openModal('prachi')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Prachi Jain">
+        <!-- Machinery Grid -->
+        <div class="machinery-grid-wrapper">
+            <!-- Card 1: Oil Filling Machine -->
+            <div class="machinery-card-item">
+                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&h=600&fit=crop" alt="Oil Filling Machine" class="machinery-card-img">
+                <div class="machinery-content-overlay">
+                    <div class="machinery-inner-content">
+                        <h3 class="machinery-title-heading">
+                            <a href="#" class="machinery-title-link">Oil Filling Machine</a>
+                        </h3>
+                        <p class="machinery-description-text">Our high-performance Oil Filling System uses vacuum-assisted filling, filtration, and degassing to ensure moisture-free and contaminant-free insulating oil. With multi-stage filtration and PLC-controlled accuracy, it delivers clean and consistent oil filling for transformers of all sizes - ensuring long life and electrical stability.</p>
                     </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Prachi Jain</h4>
-                        <p>Director</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('prachi')">Read More <span class="fa  fa-arrow-right"></span></button>
-                    </div>
-                </div>
-
-                <!-- Amit Kumar Gautam - CCO -->
-                <div class="tp-team-3-item" onclick="openModal('amit')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Amit Kumar Gautam</h4>
-                        <p>Chief Commercial Officer</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('amit')">Read More <span class="fa  fa-arrow-right"></span></button>
-                    </div>
-                </div>
-
-                <!-- Bhavya Jain - COO -->
-                <div class="tp-team-3-item" onclick="openModal('bhavya')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Bhavya Jain">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Bhavya Jain</h4>
-                        <p>Chief Operating Officer</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('bhavya')">Read More <span class="fa  fa-arrow-right"></span></button>
+                    <div class="machinery-action-footer">
+                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+
+            <!-- Card 2: Mark Screw Air Compressor -->
+            <div class="machinery-card-item">
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop" alt="Mark Screw Air Compressor" class="machinery-card-img">
+                <div class="machinery-content-overlay">
+                    <div class="machinery-inner-content">
+                        <h3 class="machinery-title-heading">
+                            <a href="#" class="machinery-title-link">Mark Screw Air Compressor</a>
+                        </h3>
+                        <p class="machinery-description-text">The Mark Screw Air Compressor provides a steady and energy-efficient supply of compressed air for continuous manufacturing operations. Compact, low-noise, and low-maintenance, it plays an essential role in powering industrial tools and equipment across our facility.</p>
+                    </div>
+                    <div class="machinery-action-footer">
+                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Electric Oven -->
+            <div class="machinery-card-item">
+                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&h=600&fit=crop" alt="Electric Oven" class="machinery-card-img">
+                <div class="machinery-content-overlay">
+                    <div class="machinery-inner-content">
+                        <h3 class="machinery-title-heading">
+                            <a href="#" class="machinery-title-link">Electric Oven</a>
+                        </h3>
+                        <p class="machinery-description-text">Our industrial Electric Oven offers precise temperature control and uniform heat distribution for heating, drying, and curing applications. It ensures consistent output, energy efficiency, and long-term durability - supporting various thermal processes in transformer manufacturing.</p>
+                    </div>
+                    <div class="machinery-action-footer">
+                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Vacuum Plant -->
+            <div class="machinery-card-item">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" alt="Vacuum Plant for Dry Type Transformers" class="machinery-card-img">
+                <div class="machinery-content-overlay">
+                    <div class="machinery-inner-content">
+                        <h3 class="machinery-title-heading">
+                            <a href="#" class="machinery-title-link">Vacuum Plant for Dry Type Transformers</a>
+                        </h3>
+                        <p class="machinery-description-text">This high-efficiency vacuum unit removes moisture, air, and impurities from windings and insulation systems. By creating deep vacuum levels, it significantly improves the dielectric strength and reliability of dry-type transformers, ensuring long operational life.</p>
+                    </div>
+                    <div class="machinery-action-footer">
+                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QC & Testing Section -->
+        <section class="qc-testing-section">
+            <h2 class="qc-section-title">QC & Testing Machines</h2>
+            <p class="qc-intro-text">We operate a complete range of quality control instruments to validate every component with precision. Our QC systems ensure accurate measurements, strict compliance, repeatable inspection results, and high mechanical and electrical reliability.</p>
+
+            <div class="qc-features-grid">
+                <div class="qc-feature-card">
+                    <div class="qc-feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <p class="qc-feature-text">Accurate measurements</p>
+                </div>
+
+                <div class="qc-feature-card">
+                    <div class="qc-feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <p class="qc-feature-text">Strict compliance with BIS/BEE/IEC standards</p>
+                </div>
+
+                <div class="qc-feature-card">
+                    <div class="qc-feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <p class="qc-feature-text">Repeatable inspection results</p>
+                </div>
+
+                <div class="qc-feature-card">
+                    <div class="qc-feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <p class="qc-feature-text">High mechanical and electrical reliability</p>
+                </div>
+            </div>
+
+            <div class="qc-testing-list">
+                <h3 class="qc-testing-title">Our Testing Infrastructure Includes:</h3>
+                <p class="qc-testing-description">Tools for dimensional checks, hardness testing, insulation analysis, and advanced inspection methods to ensure zero-compromise quality.</p>
+            </div>
+        </section>
+ 
         </div>
     </section>
 

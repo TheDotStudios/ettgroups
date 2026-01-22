@@ -31,7 +31,7 @@
     <!-- Font Awesome Icon Css-->
     <link href="css/all.css" rel="stylesheet" media="screen" />
     <!-- Animated Css -->
-    <!-- <link href="css/animate.css" rel="stylesheet" /> -->
+    <link href="css/animate.css" rel="stylesheet" />
     <!-- Magnific Popup Core Css File -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
     <!-- Mouse Cursor Css File -->
@@ -44,602 +44,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-   :root {
-            --color-primary-11: #1c1f3b;
-            --color-primary-22: #ffdc69;
-            --color-primary-33: #c5ceff;
-            --color-secondary-2: #fff9ed;
-            --color-white: white;
-      
-        }
-.section-line-white {
-    border: 1px dashed #fff;
-    opacity: .05;
-    width: 2px;
-    height: 100%;
-}
-      
-        .service-section {
-            position: relative;
-            overflow: clip;
-            /* background-color: #191919; */
-        }
-        /* .service-section .service-inner-wrap{
-            background-color: #0a0a0c;
-
-        } */
-
-         /* .swiper {
-            width: 100%;
-            padding-bottom: 80px;
-        } */
-
-        /* .swiper-slide {
-            width: 440px !important;
-            height: 600px;
-        } */
-
-        .service-slider-wrapper {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .service-slider-wrapper .swiper{
-          overflow: visible !important;
-        }
-
-        .service-slider {
-            flex: 1;
-            /* overflow: hidden; */
-            /* padding-bottom: 80px; */
-        }
-
-        .service-mask {
-            display: flex;
-            gap: 40px;
-            transition: transform 0.5s ease;
-        }
-
-        .service-slide {
-            min-width: 440px;
-            height: 600px;
-        }
-
-        .service-inline-item {
-            border-radius: 20px;
-            background-color: var(--color-primary-11);
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .service-inline-item:hover {
-            transform: translateY(-8px);
-        }
-
-        .service-inline-item.two {
-            background-color: var(--color-primary-22);
-        }
-
-        .service-inline-item.three {
-            background-color: var(--color-secondary-2);
-        }
-
-        .service-inline-item.four {
-            background-color: #c5ceff;
-        }
-
-        .service-inline-image-wrap {
-            width: auto;
-            margin: 30px;
-            padding: 2px;
-            position: relative;
-            transform: translate3d(130px, -60px, 0px);
-            transition: transform 0.4s ease;
-        }
-
-        .service-inline-item:hover .service-inline-image-wrap {
-            transform: translate3d(0px, 0px, 0px);
-        }
-
-        .service-inline-image-wrap.one {
-            background-color: var(--color-primary-11);
-        }
-
-        .service-inline-image-wrap.two {
-            background-color: var(--color-primary-22);
-        }
-
-        .service-inline-image-wrap.three {
-            background-color: var(--color-secondary-22);
-        }
-
-        .service-inline-image-wrap.four {
-            background-color: #c5ceff;
-        }
-
-        .service-inline-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 16px;
-        }
-
-        .service-inline-image-shape {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .service-inline-content {
-            padding: 0 40px 40px;
-            flex-grow: 1;
-        }
-
-        .service-inline-content.one {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-title {
-            font-family: var(--font-family-heading);
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--color-white);
-        }
-
-        .service-inline-title.one {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-title.two,
-        .service-inline-title.three,
-        .service-inline-title.four {
-            color: var(--color-primary-11);
-        }
-
-        .service-inline-content p {
-            font-size: 14px;
-            line-height: 20px;
-            margin: 0;
-            color: inherit;
-        }
-
-        .service-inline-content.one p {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-content.two p,
-        .service-inline-content.three p,
-        .service-inline-content.four p {
-            color: var(--color-primary-11);
-        }
-
-        .service-slider-arrow {
-            border-radius: 12px;
-            background-color: var(--color-primary-22);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: absolute;
-            bottom: 80px;
-            z-index: 10;
-        }
-
-        .service-slider-arrow.left {
-            left: -60px;
-        }
-
-        .service-slider-arrow.right {
-            right: -60px;
-        }
-
-        .service-slider-arrow:hover {
-            background-color: var(--color-primary-11);
-        }
-
-        .service-slider-arrow:hover .service-slider-icon {
-            color: var(--color-white);
-        }
-
-        .service-slider-icon {
-            color: #000;
-            font-size: 24px !important;
-            font-weight: 600;
-        }
-        .servicesSwiper .swiper-wrapper{
-          overflow: visible;
-        }
-  /* Custom Swiper Navigation Buttons */
-        .swiper-button-prev,
-        .swiper-button-next {
-            border-radius: 12px;
-            background-color: var(--white);
-            width: 50px;
-            height: 50px;
-            position: relative;
-            transition: all 0.3s ease;
-            /* bottom: 80px; */
-            top: 0;
-            /* right: 0; */
-        }
-        .pos-relative{
-          position: relative;
-    display: flex;
-   position: relative;
-    display: flex;
-    /* justify-content: center; */
-    gap: 10px;
-    padding-top: 25px;
-        }
-        /* .swiper-button-prev {
-            left: -60px;
-        }
-
-        .swiper-button-next {
-            right: -60px;
-        } */
-
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            background-color: var(--color-primary-1);
-        }
-
-        .swiper-button-prev:after,
-        .swiper-button-next:after {
-            font-size: 14px;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .swiper-button-prev:hover:after,
-        .swiper-button-next:hover:after {
-            color: var(--color-white);
-        }
-
-        @media (max-width: 1200px) {
-            .service-slide {
-                min-width: 380px;
-            }
-            .swiper-slide {
-                width: 380px;
-            }
-
-            .swiper-button-prev {
-                left: 10px;
-            }
-
-            .swiper-button-next {
-                right: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .service-section {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .section-title h2 {
-                font-size: 36px;
-            }
-
-            .service-slide {
-                min-width: 320px;
-            }
- .swiper-slide {
-                width: 320px;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 40px;
-                height: 40px;
-            }
-
-            .swiper-button-prev:after,
-            .swiper-button-next:after {
-                font-size: 18px;
-            }
-            .service-slider-arrow {
-                display: none;
-            }
-        }
-        .service-inline-image-shape {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0%;
-}
-.service-pos-absolute{
-    position: absolute;
-    display: flex;
-    gap: 20px;
-    bottom: -100px;
-   
-    justify-content: center;
-}
-
-  .service-slider-wrapper {
-            display: flex;
-            justify-content: flex-start;
-            align-items: stretch;
-        }
-
-        .service-slider-wrap {
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 100px;
-            position: relative;
-        }
-
-        .service-slider {
-            background-color: transparent;
-            height: 100%;
-            overflow: visible;
-            position: relative;
-        }
-
-        .service-mask {
-            width: 30%;
-            height: 600px;
-            margin-bottom: 80px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: visible;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slides-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            perspective: 1200px;
-            white-space: nowrap;
-            transition: transform 500ms ease-in-out;
-        }
-
-        .service-slide {
-            display: inline-block;
-            width: 100%;
-            height: 550px;
-            perspective: 800px;
-            vertical-align: top;
-            white-space: normal;
-            flex-shrink: 0;
-            transition: all 500ms ease-in-out;
-        }
-
-        .service-slide-inner {
-            transform-style: preserve-3d;
-            width: 100%;
-            height: 100%;
-            transition: all 500ms ease-in-out;
-        }
-
-        /* Center slide - full opacity, no rotation */
-        .service-slide.center .service-slide-inner {
-            opacity: 1;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        /* Side slides - reduced opacity, rotated */
-        .service-slide:not(.center) .service-slide-inner {
-            opacity: 0.5;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-30deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        /* Left side slides get positive Y rotation */
-        .service-slide.left .service-slide-inner {
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(30deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        .service-item1 {
-            /* border: 1px solid #1a1a1a; */
-            /* border-radius: 20px; */
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: #dedede;
-            transform: rotate(0);
-        }
-
-        .service-item1:hover {
-            transform: scale(1.02);
-        }
-
-        .service-image-wrap {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .service-image {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .service-content-wrap {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 25px 20px;
-        }
-
-        .service-content-title {
-            color: #ffffff;
-            margin-bottom: 0;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        /* Arrow buttons */
-        .service-arrow {
-            border-radius: 50%;
-            /* background-color: #ffffff; */
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            /* position: absolute; */
-            z-index: 10;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            /* border: 1px solid #e0e0e0; */
-            /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
-        }
-
-        .service-arrow:hover {
-            background-color: #000;
-            transform: scale(1.1);
-        }
-        .service-arrow-icon.left{
-          transform: rotate(180deg);
-        }
-        /* .service-left-arrow {
-            left: -60px;
-            bottom: 40px;
-        }
-
-        .service-right-arrow {
-            right: -60px;
-            bottom: 40px;
-        } */
-
-        .service-arrow-icon {
-            width: 20px;
-            height: 20px;
-            color: #fff;
-        }
-
-        /* Navigation dots */
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #d0d0d0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .slider-dot.active {
-            background-color: #1a1a1a;
-            transform: scale(1.3);
-        }
-
-        .slider-dot:hover {
-            background-color: #666;
-        }
-
-        @media (max-width: 1200px) {
-            .service-mask {
-                width: 40%;
-            }
-
-            .service-left-arrow {
-                left: 20px;
-            }
-
-            .service-right-arrow {
-                right: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section-title h1,
-            .section-title .services-text {
-                font-size: 36px;
-            }
-
-            .service-mask {
-                width: 80%;
-                /* height: 450px; */
-                height: 310px;
-            }
-
-            .service-slide {
-                height: 400px;
-            }
-
-            .service-slide[data-position="-1"],
-            .service-slide[data-position="1"] {
-                transform: translateX(0) translateZ(-200px) scale(0.7);
-                opacity: 0.3;
-            }
-
-            .service-slide[data-position="-2"],
-            .service-slide[data-position="2"] {
-                display: none;
-            }
-        }
-
-
-      .text {
-        font-weight: 800;
-        font-size: 280px;
-        line-height: 0.9;
-        text-transform: uppercase;
-        background-image: url("images/text-img.jpg"); /* Explicitly set background-image */
-        background-size: cover; /* Ensures the background covers the text */
-        background-repeat: no-repeat; /* Prevent tiling */
-        background-position: center; /* Centers the image on the text */
-        -webkit-text-fill-color: transparent; /* Makes text transparent to show the background */
-        -webkit-background-clip: text; /* Clips the background to the text area */
-        color: transparent; /* Fallback for browsers not supporting background-clip */
-        display: inline-block;
-      }
-      /* Update the active state to match hover state opacity */
-      .award-item.active::before {
-        opacity: 0.15;
-      }
-
-      /* Remove hover effect since we're using click instead */
-      .award-item:hover::before {
-        opacity: 0; /* Remove the hover effect */
-      }
-     
-    </style>
+ 
   </head>
   <body>
     <!-- Preloader Start -->
@@ -651,7 +56,8 @@
     </div> -->
     <!-- Preloader End -->
 
-   <!-- Header Top -->
+
+  <!-- Header Top -->
     <div class="header-top">
         <div class="container">
             <div class="header-row">
@@ -711,7 +117,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
-                              <li class="nav-item mega-menu-item submenu submenu-n">
+                             <li class="nav-item mega-menu-item submenu submenu-n">
                                     <a class="nav-link" href="about.html">Pages</a>
                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -1032,11 +438,11 @@
                     <div class="col-lg-12">
                         <!-- Page Header Content Start -->
                         <div class="page-header-content text-center">
-                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Team</span></h1>
+                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Furnace Transformer</span></h1>
                             <nav class="wow fadeInUp" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
                                 <ol class="breadcrumb" style="justify-content: center !important;">
                                     <li class="breadcrumb-item"><a href="index.html">home /</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Team</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Furnace Transformer</li>
                                 </ol>
                             </nav>
                         </div>
@@ -1047,523 +453,176 @@
         </div>	
         <!-- Page Header Box End -->	
 	</div>
- 
-    
-    <style>
-           :root {
-            --tp-theme-primary: var(--color-primary-2);
-            --tp-common-white: #ffffff;
-            --bg-color: #EBF3ED;
-        }
-
-
-        .tp-team-3-heading {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .tp-section-title-pre {
-            display: block;
-            color: var(--tp-theme-primary);
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .tp-section-title {
-            font-size: 42px;
-            font-weight: 700;
-            color: #1a1a1a;
-            line-height: 1.3;
-        }
-
-        .team-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .tp-team-3-item {
-            position: relative;
-            margin-bottom: 30px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .tp-team-3-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .tp-team-3-thumb {
-            overflow: hidden;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .tp-team-3-thumb img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 1.3s;
-            border-radius: 10px;
-        }
-
-        .tp-team-3-item:hover .tp-team-3-thumb img {
-            transform: scale(1.1);
-        }
-
-        .tp-team-3-content {
-            position: absolute;
-            width: 245px;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            visibility: hidden;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            transition: all 0.3s ease-out;
-            z-index: 1;
-            background: var(--tp-theme-primary);
-        }
-
-        .tp-team-3-item:hover .tp-team-3-content {
-            opacity: 1;
-            visibility: visible;
-            bottom: -100px;
-        }
-
-        .tp-team-3-social {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .tp-team-3-social a {
-            color: rgba(255, 255, 255, 0.4);
-            margin: 0 7.5px;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .tp-team-3-social a:hover {
-            color: var(--tp-common-white);
-        }
-
-        .tp-team-3-title {
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 1;
-            letter-spacing: -0.48px;
-            color: var(--tp-common-white);
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .tp-team-3-content p {
-            letter-spacing: -0.32px;
-            color: rgba(255, 255, 255, 0.75);
-            text-align: center;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .read-more-btn {
-               background: unset;
-    color: #fff;
-    /* border-bottom: 1px solid #fff; */
-    border: none;
-    /* border-top: none;
-    border-left: none;
-    border-right: none; */
-    border-radius: none;
-    padding: 0px 20px;
-    /* border-radius: 5px; */
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: block;
-    margin: 0 auto;
-    font-size: 14px;
-        }
-
-        .read-more-btn:hover {
-            /* background: #1a1a1a; */
-            color: var(--tp-common-white);
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 85vh;
-            overflow-y: auto;
-            animation: slideIn 0.3s;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            background: #ebebeb;
-            color: white;
-            padding: 30px;
-            border-radius: 15px 15px 0 0;
-            position: relative;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            color: #000;
-            font-weight: 600;
-            font-size: 32px;
-        }
-
-        .modal-header p {
-            margin: 10px 0 0 0;
-            opacity: 0.9;
-            color: #000;
-            font-size: 18px;
-        }
-
-        .close {
-            color: #000;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .close:hover {
-            transform: rotate(90deg);
-        }
-
-        .modal-body {
-            padding: 40px;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .modal-body h3 {
-           color: var(--tp-theme-primary);
-    /* margin-top: 25px; */
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 19px;
-        }
-
-        .modal-body p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            text-align: justify;
-        }
-
-        .modal-body ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .modal-body ul li {
-            margin-bottom: 8px;
-        }
-
-        .quote {
-            background: #f8f9fa;
-            border-left: 4px solid var(--tp-theme-primary);
-            padding: 20px;
-            margin: 25px 0;
-            font-style: italic;
-            border-radius: 5px;
-        }
-
-        .signature {
-            margin-top: 30px;
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-
-        @media (max-width: 768px) {
-            .tp-section-title {
-                font-size: 32px;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-            }
-
-            .modal-body {
-                padding: 25px;
-            }
-
-            .modal-header h2 {
-                font-size: 24px;
-            }
-        }
-    </style>
-     <section class="tp-team-3-ptb pt-200px pb-200px">
+   <section class="tp-portfolio-details-ptb pt-150px pb-150px">
         <div class="container">
-          <div class="blog-heading">
-             <div class="section-title mb-5">
-                <h3 class="">Team</h3>
-                <h2 class="tp-section-title">
-                Our Team
-                </h2>
-                <p class="max-width">The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
-</p>
-              </div>
+            <div class="row"> 
+                <div class="col-lg-12">
+                    <div class="tp-portfolio-details-thumb-main mb-60">
+                        <img src="./images/banner-ett-01.png" alt="Off-Load Distribution Transformer">
+                    </div>
+                </div>
             </div>
-            <div class="team-row">
-                <!-- Rohit Jain - Managing Director -->
-                <div class="tp-team-3-item" onclick="openModal('rohit')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Rohit Jain">
+            
+            <div class="tp-portfolio-details-info-box pb-90">
+                <!-- <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tp-portfolio-details-item" style="text-align: center; margin-bottom: 20px;">
+                            <span>Product</span>
+                            <h4 class="tp-portfolio-details-item-title" style="font-size: 28px; margin-bottom: 10px;">Off-Load Distribution Transformer</h4>
+                            <p style="font-size: 18px; color: #555; margin: 0;">Energy-Efficient Power with Minimal Maintenance</p>
+                        </div>
                     </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Rohit Jain</h4>
-                        <p>Managing Director</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('rohit')">Read More <span class="fa  fa-arrow-right"></span></button>
+                </div> -->
+                
+                <div class="tech-specs-slider">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 25px; text-align: center; color: #333;">Technical Specifications</h3>
+                    
+                    <div class="swiper techSwiper pt-70px">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Type</span>
+                                    <h4> Indoor / Outdoor</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Duty</span>
+                                    <h4>On-Load / Off-Load</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Voltage </span>
+                                    <h4> 3.3 / 6.6 / 11 / 22 / 33 KV</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Vector Group</span>
+                                    <h4>Dyn11 (or as specified)</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Phase</span>
+                                    <h4>3 Phase</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Frequency</span>
+                                    <h4>50 / 60 Hz</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Tap Range</span>
+                                    <h4>±10% (On-Load), ±7.5% (Off-Load)</h4>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Winding Material</span>
+                                    <h4> Multi-paper insulated copper</h4>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Standards</span>
+                                    <h4>IS-2026, IEC 60076</h4>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="spec-card">
+                                    <span>Painting</span>
+                                    <h4> Epoxy (or as specified)</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-pagination"></div> -->
                     </div>
                 </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tp-portfolio-details-text-box mb-70">
+                        <h3 class="tp-portfolio-details-text-title">Product Overview</h3>
+                        <h6 class="mb-2">Built for Rapid Heating. Reliable for Continuous Duty.</h6>
+                        <p class="text-1 mb-65">ETT Furnace Transformers are engineered for induction melting and heating of ferrous and non-ferrous metals. Designed to operate with inverter circuits, the transformer applies medium-frequency voltage (typically 500–1000 Hz) to the induction coil, enabling fast and uniform heat generation with high metallurgical efficiency.
 
-                <!-- Prachi Jain - Director -->
-                <div class="tp-team-3-item" onclick="openModal('prachi')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Prachi Jain">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Prachi Jain</h4>
-                        <p>Director</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('prachi')">Read More <span class="fa  fa-arrow-right"></span></button>
+</p>
+                        
+                        <!-- <h3 class="tp-postfolio-details-text-title">Key Features</h3>
+                        <div class="tp-portfolio-details-text-list">
+                            <ul>
+                                <li>High-grade copper windings for superior conductivity</li>
+                                <li>BIS-approved efficiency standards</li>
+                                <li>Silent operation with minimal noise levels</li>
+                                <li>Stable performance under varying load conditions</li>
+                                <li>Low maintenance requirements</li>
+                                <li>Extended service life and reliability</li>
+                            </ul>
+                        </div>
+                        <p>Our transformers are manufactured using advanced technology and quality materials, ensuring consistent performance in diverse environmental conditions. The multi-paper covered copper winding design provides excellent insulation and heat dissipation, contributing to the longevity and efficiency of the unit. Each transformer undergoes rigorous testing to meet international standards and customer specifications.</p> -->
                     </div>
                 </div>
-
-                <!-- Amit Kumar Gautam - CCO -->
-                <div class="tp-team-3-item" onclick="openModal('amit')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Amit Kumar Gautam</h4>
-                        <p>Chief Commercial Officer</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('amit')">Read More <span class="fa  fa-arrow-right"></span></button>
+                
+                <div class="col-lg-5">
+                    <div class="tp-portfolio-details-thumb">
+                        <img src="./images/onloadtransformers-ett.png" alt="Transformer Detail 1">
                     </div>
                 </div>
-
-                <!-- Bhavya Jain - COO -->
-                <div class="tp-team-3-item" onclick="openModal('bhavya')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Bhavya Jain">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Bhavya Jain</h4>
-                        <p>Chief Operating Officer</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('bhavya')">Read More <span class="fa  fa-arrow-right"></span></button>
+                <div class="col-lg-7">
+                    <div class="tp-portfolio-details-thumb">
+                        <img src="./images/offloadtransformer-ett.png" alt="Transformer Detail 2">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modals -->
-    <!-- Rohit Jain Modal -->
-    <div id="rohit-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('rohit')">&times;</span>
-                <h2>Rohit Jain</h2>
-                <p>Managing Director, ETT Groups</p>
-            </div>
-            <div class="modal-body">
-                <div class="quote">
-                    "Do not wait; the time will never be just right. Begin now, with what you have. The rest will follow."
-                </div>
-                
-                <p>This belief has shaped ETT since its inception. We started small, with limited resources but a clear vision - to build reliable and efficient transformer solutions for India's growing energy needs.</p>
-
-                <h3>Our Journey</h3>
-                <p>Over the years, we have:</p>
-                <ul>
-                    <li>Expanded our product portfolio</li>
-                    <li>Modernized our manufacturing infrastructure</li>
-                    <li>Strengthened our technical capabilities</li>
-                    <li>Built strong customer relationships based on trust</li>
-                </ul>
-
-                <p>Our success comes from a committed team, continuous innovation, and our focus on sustainability. We aim to deliver energy-efficient transformers that meet industry standards while minimizing environmental impact.</p>
-
-                <p>At ETT, quality is not just a priority - it is part of our culture. We learn, adapt, and innovate to stay ahead in a competitive industry.</p>
-
-                <p>With our technology-driven approach and commitment to excellence, I believe we will continue to build milestones in power and distribution technologies - not just for India, but across international markets as well.</p>
-
-                <p class="signature">– Rohit Jain<br>Managing Director, ETT Groups</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Prachi Jain Modal -->
-    <div id="prachi-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('prachi')">&times;</span>
-                <h2>Prachi Jain</h2>
-                <p>Director, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-            <div class="modal-body">
-                <p>At Electro-Tech Transmission Pvt. Ltd. (ETT), our journey is not defined only by the transformers we manufacture - it is shaped by the people who build them, the relationships we nurture, and the values we uphold every day.</p>
-
-                <h3>Our People-First Philosophy</h3>
-                <p>From our engineers and office teams to technicians and shop-floor workers, every individual at ETT contributes meaningfully to our success. I truly believe that teamwork, respect, and shared purpose are the pillars of a progressive organization. When people collaborate with trust and dedication, excellence naturally becomes the outcome.</p>
-
-                <p>We work hard to maintain a workplace culture built on fairness, transparency, and equal opportunity. At ETT, growth and respect are not limited to designations - everyone's voice matters, and every contribution is valued, irrespective of role, background, or gender.</p>
-
-                <h3>Our Commitment</h3>
-                <p>Our deepest responsibility lies with the backbone of our operations - our labour force. Their safety, well-being, and dignity are priorities we will never compromise. Through training, skill development, and a safe environment, we aim to uplift the people who are integral to our success.</p>
-
-                <p>As we continue to grow and expand, our mission remains clear - to build a company rooted in human values, engineering excellence, and long-term trust. Together, we aspire to create a responsible, inclusive, and people-centric organization that stands strong today and for the generations to come.</p>
-
-                <p class="signature">– Prachi Jain<br>Director, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Amit Kumar Gautam Modal -->
-    <div id="amit-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('amit')">&times;</span>
-                <h2>Amit Kumar Gautam</h2>
-                <p>Chief Commercial Officer, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-            <div class="modal-body">
-                <h3>Professional Background</h3>
-                <p>With over 14 years of diverse professional experience spanning financial consultancy, corporate finance, banking, and audit, Mr. Amit Gautam brings strong commercial acumen and strategic leadership to Electro-Tech Transmission Pvt. Ltd. He holds an MBA in Banking and Finance, supported by a robust foundation in audit practices and financial controls.</p>
-
-                <h3>Career Journey</h3>
-                <p>Mr. Gautam began his career with a three-year internship at a reputed Chartered Accountancy firm, gaining extensive hands-on exposure to revenue audits, concurrent audits, tax audits, and statutory audits. This early experience strengthened his understanding of compliance, risk management, and financial discipline—elements that continue to guide his professional approach.</p>
-
-                <p>He subsequently joined a leading financial consultancy firm in Indore, where he spent four years and rose to the position of Team Leader. Working closely with several corporates, banks, and NBFCs across Indore and Bhopal, he developed deep expertise in credit evaluation, financial structuring, and lender coordination.</p>
-
-                <p>Further advancing his career, Mr. Gautam served as Chief Financial Officer (CFO) of an EPC company for nearly three years, where he led financial planning, budgeting, commercial operations, and strategic decision-making initiatives. He then transitioned into the banking sector, gaining valuable exposure in the SME divisions of Yes Bank and HDFC Bank. His experience includes handling credit appraisals under sole banking, multiple banking, and consortium arrangements, along with effective portfolio and risk management.</p>
-
-                <h3>Role at ETT</h3>
-                <p>As Chief Commercial Officer at Electro-Tech Transmission, Mr. Gautam plays a critical role in shaping the company's commercial and operational growth strategy. His multidimensional experience enables him to evaluate opportunities with a balanced perspective—combining financial prudence, risk assessment, and long-term sustainability. He believes that structured decision-making, strong financial controls, and agile commercial strategies are key to building a resilient and scalable organization.</p>
-
-                <p>By leveraging his deep understanding of finance, banking, and corporate operations, Mr. Gautam contributes to informed leadership decisions that support business expansion, strengthen stakeholder confidence, and ensure sustainable growth. His forward-looking approach continues to help ETT navigate market dynamics while aligning growth initiatives with the company's vision and values.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bhavya Jain Modal -->
-    <div id="bhavya-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('bhavya')">&times;</span>
-                <h2>Bhavya Jain</h2>
-                <p>Chief Operating Officer, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-            <div class="modal-body">
-                <h3>Academic Excellence</h3>
-                <p>Bhavya Jain serves as the Chief Operating Officer at Electro-Tech Transmission Pvt. Ltd., equipped with a strong academic foundation and a dynamic multi-disciplinary skill set. She holds an MBA in Business Economics and Finance from DAVV Indore, along with a Diploma in Security Analysis and Portfolio Management from Maharaja Sayajirao University of Baroda.</p>
-
-                <h3>Unique Expertise</h3>
-                <p>With diverse experience across corporate finance, investment analysis, and digital marketing, Bhavya brings a balanced and insightful perspective to business leadership. Her unique ability to combine analytical precision with creative problem-solving empowers her to drive operational efficiency, enhance financial performance, and contribute meaningfully to the company's long-term growth strategy.</p>
-
-                <h3>Leadership Role</h3>
-                <p>As COO, Bhavya leads the company's day-to-day operations, streamlines processes, and drives key initiatives aimed at strengthening Electro-Tech Transmission's position in a rapidly evolving and competitive industry.</p>
-            </div>
-        </div>
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     <script>
-        function openModal(person) {
-            document.getElementById(person + '-modal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(person) {
-            document.getElementById(person + '-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modals = document.getElementsByClassName('modal');
-            for (let modal of modals) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+        const swiper1 = new Swiper('.techSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
                 }
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modals = document.getElementsByClassName('modal');
-                for (let modal of modals) {
-                    modal.style.display = 'none';
-                }
-                document.body.style.overflow = 'auto';
             }
         });
     </script>
-   
-   
+     
     <style>
       .form-control::placeholder {
     color: #3131313d !important;
@@ -1736,7 +795,7 @@
             }
         });
     </script>
-      <!-- Footer Start -->
+        <!-- Footer Start -->
     <footer class="main-footer sm-ps-20px sm-pe-20px  md-pe-20px md-ps-20px pt-100px">
       <div class="container">
         <div class="row">
