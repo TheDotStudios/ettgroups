@@ -9,6 +9,11 @@
     opacity: 0;
     animation: excellenceHeroSlideUp 1s var(--excellence-hero-transition-easing) 0.7s forwards;
 }
+.tabcontent {
+    display: none !important;
+    padding: 30px;
+    background-color: #fff;
+}
 }
 @media screen and (min-width:1200px) and (max-width:1599px) {
     .container {
