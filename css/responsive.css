@@ -16,6 +16,30 @@
 }
 }
 @media screen and (min-width:1200px) and (max-width:1599px) {
+    .main-menu ul li.mega-menu-item > .mega-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: scaleY(0.8);
+    transform-origin: top;
+    position: absolute;
+    /* left: 50%; */
+    left: 100% !important;
+    transform: translateX(-50%) scaleY(0.8);
+    top: 100%;
+    background-color: #fff;
+    min-width: 1400px !important;
+    /* max-width: 1200px; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+    border-radius: 0 0 10px 10px;
+    }
+    .main-menu ul li .segment-tabs a {
+    font-size: 11px !important;
+    }
+    .tabcontent .text-center div:last-child {
+    font-size: 11px !important;
+    }
     .container {
     max-width: 1200px !important;
 }
