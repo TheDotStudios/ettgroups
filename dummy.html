@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infrastructure - ETT</title>
+    <title>Transformer Virtual Showroom</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,413 +14,574 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
             background: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
         }
 
-        .infra-hero-section {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 100px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .infra-hero-title {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
-
-        .infra-hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        .infra-main-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 70px 20px;
-        }
-
-        .infra-intro-section {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .infra-intro-title {
-            font-size: 2.5rem;
-            color: #1a1a2e;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        .infra-intro-description {
-            font-size: 1.1rem;
-            color: #555;
-            max-width: 1000px;
-            margin: 0 auto;
-            line-height: 1.9;
-        }
-
-        .machinery-grid-wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-            margin-bottom: 80px;
-        }
-
-        .machinery-card-item {
+        .tvs-transformer-showroom-wrapper {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2742 50%, #0f1e3a 100%);
+            min-height: 100vh;
+            padding: 80px 20px;
             position: relative;
             overflow: hidden;
-            border-radius: 12px;
-            height: 500px;
-            cursor: pointer;
         }
 
-        .machinery-card-item::before {
+        /* Animated background particles */
+        .tvs-animated-bg-particle {
             position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(18, 15, 12, 0.75), rgba(18, 15, 12, 0));
-            top: 0;
-            left: 0;
-            transition: all 0.4s ease-in-out;
-            border-radius: 12px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 183, 3, 0.1), transparent);
+            animation: tvs-particle-float 15s infinite ease-in-out;
+        }
+
+        .tvs-animated-bg-particle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .tvs-animated-bg-particle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+
+        .tvs-animated-bg-particle:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            bottom: 10%;
+            left: 40%;
+            animation-delay: 6s;
+        }
+
+        @keyframes tvs-particle-float {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.1; }
+            50% { transform: translate(50px, 50px) scale(1.1); opacity: 0.2; }
+        }
+
+        .tvs-main-content-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
             z-index: 2;
         }
 
-        .machinery-card-item:hover::before {
-            background: linear-gradient(0deg, rgba(18, 15, 12, 0.85), rgba(18, 15, 12, 0.2));
+        /* Featured Products Banner */
+        .tvs-featured-banner-area {
+            position: relative;
+            margin-bottom: 60px;
         }
 
-        .machinery-card-img {
+        .tvs-rotated-corner-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: linear-gradient(135deg, #00e676, #00c853);
+            color: white;
+            padding: 40px 80px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transform: rotate(45deg);
+            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4);
+            z-index: 10;
+            letter-spacing: 1px;
+        }
+
+        .tvs-centered-section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .tvs-power-section-label {
+            display: inline-block;
+            background: rgba(255, 183, 3, 0.15);
+            border: 2px solid rgba(255, 183, 3, 0.4);
+            color: #FFB703;
+            padding: 8px 24px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .tvs-gradient-main-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tvs-intro-subtitle-text {
+            font-size: 1.15rem;
+            color: #b8c5d6;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        /* Products Grid */
+        .tvs-featured-products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .tvs-interactive-product-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 183, 3, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tvs-interactive-product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 183, 3, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .tvs-interactive-product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 183, 3, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 15px 40px rgba(255, 183, 3, 0.2);
+        }
+
+        .tvs-interactive-product-card:hover::before {
+            opacity: 1;
+        }
+
+        .tvs-product-image-wrapper {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .tvs-rounded-product-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid rgba(255, 183, 3, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 183, 3, 0.2);
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 183, 3, 0.1), rgba(255, 140, 0, 0.1));
+        }
+
+        .tvs-rounded-product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
         }
 
-        .machinery-card-item:hover .machinery-card-img {
-            transform: scale(1.1);
-        }
-
-        .machinery-content-overlay {
+        .tvs-floating-icon-badge {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-image: linear-gradient(to top, rgba(3, 15, 39, 0.85), transparent);
-            z-index: 3;
+            bottom: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00e676, #00c853);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 20px rgba(0, 230, 118, 0.4);
+            z-index: 2;
         }
 
-        .machinery-inner-content {
-            padding: 45px 35px 15px 35px;
-            transition: transform 0.4s ease;
-            transform: translateY(90px);
+        .tvs-product-details-content {
+            flex: 1;
+            position: relative;
+            z-index: 2;
         }
 
-        .machinery-card-item:hover .machinery-inner-content {
-            transform: translateY(0);
-        }
-
-        .machinery-title-heading {
-            font-size: 1.6rem;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .machinery-title-link {
-            color: #fff;
-            text-decoration: none;
+        .tvs-category-tag-label {
+            display: inline-block;
+            background: rgba(255, 183, 3, 0.15);
+            color: #FFB703;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .machinery-description-text {
-            color: #e0e3e5;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease-in-out;
-            line-height: 1.7;
+        .tvs-product-name-heading {
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tvs-product-desc-text {
             font-size: 0.95rem;
+            color: #8899ab;
+            line-height: 1.6;
         }
 
-        .machinery-card-item:hover .machinery-description-text {
+        /* Popular Products Section */
+        .tvs-popular-products-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 183, 3, 0.15);
+            border-radius: 32px;
+            padding: 50px;
+            margin-bottom: 60px;
+        }
+
+        .tvs-popular-section-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .tvs-popular-section-subtitle {
+            font-size: 1rem;
+            color: #8899ab;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tvs-popular-items-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tvs-popular-product-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, rgba(26, 39, 66, 0.8), rgba(15, 30, 58, 0.8));
+            border: 1px solid rgba(255, 183, 3, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .tvs-popular-product-item:hover {
+            transform: scale(1.05);
+            border-color: rgba(255, 183, 3, 0.5);
+            box-shadow: 0 15px 40px rgba(255, 183, 3, 0.3);
+        }
+
+        .tvs-popular-product-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            transition: opacity 0.4s ease;
+        }
+
+        .tvs-popular-product-item:hover img {
             opacity: 1;
-            visibility: visible;
         }
 
-        .machinery-action-footer {
-            padding: 15px 35px 30px;
-            margin-top: 30px;
+        /* CTA Banner */
+        .tvs-promotional-cta-banner {
+            background: linear-gradient(135deg, #00e676, #00c853);
+            border-radius: 32px;
+            padding: 60px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 230, 118, 0.3);
         }
 
-        .machinery-link-btn {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
+        .tvs-promotional-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+            animation: tvs-banner-rotate-slow 20s linear infinite;
+        }
+
+        @keyframes tvs-banner-rotate-slow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .tvs-cta-banner-title {
+            font-size: 2rem;
+            color: #0a1628;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tvs-cta-banner-description {
+            font-size: 1rem;
+            color: rgba(10, 22, 40, 0.8);
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tvs-shop-now-action-btn {
             display: inline-flex;
             align-items: center;
+            gap: 12px;
+            background: white;
+            color: #00c853;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .tvs-shop-now-action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tvs-shop-now-action-btn i {
+            font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
 
-        .machinery-link-btn:hover {
+        .tvs-shop-now-action-btn:hover i {
             transform: translateX(5px);
         }
 
-        .machinery-link-btn i {
-            margin-left: 10px;
-            transition: margin-left 0.3s ease;
-        }
-
-        .machinery-link-btn:hover i {
-            margin-left: 15px;
-        }
-
-        .qc-testing-section {
-            padding: 80px 40px;
-            border-radius: 15px;
-            margin-top: 50px;
-        }
-
-        .qc-section-title {
-            font-size: 2.3rem;
-            color: #1a1a2e;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .qc-intro-text {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 35px;
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-
-        .qc-features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .qc-feature-card {
-            background: #1a1a1a;
-            padding: 30px;
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .qc-feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(41, 41, 41, 0.3);
-        }
-
-        .qc-feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .qc-feature-text {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        .qc-testing-list {
-            margin-top: 40px;
-            background: #f8f9fa;
-            text-align: center;
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .qc-testing-title {
-            font-size: 1.5rem;
-            color: #1a1a2e;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        .qc-testing-description {
-            font-size: 1.05rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        @media (max-width: 768px) {
-            .infra-hero-title {
-                font-size: 2.2rem;
-            }
-
-            .infra-intro-title {
-                font-size: 2rem;
-            }
-
-            .qc-section-title {
-                font-size: 1.9rem;
-            }
-
-            .machinery-grid-wrapper {
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .tvs-featured-products-grid {
                 grid-template-columns: 1fr;
             }
 
-            .machinery-inner-content {
-                padding: 30px 25px 10px 25px;
+            .tvs-popular-items-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .qc-testing-section {
-                padding: 50px 25px;
+            .tvs-gradient-main-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tvs-transformer-showroom-wrapper {
+                padding: 60px 15px;
+            }
+
+            .tvs-rotated-corner-badge {
+                font-size: 0.8rem;
+                padding: 30px 60px;
+            }
+
+            .tvs-gradient-main-title {
+                font-size: 2rem;
+            }
+
+            .tvs-intro-subtitle-text {
+                font-size: 1rem;
+            }
+
+            .tvs-interactive-product-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .tvs-rounded-product-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .tvs-popular-items-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tvs-popular-products-section,
+            .tvs-promotional-cta-banner {
+                padding: 40px 25px;
+            }
+
+            .tvs-cta-banner-title {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <!-- <section class="infra-hero-section">
-        <h1 class="infra-hero-title">Manufacturing that Defines Reliability</h1>
-        <p class="infra-hero-subtitle">Our 1,00,000 sq. ft. advanced facility ensures precision engineering, strict quality control, and fast delivery timelines. Every transformer undergoes rigorous testing using modern equipment such as Vacuum Plants, Oil Filtration Units, Air Compressors, Electric Ovens, and QC Systems, ensuring dependable and long-lasting performance.</p>
-    </section> -->
+    <section class="tvs-transformer-showroom-wrapper">
+        <div class="tvs-animated-bg-particle"></div>
+        <div class="tvs-animated-bg-particle"></div>
+        <div class="tvs-animated-bg-particle"></div>
 
-    <!-- Main Content -->
-    <div class="infra-main-container">
-        <!-- Introduction -->
-        <div class="infra-intro-section">
-            <div class="section-title mb-5">
-                    <h3>Infrastructure</h3>
-                    <h2 class="tp-section-title">Manufacturing that Defines Reliability</h2>
-             
-                    <p class="history-desc">Our 1,00,000 sq. ft. advanced facility ensures precision engineering, strict quality control, and fast delivery timelines. Every transformer undergoes rigorous testing using modern equipment such as Vacuum Plants, Oil Filtration Units, Air Compressors, Electric Ovens, and QC Systems, ensuring dependable and long-lasting performance. <br><br>
-                At ETT, our strength lies in modern infrastructure and advanced machinery that ensure precision engineering, consistent quality, and reliable performance. Our facility is designed to support end-to-end transformer manufacturing backed by technology-driven processes.</p>
+        <div class="tvs-main-content-container">
+            <!-- Featured Banner with Corner Badge -->
+            <div class="tvs-featured-banner-area">
+                <div class="tvs-rotated-corner-badge">FEATURED</div>
                 
+                <div class="tvs-centered-section-header">
+                    <span class="tvs-power-section-label">⚡ Transform Your Power Solutions</span>
+                    <h1 class="tvs-gradient-main-title">Virtual Showroom Experience</h1>
+                    <p class="tvs-intro-subtitle-text">
+                        Explore our cutting-edge transformer technology from the comfort of your workspace. 
+                        Browse products, specifications, and get instant expert guidance 24/7.
+                    </p>
                 </div>
-            <!-- <h2 class="infra-intro-title">Manufacturing that Defines Reliability</h2>
-            <p class="infra-intro-description">Our 1,00,000 sq. ft. advanced facility ensures precision engineering, strict quality control, and fast delivery timelines. Every transformer undergoes rigorous testing using modern equipment such as Vacuum Plants, Oil Filtration Units, Air Compressors, Electric Ovens, and QC Systems, ensuring dependable and long-lasting performance. <br><br>
-                At ETT, our strength lies in modern infrastructure and advanced machinery that ensure precision engineering, consistent quality, and reliable performance. Our facility is designed to support end-to-end transformer manufacturing backed by technology-driven processes.</p> -->
+            </div>
+
+            <!-- Featured Products Grid -->
+            <div class="tvs-featured-products-grid">
+                <div class="tvs-interactive-product-card">
+                    <div class="tvs-product-image-wrapper">
+                        <div class="tvs-rounded-product-image">
+                            <svg width="100%" height="100%" viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="transformerGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FFB703;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="60" fill="url(#transformerGrad1)" opacity="0.3"/>
+                                <circle cx="100" cy="100" r="45" fill="none" stroke="#FFB703" stroke-width="3"/>
+                                <circle cx="100" cy="100" r="30" fill="none" stroke="#FFA500" stroke-width="2"/>
+                                <circle cx="100" cy="100" r="15" fill="#FFD700"/>
+                                <text x="100" y="115" font-size="40" fill="#0a1628" text-anchor="middle">⚡</text>
+                            </svg>
+                        </div>
+                        <div class="tvs-floating-icon-badge">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                    </div>
+                    <div class="tvs-product-details-content">
+                        <span class="tvs-category-tag-label">Virtual Reality</span>
+                        <h3 class="tvs-product-name-heading">Virtual Reality GM</h3>
+                        <p class="tvs-product-desc-text">
+                            Immerse yourself in our 3D transformer showroom with VR technology. 
+                            Explore every detail and specification interactively.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tvs-interactive-product-card">
+                    <div class="tvs-product-image-wrapper">
+                        <div class="tvs-rounded-product-image">
+                            <svg width="100%" height="100%" viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="transformerGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#00e676;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#00c853;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="60" y="40" width="80" height="120" rx="10" fill="url(#transformerGrad2)" opacity="0.3"/>
+                                <rect x="70" y="50" width="60" height="80" rx="5" fill="none" stroke="#00e676" stroke-width="3"/>
+                                <circle cx="100" cy="140" r="8" fill="#00e676"/>
+                                <text x="100" y="105" font-size="35" fill="#00e676" text-anchor="middle">📱</text>
+                            </svg>
+                        </div>
+                        <div class="tvs-floating-icon-badge">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="tvs-product-details-content">
+                        <span class="tvs-category-tag-label">Mobile Access</span>
+                        <h3 class="tvs-product-name-heading">Virtual Reality YC</h3>
+                        <p class="tvs-product-desc-text">
+                            Access our showroom from any device, anywhere. Browse specifications, 
+                            compare models, and request quotes on the go.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Virtual Reality Products -->
+            <div class="tvs-popular-products-section">
+                <h2 class="tvs-popular-section-title">Popular Virtual Reality Products</h2>
+                <p class="tvs-popular-section-subtitle">
+                    Discover our most sought-after transformer solutions. Each model is optimized 
+                    for reliability, efficiency, and performance.
+                </p>
+                
+                <div class="tvs-popular-items-grid">
+                    <div class="tvs-popular-product-item">
+                        <svg width="100%" height="100%" viewBox="0 0 300 300">
+                            <rect x="50" y="80" width="200" height="140" rx="15" fill="#1a2742" stroke="#FFB703" stroke-width="3"/>
+                            <rect x="70" y="100" width="160" height="100" rx="10" fill="#0f1e3a"/>
+                            <circle cx="150" cy="150" r="30" fill="#FFB703"/>
+                            <text x="150" y="165" font-size="35" fill="#0a1628" text-anchor="middle">⚡</text>
+                            <rect x="130" y="230" width="40" height="30" rx="5" fill="#FFB703"/>
+                        </svg>
+                    </div>
+                    <div class="tvs-popular-product-item">
+                        <svg width="100%" height="100%" viewBox="0 0 300 300">
+                            <circle cx="150" cy="150" r="80" fill="none" stroke="#FFB703" stroke-width="4"/>
+                            <circle cx="150" cy="150" r="60" fill="none" stroke="#FFA500" stroke-width="3"/>
+                            <circle cx="150" cy="150" r="40" fill="none" stroke="#FF8C00" stroke-width="2"/>
+                            <circle cx="150" cy="150" r="25" fill="#FFD700"/>
+                            <text x="150" y="165" font-size="40" fill="#0a1628" text-anchor="middle">⚙️</text>
+                        </svg>
+                    </div>
+                    <div class="tvs-popular-product-item">
+                        <svg width="100%" height="100%" viewBox="0 0 300 300">
+                            <polygon points="150,60 250,240 50,240" fill="#1a2742" stroke="#FFB703" stroke-width="3"/>
+                            <polygon points="150,100 220,210 80,210" fill="#0f1e3a"/>
+                            <circle cx="150" cy="170" r="35" fill="#FFB703"/>
+                            <text x="150" y="185" font-size="35" fill="#0a1628" text-anchor="middle">🔋</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="tvs-promotional-cta-banner">
+                <h2 class="tvs-cta-banner-title">Don't Miss the 50% Discount If You Shop Today</h2>
+                <p class="tvs-cta-banner-description">
+                    Limited time offer on selected transformer models. Experience premium quality 
+                    at unbeatable prices. Virtual consultation included free!
+                </p>
+                <a href="#" class="tvs-shop-now-action-btn">
+                    Shop Now
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
-
-        <!-- Machinery Grid -->
-        <div class="machinery-grid-wrapper">
-            <!-- Card 1: Oil Filling Machine -->
-            <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&h=600&fit=crop" alt="Oil Filling Machine" class="machinery-card-img">
-                <div class="machinery-content-overlay">
-                    <div class="machinery-inner-content">
-                        <h3 class="machinery-title-heading">
-                            <a href="#" class="machinery-title-link">Oil Filling Machine</a>
-                        </h3>
-                        <p class="machinery-description-text">Our high-performance Oil Filling System uses vacuum-assisted filling, filtration, and degassing to ensure moisture-free and contaminant-free insulating oil. With multi-stage filtration and PLC-controlled accuracy, it delivers clean and consistent oil filling for transformers of all sizes - ensuring long life and electrical stability.</p>
-                    </div>
-                    <div class="machinery-action-footer">
-                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2: Mark Screw Air Compressor -->
-            <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop" alt="Mark Screw Air Compressor" class="machinery-card-img">
-                <div class="machinery-content-overlay">
-                    <div class="machinery-inner-content">
-                        <h3 class="machinery-title-heading">
-                            <a href="#" class="machinery-title-link">Mark Screw Air Compressor</a>
-                        </h3>
-                        <p class="machinery-description-text">The Mark Screw Air Compressor provides a steady and energy-efficient supply of compressed air for continuous manufacturing operations. Compact, low-noise, and low-maintenance, it plays an essential role in powering industrial tools and equipment across our facility.</p>
-                    </div>
-                    <div class="machinery-action-footer">
-                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3: Electric Oven -->
-            <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&h=600&fit=crop" alt="Electric Oven" class="machinery-card-img">
-                <div class="machinery-content-overlay">
-                    <div class="machinery-inner-content">
-                        <h3 class="machinery-title-heading">
-                            <a href="#" class="machinery-title-link">Electric Oven</a>
-                        </h3>
-                        <p class="machinery-description-text">Our industrial Electric Oven offers precise temperature control and uniform heat distribution for heating, drying, and curing applications. It ensures consistent output, energy efficiency, and long-term durability - supporting various thermal processes in transformer manufacturing.</p>
-                    </div>
-                    <div class="machinery-action-footer">
-                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4: Vacuum Plant -->
-            <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" alt="Vacuum Plant for Dry Type Transformers" class="machinery-card-img">
-                <div class="machinery-content-overlay">
-                    <div class="machinery-inner-content">
-                        <h3 class="machinery-title-heading">
-                            <a href="#" class="machinery-title-link">Vacuum Plant for Dry Type Transformers</a>
-                        </h3>
-                        <p class="machinery-description-text">This high-efficiency vacuum unit removes moisture, air, and impurities from windings and insulation systems. By creating deep vacuum levels, it significantly improves the dielectric strength and reliability of dry-type transformers, ensuring long operational life.</p>
-                    </div>
-                    <div class="machinery-action-footer">
-                        <a href="#" class="machinery-link-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- QC & Testing Section -->
-        <section class="qc-testing-section">
-            <h2 class="qc-section-title">QC & Testing Machines</h2>
-            <p class="qc-intro-text">We operate a complete range of quality control instruments to validate every component with precision. Our QC systems ensure accurate measurements, strict compliance, repeatable inspection results, and high mechanical and electrical reliability.</p>
-
-            <div class="qc-features-grid">
-                <div class="qc-feature-card">
-                    <div class="qc-feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <p class="qc-feature-text">Accurate measurements</p>
-                </div>
-
-                <div class="qc-feature-card">
-                    <div class="qc-feature-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <p class="qc-feature-text">Strict compliance with BIS/BEE/IEC standards</p>
-                </div>
-
-                <div class="qc-feature-card">
-                    <div class="qc-feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <p class="qc-feature-text">Repeatable inspection results</p>
-                </div>
-
-                <div class="qc-feature-card">
-                    <div class="qc-feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <p class="qc-feature-text">High mechanical and electrical reliability</p>
-                </div>
-            </div>
-
-            <div class="qc-testing-list">
-                <h3 class="qc-testing-title">Our Testing Infrastructure Includes:</h3>
-                <p class="qc-testing-description">Tools for dimensional checks, hardness testing, insulation analysis, and advanced inspection methods to ensure zero-compromise quality.</p>
-            </div>
-        </section>
-    </div>
+    </section>
 </body>
 </html>
