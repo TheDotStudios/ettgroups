@@ -707,7 +707,7 @@
                                     <a class="nav-link active" href="index1.html">Home</a>
                                 </li>
                                 <li class="nav-item mega-menu-item submenu submenu-n">
-                                    <a class="nav-link" href="about.html">Pages</a>
+                                    <a class="nav-link" href="about.html">Company</a>
                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                                         <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
@@ -920,7 +920,7 @@
                                   <li class="nav-item mega-menu-item submenu submenu-n">
                                     <a class="nav-link" href="#!">Resources</a>
                                     <ul class="n-flex">                                        
-                                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="gallery-main.html">Gallery</a></li>
                                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                                         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                                         <li class="nav-item"><a class="nav-link" href="case-study.html">Case Studies</a></li>
@@ -1061,7 +1061,7 @@
                                 Trusted Nationwide
                             </p>
                             <div class="excellence-hero-buttons">
-                                <a href="#quote" class="custom-button-1">
+                                <a href="#quote" class="custom-button-1" onclick="openRFQ()">
                                     Get a Quote
                                     <svg class="arrow" viewBox="0 0 24 24">
                                         <line x1="7" y1="12" x2="21" y2="12"></line>
@@ -1080,7 +1080,7 @@
                                 Showcase of our top transformers
                             </p>
                             <div class="excellence-hero-buttons">
-                                <a href="#products" class="custom-button-1">
+                                <a href="offload.html" class="custom-button-1">
                                     Explore Products
                                     <svg class="arrow" viewBox="0 0 24 24">
                                         <line x1="7" y1="12" x2="21" y2="12"></line>
@@ -1099,7 +1099,7 @@
                                 Trusted Power Solutions for Energy, <br>Industrial & Commercial Applications
                             </p>
                             <div class="excellence-hero-buttons">
-                                <a href="#industries" class="custom-button-1">
+                                <a href="industry-serve.html" class="custom-button-1">
                                     Know More
                                     <svg class="arrow" viewBox="0 0 24 24">
                                         <line x1="7" y1="12" x2="21" y2="12"></line>
@@ -1118,7 +1118,7 @@
                                 ISO 9001:2015 & ISO 14001:2015 certified manufacturing, <br>BIS & BEE approvals, and rigorous in-house testing
                             </p>
                             <div class="excellence-hero-buttons">
-                                <a href="#certifications" class="custom-button-1">
+                                <a href="certifications.html" class="custom-button-1">
                                     View Certifications
                                     <svg class="arrow" viewBox="0 0 24 24">
                                         <line x1="7" y1="12" x2="21" y2="12"></line>
@@ -1239,7 +1239,7 @@
         excellenceUpdateThumbnailPosition();
     </script>
     <!-- Hero Section End -->
-    <div class="our-expertise comman-padding-2" id="about-section">
+    <div class="our-expertise comman-padding-2 sm-pb-20px" id="about-section">
      
       <div class="container">
         <div class="row">
@@ -1310,429 +1310,358 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
         </div>
       </div>
     </div>
-    <div class="stats-showcase-container pt-50px pb-200px">
-    <!-- Slider Container (Full Width) -->
-    <div class="stats-slider-wrapper">
-        <div class="stats-slider-container">
-            <div class="stats-slider-track">
-                <!-- Stat Card 1 -->
-                <div class="stats-slide-item">
-                    <div class="stats-card stats-card-light">
-                        <div class="stats-card-content">
-                            <h2 class="stats-card-subtitle">Government Projects </h2>
-                            <div class="stats-info-block">
-                                <h2 class="stats-number">
-                                    <span class="counter-value" data-target="294">0</span><span class="stats-accent">+</span>
-                                </h2>
-                                <div class="stats-description">Government Projects </div>
+ <div class="stats-showcase-container">
+        <div class="stats-slider-wrapper">
+            <div class="stats-slider-container">
+                <div class="stats-slider-track">
+                    <!-- Stat Card 1 -->
+                    <div class="stats-slide-item">
+                        <div class="stats-card stats-card-light">
+                            <div class="stats-card-content">
+                                <h2 class="stats-card-subtitle">Government Projects</h2>
+                                <div class="stats-info-block">
+                                    <h2 class="stats-number">
+                                        <span class="counter-value" data-target="294">0</span><span class="stats-accent">+</span>
+                                    </h2>
+                                    <div class="stats-description">Government Projects</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="stats-image-container">
-                            <img src="./images/susbstation.png" 
-                                 alt="3D visualization" 
-                                 class="stats-visual-img">
+                            <div class="stats-image-container">
+                                <img src="./images/susbstation.png" 
+                                     alt="3D visualization" 
+                                     class="stats-visual-img"
+                                     loading="eager">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Stat Card 2 -->
-                <div class="stats-slide-item">
-                    <div class="stats-card stats-card-dark">
-                        <div class="stats-card-content-inner">
-                            <h2 class="stats-card-subtitle stats-subtitle-light">Authorized Dealers 
-</h2>
-                            <div class="stats-info-block stats-info-light">
-                                <h2 class="stats-number stats-number-light">
-                                    <span class="counter-value" data-target="40">0</span><span class="stats-accent">+</span>
-                                </h2>
-                                <div class="stats-description">Authorized Dealers 
-</div>
+                    <!-- Stat Card 2 -->
+                    <div class="stats-slide-item">
+                        <div class="stats-card stats-card-dark">
+                            <div class="stats-card-content-inner">
+                                <h2 class="stats-card-subtitle stats-subtitle-light">Authorized Dealers</h2>
+                                <div class="stats-info-block stats-info-light">
+                                    <h2 class="stats-number stats-number-light">
+                                        <span class="counter-value" data-target="40">0</span><span class="stats-accent">+</span>
+                                    </h2>
+                                    <div class="stats-description">Authorized Dealers</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="stats-image-container stats-image-top">
-                            <img src="./images/dry type.png" 
-                                 alt="3D hand visualization" 
-                                 class="stats-visual-img">
+                            <div class="stats-image-container stats-image-top">
+                                <img src="./images/dry type.png" 
+                                     alt="3D hand visualization" 
+                                     class="stats-visual-img"
+                                     loading="eager">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Stat Card 3 -->
-                <div class="stats-slide-item">
-                    <div class="stats-card stats-card-light">
-                        <div class="stats-card-content">
-                            <h2 class="stats-card-subtitle">Distributors</h2>
-                            <div class="stats-info-block">
-                                <h2 class="stats-number">
-                                    <span class="counter-value" data-target="200">0</span><span class="stats-accent">+</span>
-                                </h2>
-                                <div class="stats-description">Distributors</div>
+                    <!-- Stat Card 3 -->
+                    <div class="stats-slide-item">
+                        <div class="stats-card stats-card-light">
+                            <div class="stats-card-content">
+                                <h2 class="stats-card-subtitle">Distributors</h2>
+                                <div class="stats-info-block">
+                                    <h2 class="stats-number">
+                                        <span class="counter-value" data-target="200">0</span><span class="stats-accent">+</span>
+                                    </h2>
+                                    <div class="stats-description">Distributors</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="stats-image-container">
-                               <img src="./images/susbstation.png" 
-                                 alt="3D visualization" 
-                                 class="stats-visual-img">
+                            <div class="stats-image-container">
+                                <img src="./images/susbstation.png" 
+                                     alt="3D visualization" 
+                                     class="stats-visual-img"
+                                     loading="eager">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Stat Card 4 -->
-                <div class="stats-slide-item">
-                    <div class="stats-card stats-card-dark">
-                        <div class="stats-card-content-inner">
-                            <h2 class="stats-card-subtitle stats-subtitle-light">Active Private Projects </h2>
-                            <div class="stats-info-block stats-info-light">
-                                <h2 class="stats-number stats-number-light">
-                                    <span class="counter-value" data-target="46">0</span><span class="stats-accent">+</span>
-                                </h2>
-                                <div class="stats-description">Active Private Projects </div>
+                    <!-- Stat Card 4 -->
+                    <div class="stats-slide-item">
+                        <div class="stats-card stats-card-dark">
+                            <div class="stats-card-content-inner">
+                                <h2 class="stats-card-subtitle stats-subtitle-light">Active Private Projects</h2>
+                                <div class="stats-info-block stats-info-light">
+                                    <h2 class="stats-number stats-number-light">
+                                        <span class="counter-value" data-target="46">0</span><span class="stats-accent">+</span>
+                                    </h2>
+                                    <div class="stats-description">Active Private Projects</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="stats-image-container stats-image-top">
-                            <img src="./images/dry type.png" 
-                                 alt="3D hand visualization" 
-                                 class="stats-visual-img">
+                            <div class="stats-image-container stats-image-top">
+                                <img src="./images/dry type.png" 
+                                     alt="3D hand visualization" 
+                                     class="stats-visual-img"
+                                     loading="eager">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Stat Card 5 -->
-                <div class="stats-slide-item">
-                    <div class="stats-card stats-card-light">
-                        <div class="stats-card-content">
-                            <h2 class="stats-card-subtitle">Transformers repaired Every Year </h2>
-                            <div class="stats-info-block">
-                                <h2 class="stats-number">
-                                    <span class="counter-value" data-target="1500">0</span><span class="stats-accent">+</span>
-                                </h2>
-                                <div class="stats-description">Transformers repaired Every Year </div>
+                    <!-- Stat Card 5 -->
+                    <div class="stats-slide-item">
+                        <div class="stats-card stats-card-light">
+                            <div class="stats-card-content">
+                                <h2 class="stats-card-subtitle">Transformers Repaired Every Year</h2>
+                                <div class="stats-info-block">
+                                    <h2 class="stats-number">
+                                        <span class="counter-value" data-target="1500">0</span><span class="stats-accent">+</span>
+                                    </h2>
+                                    <div class="stats-description">Transformers Repaired Every Year</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="stats-image-container">
-                            <img src="./images/susbstation.png" 
-                                 alt="3D visualization" 
-                                 class="stats-visual-img">
+                            <div class="stats-image-container">
+                                <img src="./images/susbstation.png" 
+                                     alt="3D visualization" 
+                                     class="stats-visual-img"
+                                     loading="eager">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Stat Card 6 -->
-                <div class="stats-slide-item">
-                    <div class="stats-card stats-card-dark">
-                        <div class="stats-card-content-inner">
-                            <h2 class="stats-card-subtitle stats-subtitle-light">MVA yearly Production</h2>
-                            <div class="stats-info-block stats-info-light">
-                                <h2 class="stats-number stats-number-light">
-                                    <span class="counter-value" data-target="445">0</span><span class="stats-accent">+</span>
-                                </h2>
-                                <div class="stats-description"> MVA yearly Production</div>
+                    <!-- Stat Card 6 -->
+                    <div class="stats-slide-item">
+                        <div class="stats-card stats-card-dark">
+                            <div class="stats-card-content-inner">
+                                <h2 class="stats-card-subtitle stats-subtitle-light">MVA Yearly Production</h2>
+                                <div class="stats-info-block stats-info-light">
+                                    <h2 class="stats-number stats-number-light">
+                                        <span class="counter-value" data-target="445">0</span><span class="stats-accent">+</span>
+                                    </h2>
+                                    <div class="stats-description">MVA Yearly Production</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="stats-image-container stats-image-top">
-                             <img src="./images/dry type.png" 
-                                 alt="3D hand visualization" 
-                                 class="stats-visual-img">
+                            <div class="stats-image-container stats-image-top">
+                                <img src="./images/dry type.png" 
+                                     alt="3D hand visualization" 
+                                     class="stats-visual-img"
+                                     loading="eager">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-    <script src="script.js"></script>
-  <script>
-    // ========================================
-// STATS SHOWCASE SLIDER - 4 Slides Per View
-// ========================================
 
-// Counter Animation Function
-function statsCounterAnimate(statsElement, statsTarget, statsDuration = 2000) {
-    const statsStart = 0;
-    const statsIncrement = statsTarget / (statsDuration / 16); // 60fps
-    let statsCurrent = statsStart;
-    
-    const statsTimer = setInterval(() => {
-        statsCurrent += statsIncrement;
-        if (statsCurrent >= statsTarget) {
-            statsElement.textContent = statsTarget;
-            clearInterval(statsTimer);
-        } else {
-            statsElement.textContent = Math.floor(statsCurrent);
-        }
-    }, 16);
-}
-
-// Intersection Observer for Counter Animation
-const statsObserverOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3
-};
-
-let statsHasAnimated = false;
-
-const statsObserverCallback = (statsEntries, statsObserver) => {
-    statsEntries.forEach(statsEntry => {
-        if (statsEntry.isIntersecting && !statsHasAnimated) {
-            statsHasAnimated = true;
-            
-            // Trigger counter animations
-            const statsCounters = document.querySelectorAll('.counter-value');
-            statsCounters.forEach(statsCounter => {
-                const statsTargetValue = parseInt(statsCounter.getAttribute('data-target'));
-                statsCounter.classList.add('counter-animated');
-                statsCounterAnimate(statsCounter, statsTargetValue);
-            });
-        }
-    });
-};
-
-const statsIntersectionObserver = new IntersectionObserver(statsObserverCallback, statsObserverOptions);
-
-// Observe the stats container
-document.addEventListener('DOMContentLoaded', () => {
-    const statsMainContainer = document.querySelector('.stats-showcase-container');
-    if (statsMainContainer) {
-        statsIntersectionObserver.observe(statsMainContainer);
-    }
-});
-
-// ========================================
-// HORIZONTAL SWIPER SLIDER - 4 Slides Per View
-// ========================================
-
-class StatsHorizontalSwiper {
-    constructor(swiperContainerSelector) {
-        this.swiperWrapper = document.querySelector(swiperContainerSelector);
-        if (!this.swiperWrapper) return;
-        
-        this.swiperTrack = this.swiperWrapper.querySelector('.stats-slider-track');
-        this.swiperSlides = Array.from(this.swiperTrack.querySelectorAll('.stats-slide-item'));
-        this.swiperCurrentIndex = 0;
-        this.swiperTotalSlides = this.swiperSlides.length;
-        this.swiperSlidesPerView = 4;
-        this.swiperAutoplayDelay = 2000;
-        this.swiperAutoplayTimer = null;
-        this.swiperIsTransitioning = false;
-        
-        this.swiperInit();
-    }
-    
-    swiperInit() {
-        // Update slides per view based on screen size
-        this.swiperUpdateSlidesPerView();
-        
-        // Clone slides for infinite loop
-        this.swiperCloneSlides();
-        
-        // Start autoplay
-        this.swiperStartAutoplay();
-        
-        // Pause on hover
-        this.swiperWrapper.addEventListener('mouseenter', () => this.swiperStopAutoplay());
-        this.swiperWrapper.addEventListener('mouseleave', () => this.swiperStartAutoplay());
-        
-        // Handle window resize
-        window.addEventListener('resize', () => this.swiperHandleResize());
-    }
-    
-    swiperUpdateSlidesPerView() {
-        const windowWidth = window.innerWidth;
-        
-        if (windowWidth <= 480) {
-            this.swiperSlidesPerView = 1;
-        } else if (windowWidth <= 768) {
-            this.swiperSlidesPerView = 2;
-        } else if (windowWidth <= 1024) {
-            this.swiperSlidesPerView = 3;
-        } else {
-            this.swiperSlidesPerView = 4;
-        }
-    }
-    
-    swiperCloneSlides() {
-        // Clone first N slides and append to end
-        for (let i = 0; i < this.swiperSlidesPerView; i++) {
-            const swiperClone = this.swiperSlides[i].cloneNode(true);
-            this.swiperTrack.appendChild(swiperClone);
-        }
-        
-        // Update slides array
-        this.swiperSlides = Array.from(this.swiperTrack.querySelectorAll('.stats-slide-item'));
-    }
-    
-    swiperGetSlideWidth() {
-        const swiperFirstSlide = this.swiperSlides[0];
-        if (!swiperFirstSlide) return 0;
-        
-        const swiperStyle = window.getComputedStyle(swiperFirstSlide);
-        const swiperWidth = swiperFirstSlide.offsetWidth;
-        
-        // Get gap from track
-        const swiperTrackStyle = window.getComputedStyle(this.swiperTrack);
-        const swiperGap = parseFloat(swiperTrackStyle.gap) || 0;
-        
-        return swiperWidth + swiperGap;
-    }
-    
-    swiperSlideTo(swiperIndex) {
-        if (this.swiperIsTransitioning) return;
-        
-        this.swiperIsTransitioning = true;
-        const swiperSlideWidth = this.swiperGetSlideWidth();
-        const swiperTranslateX = -swiperIndex * swiperSlideWidth;
-        
-        this.swiperTrack.style.transform = `translateX(${swiperTranslateX}px)`;
-        this.swiperCurrentIndex = swiperIndex;
-        
-        // Handle infinite loop
-        setTimeout(() => {
-            if (this.swiperCurrentIndex >= this.swiperTotalSlides) {
-                this.swiperTrack.style.transition = 'none';
-                this.swiperCurrentIndex = 0;
-                this.swiperTrack.style.transform = `translateX(0px)`;
-                
-                setTimeout(() => {
-                    this.swiperTrack.style.transition = 'transform 0.5s ease-in-out';
-                    this.swiperIsTransitioning = false;
-                }, 50);
-            } else {
-                this.swiperIsTransitioning = false;
-            }
-        }, 500);
-    }
-    
-    swiperNext() {
-        const swiperNextIndex = this.swiperCurrentIndex + 1;
-        this.swiperSlideTo(swiperNextIndex);
-    }
-    
-    swiperStartAutoplay() {
-        this.swiperStopAutoplay();
-        this.swiperAutoplayTimer = setInterval(() => {
-            this.swiperNext();
-        }, this.swiperAutoplayDelay);
-    }
-    
-    swiperStopAutoplay() {
-        if (this.swiperAutoplayTimer) {
-            clearInterval(this.swiperAutoplayTimer);
-            this.swiperAutoplayTimer = null;
-        }
-    }
-    
-    swiperHandleResize() {
-        // Update slides per view
-        const oldSlidesPerView = this.swiperSlidesPerView;
-        this.swiperUpdateSlidesPerView();
-        
-        // If slides per view changed, reset everything
-        if (oldSlidesPerView !== this.swiperSlidesPerView) {
-            this.swiperStopAutoplay();
-            this.swiperCurrentIndex = 0;
-            this.swiperTrack.style.transition = 'none';
-            this.swiperTrack.style.transform = 'translateX(0px)';
-            
-            setTimeout(() => {
-                this.swiperTrack.style.transition = 'transform 0.5s ease-in-out';
-                this.swiperStartAutoplay();
-            }, 50);
-        } else {
-            // Just recalculate position
-            const swiperSlideWidth = this.swiperGetSlideWidth();
-            const swiperTranslateX = -this.swiperCurrentIndex * swiperSlideWidth;
-            this.swiperTrack.style.transition = 'none';
-            this.swiperTrack.style.transform = `translateX(${swiperTranslateX}px)`;
-            
-            setTimeout(() => {
-                this.swiperTrack.style.transition = 'transform 0.5s ease-in-out';
-            }, 50);
-        }
-    }
-}
-
-// Initialize the swiper on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-    const statsCustomSwiper = new StatsHorizontalSwiper('.stats-slider-wrapper');
-});
-
-// Optional: Reset counter animation when scrolling back up
-window.addEventListener('scroll', () => {
-    const statsMainContainer = document.querySelector('.stats-showcase-container');
-    if (!statsMainContainer) return;
-    
-    const statsRect = statsMainContainer.getBoundingClientRect();
-    const statsIsOutOfView = statsRect.bottom < 0 || statsRect.top > window.innerHeight;
-    
-    if (statsIsOutOfView && statsHasAnimated) {
-        // Reset animation flag if user scrolls away and comes back
-        setTimeout(() => {
-            statsHasAnimated = false;
-            const statsCounters = document.querySelectorAll('.counter-value');
-            statsCounters.forEach(statsCounter => {
-                statsCounter.textContent = '0';
-                statsCounter.classList.remove('counter-animated');
-            });
-        }, 500);
-    }
-});
-  </script>
     <script>
-        // Counter Animation Function
-        function animateCounter(element, target, duration = 2000) {
-            const start = 0;
-            const increment = target / (duration / 16); // 60 FPS
-            let current = start;
+        // ========================================
+        // STATS COUNTER ANIMATION - FIXED VERSION
+        // ========================================
+
+        function statsCounterAnimate(statsElement, statsTarget, statsDuration = 2000) {
+            const statsStart = 0;
+            const statsIncrement = statsTarget / (statsDuration / 16);
+            let statsCurrent = statsStart;
             
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target;
-                    clearInterval(timer);
+            const statsTimer = setInterval(() => {
+                statsCurrent += statsIncrement;
+                if (statsCurrent >= statsTarget) {
+                    statsElement.textContent = statsTarget;
+                    clearInterval(statsTimer);
                 } else {
-                    element.textContent = Math.floor(current);
+                    statsElement.textContent = Math.floor(statsCurrent);
                 }
             }, 16);
         }
 
-        // Intersection Observer to trigger animation when in viewport
-        const observerOptions1 = {
-            threshold: 0.5, // Trigger when 50% of element is visible
-            rootMargin: '0px'
+        // Single Intersection Observer for Counter Animation
+        const statsObserverOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
         };
 
-        const observer1 = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                    const target = parseInt(entry.target.getAttribute('data-target'));
-                    animateCounter(entry.target, target);
-                    entry.target.classList.add('animated');
+        let statsHasAnimated = false;
+
+        const statsObserverCallback = (statsEntries) => {
+            statsEntries.forEach(statsEntry => {
+                if (statsEntry.isIntersecting && !statsHasAnimated) {
+                    statsHasAnimated = true;
+                    
+                    const statsCounters = document.querySelectorAll('.counter-value');
+                    statsCounters.forEach(statsCounter => {
+                        const statsTargetValue = parseInt(statsCounter.getAttribute('data-target'));
+                        statsCounterAnimate(statsCounter, statsTargetValue);
+                    });
                 }
             });
-        }, observerOptions1);
+        };
 
-        // Observe all counter elements
+        const statsIntersectionObserver = new IntersectionObserver(statsObserverCallback, statsObserverOptions);
+
+        // ========================================
+        // HORIZONTAL SWIPER SLIDER
+        // ========================================
+
+        class StatsHorizontalSwiper {
+            constructor(swiperContainerSelector) {
+                this.swiperWrapper = document.querySelector(swiperContainerSelector);
+                if (!this.swiperWrapper) return;
+                
+                this.swiperTrack = this.swiperWrapper.querySelector('.stats-slider-track');
+                this.swiperSlides = Array.from(this.swiperTrack.querySelectorAll('.stats-slide-item'));
+                this.swiperCurrentIndex = 0;
+                this.swiperTotalSlides = this.swiperSlides.length;
+                this.swiperSlidesPerView = 4;
+                this.swiperAutoplayDelay = 2000;
+                this.swiperAutoplayTimer = null;
+                this.swiperIsTransitioning = false;
+                
+                this.swiperInit();
+            }
+            
+            swiperInit() {
+                this.swiperUpdateSlidesPerView();
+                this.swiperCloneSlides();
+                this.swiperStartAutoplay();
+                
+                this.swiperWrapper.addEventListener('mouseenter', () => this.swiperStopAutoplay());
+                this.swiperWrapper.addEventListener('mouseleave', () => this.swiperStartAutoplay());
+                
+                window.addEventListener('resize', () => this.swiperHandleResize());
+            }
+            
+            swiperUpdateSlidesPerView() {
+                const windowWidth = window.innerWidth;
+                
+                if (windowWidth <= 480) {
+                    this.swiperSlidesPerView = 1;
+                } else if (windowWidth <= 768) {
+                    this.swiperSlidesPerView = 2;
+                } else if (windowWidth <= 1024) {
+                    this.swiperSlidesPerView = 3;
+                } else {
+                    this.swiperSlidesPerView = 4;
+                }
+            }
+            
+            swiperCloneSlides() {
+                for (let i = 0; i < this.swiperSlidesPerView; i++) {
+                    const swiperClone = this.swiperSlides[i].cloneNode(true);
+                    this.swiperTrack.appendChild(swiperClone);
+                }
+                
+                this.swiperSlides = Array.from(this.swiperTrack.querySelectorAll('.stats-slide-item'));
+            }
+            
+            swiperGetSlideWidth() {
+                const swiperFirstSlide = this.swiperSlides[0];
+                if (!swiperFirstSlide) return 0;
+                
+                const swiperWidth = swiperFirstSlide.offsetWidth;
+                const swiperTrackStyle = window.getComputedStyle(this.swiperTrack);
+                const swiperGap = parseFloat(swiperTrackStyle.gap) || 0;
+                
+                return swiperWidth + swiperGap;
+            }
+            
+            swiperSlideTo(swiperIndex) {
+                if (this.swiperIsTransitioning) return;
+                
+                this.swiperIsTransitioning = true;
+                const swiperSlideWidth = this.swiperGetSlideWidth();
+                const swiperTranslateX = -swiperIndex * swiperSlideWidth;
+                
+                this.swiperTrack.style.transform = `translateX(${swiperTranslateX}px)`;
+                this.swiperCurrentIndex = swiperIndex;
+                
+                setTimeout(() => {
+                    if (this.swiperCurrentIndex >= this.swiperTotalSlides) {
+                        this.swiperTrack.style.transition = 'none';
+                        this.swiperCurrentIndex = 0;
+                        this.swiperTrack.style.transform = `translateX(0px)`;
+                        
+                        setTimeout(() => {
+                            this.swiperTrack.style.transition = 'transform 0.5s ease-in-out';
+                            this.swiperIsTransitioning = false;
+                        }, 50);
+                    } else {
+                        this.swiperIsTransitioning = false;
+                    }
+                }, 500);
+            }
+            
+            swiperNext() {
+                const swiperNextIndex = this.swiperCurrentIndex + 1;
+                this.swiperSlideTo(swiperNextIndex);
+            }
+            
+            swiperStartAutoplay() {
+                this.swiperStopAutoplay();
+                this.swiperAutoplayTimer = setInterval(() => {
+                    this.swiperNext();
+                }, this.swiperAutoplayDelay);
+            }
+            
+            swiperStopAutoplay() {
+                if (this.swiperAutoplayTimer) {
+                    clearInterval(this.swiperAutoplayTimer);
+                    this.swiperAutoplayTimer = null;
+                }
+            }
+            
+            swiperHandleResize() {
+                const oldSlidesPerView = this.swiperSlidesPerView;
+                this.swiperUpdateSlidesPerView();
+                
+                if (oldSlidesPerView !== this.swiperSlidesPerView) {
+                    this.swiperStopAutoplay();
+                    this.swiperCurrentIndex = 0;
+                    this.swiperTrack.style.transition = 'none';
+                    this.swiperTrack.style.transform = 'translateX(0px)';
+                    
+                    setTimeout(() => {
+                        this.swiperTrack.style.transition = 'transform 0.5s ease-in-out';
+                        this.swiperStartAutoplay();
+                    }, 50);
+                } else {
+                    const swiperSlideWidth = this.swiperGetSlideWidth();
+                    const swiperTranslateX = -this.swiperCurrentIndex * swiperSlideWidth;
+                    this.swiperTrack.style.transition = 'none';
+                    this.swiperTrack.style.transform = `translateX(${swiperTranslateX}px)`;
+                    
+                    setTimeout(() => {
+                        this.swiperTrack.style.transition = 'transform 0.5s ease-in-out';
+                    }, 50);
+                }
+            }
+        }
+
+        // Initialize on DOM ready
         document.addEventListener('DOMContentLoaded', () => {
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                observer1.observe(counter);
+            const statsMainContainer = document.querySelector('.stats-showcase-container');
+            if (statsMainContainer) {
+                statsIntersectionObserver.observe(statsMainContainer);
+            }
+            
+            const statsCustomSwiper = new StatsHorizontalSwiper('.stats-slider-wrapper');
+            
+            // Preload images to prevent layout shift
+            const allImages = document.querySelectorAll('.stats-visual-img');
+            allImages.forEach(img => {
+                if (img.complete) {
+                    img.setAttribute('data-loaded', 'true');
+                } else {
+                    img.addEventListener('load', () => {
+                        img.setAttribute('data-loaded', 'true');
+                    });
+                }
             });
         });
     </script>
- 
    
-<section class="products-section comman-padding-2 sm-ps-20px sm-pe-20px md-pe-20px md-ps-20px" id="product-section">
+<section class="products-section comman-padding-2 " id="product-section">
    <!-- <img src="https://cdn.prod.website-files.com/66e428d73c8b4f3072c80344/66e53eb322fd5a8e2a4a6091_vector-04.svg" loading="eager" alt="" class="about-dark-shape-one"> -->
     <img src="https://cdn.prod.website-files.com/66e428d73c8b4f3072c80344/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-one">
-    <div class="container-fluid">
+    <div class="container-fluid sm-pt-50px">
       <div class="col-md-12">
         <div class="row">
           <div class="col-lg-12 service-top">
            <div class="row">
             <div class="col-md-6">
-              <div class="section-title mb-5">
+              <div class="section-title mb-5 sm-mb-20">
                 <h3 class="">Our Products</h3>
                 <h2 class="tp-section-title">
                   Lorem, ipsum dolor sit<br> amet consectetur adipisicing elit
@@ -1858,7 +1787,7 @@ window.addEventListener('scroll', () => {
       </div>
     </div>
   </section>
-    <section class="history-section pt-200px pb-200px">
+    <section class="history-section pt-200px pb-200px sm-pt-50px sm-pb-70px">
         <!-- <img src="https://cdn.prod.website-files.com/66e428d73c8b4f3072c80344/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-one"> -->
         <div class="history-tab-overlay-wrap left">
             <img src="./images/67b411444a2bc04d71c7d17f_history-left-image.png" loading="lazy" sizes="100vw" srcset="./images/67b411444a2bc04d71c7d17f_history-left-image.png" alt="History Left Image " class="history-tab-overlay-image">
@@ -1866,7 +1795,7 @@ window.addEventListener('scroll', () => {
         <div class="container pt-70px">
             <div class="history-area">
                 <div class="d-flex align-items-center justify-content-center text-center">
-                 <div class="section-title mb-5">
+                 <div class="section-title mb-5 sm-mb-20">
                     <h3>Lorem, ipsum dolor</h3>
                     <h2 class="tp-section-title">Our Timeline View</h2>
              
@@ -1875,7 +1804,7 @@ window.addEventListener('scroll', () => {
                 </div>
                 </div>
 
-                <div class="history-tabs pt-20px">
+                <div class="history-tabs pt-20px sm-pt-0px">
                     <div class="history-tab-menu">
                         <a href="#" class="history-tab-link active" data-tab="2014">
                             2014
@@ -2135,14 +2064,14 @@ window.addEventListener('scroll', () => {
             });
         });
     </script>
-  <section class="portfolio-section">
+  <section class="portfolio-section sm-pt-100px sm-pb-100px">
         <img src="https://cdn.prod.website-files.com/66e428d73c8b4f3072c80344/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-one">
         <img src="https://cdn.prod.website-files.com/66e428d73c8b4f3072c80344/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-two">
         
         <div class="container-1288 ">
             <!-- Header -->
             <div class="portfolio-header">
-                <div class="section-title mb-5">
+                <div class="section-title mb-5 sm-mb-10">
                     <h3>Lorem, ipsum dolor</h3>
                     <h2 class="tp-section-title" style="color: #fff !important;">Industries We Power</h2>
                 </div>
@@ -2240,7 +2169,7 @@ window.addEventListener('scroll', () => {
             <!-- Stats -->
             <div class="portfolio-stats">
                 <div class="stats-content">
-                    <span class="stats-icon">⭐</span>
+                    <span class="stats-icon fa fa-star"></span>
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
                     <span class="stats-highlight">Lorem, ipsum dolor.</span>
                 </div>
@@ -2301,12 +2230,12 @@ window.addEventListener('scroll', () => {
             }
         });
     </script>
-  <section class="pt-200px pb-200px">
+  <section class="pt-200px pb-200px sm-pt-50px sm-pb-50px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="tp-about-2-heading mb-60">
-                       <div class="section-title mb-5">
+                    <div class="tp-about-2-heading mb-60 sm-mb-20">
+                       <div class="section-title mb-5 sm-mb-10">
                 <h3 class="">Lorem, ipsum</h3>
                 <h2 class="tp-section-title">
                  Why Industries <br> Choose ETT
@@ -2415,7 +2344,7 @@ window.addEventListener('scroll', () => {
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <div class="tp-about-2-counter animate-counter-section">
+                    <div class="tp-about-2-counter animate-counter-section sm-pt-50px">
                         <div class="tp-counter-item mb-55">
                             <div class="tp-counter-title">
                                 <h4 class="tp-counter-item-title">
@@ -2647,7 +2576,7 @@ We use low-loss cores, premium conductors, and engineered insulation to reduce e
       </div>
     </section> -->
    
-    <div class="award-section pt-200px pb-200px sm-ps-20px sm-pe-20px md-pe-20px md-ps-20px">
+    <div class="award-section pt-200px pb-200px sm-pt-50px sm-pb-50px">
         <img src="https://cdn.prod.website-files.com/66e428d73c8b4f3072c80344/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-two">
         <div class="container">
          <div class="col-md-12">
@@ -2722,12 +2651,75 @@ We use low-loss cores, premium conductors, and engineered insulation to reduce e
               </div>
           </div>
       </div>
-      
+          <!-- Mobile View - Swiper Slider -->
+            <div class="awards-list mobile-view">
+                <div class="swiper awardSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="award-item">
+                                <div class="award-content">
+                                    <div class="award-center">
+                                        <div class="icon-box">
+                                            <img src="images/Logo-ISO_new.png" alt="Logo-ISO_new" title="Logo-ISO_new" class="logo-first" />
+                                        </div>
+                                    </div>
+                                    <div class="award-left">
+                                        <h2 class="award-title">ISO 9001:2015 Certification</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="award-item award-item-border">
+                                <div class="award-content">
+                                    <div class="award-center">
+                                        <div class="icon-box">
+                                            <img src="images/bis (1).png" alt="BIS-logo" title="BIS-logo" class="logo-first" />
+                                        </div>
+                                    </div>
+                                    <div class="award-left">
+                                        <h2 class="award-title">Bureau of Indian Standards (BIS)</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="award-item">
+                                <div class="award-content">
+                                    <div class="award-center">
+                                        <div class="icon-box">
+                                            <img src="images/nabl (2).png" alt="nabl_logo" title="nabl_logo" class="logo-first" />
+                                        </div>
+                                    </div>
+                                    <div class="award-left">
+                                        <h2 class="award-title">NABL-Certified Welder Training</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
     
         </div>
       </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for mobile view
+        const swiper1 = new Swiper('.awardSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: false,
+        });
+    </script>
   
 
 <!-- <section class="blog-section pt-200px pb-200px">

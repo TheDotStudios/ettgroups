@@ -44,7 +44,602 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- 
+    <style>
+   :root {
+            --color-primary-11: #1c1f3b;
+            --color-primary-22: #ffdc69;
+            --color-primary-33: #c5ceff;
+            --color-secondary-2: #fff9ed;
+            --color-white: white;
+      
+        }
+.section-line-white {
+    border: 1px dashed #fff;
+    opacity: .05;
+    width: 2px;
+    height: 100%;
+}
+      
+        .service-section {
+            position: relative;
+            overflow: clip;
+            /* background-color: #191919; */
+        }
+        /* .service-section .service-inner-wrap{
+            background-color: #0a0a0c;
+
+        } */
+
+         /* .swiper {
+            width: 100%;
+            padding-bottom: 80px;
+        } */
+
+        /* .swiper-slide {
+            width: 440px !important;
+            height: 600px;
+        } */
+
+        .service-slider-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .service-slider-wrapper .swiper{
+          overflow: visible !important;
+        }
+
+        .service-slider {
+            flex: 1;
+            /* overflow: hidden; */
+            /* padding-bottom: 80px; */
+        }
+
+        .service-mask {
+            display: flex;
+            gap: 40px;
+            transition: transform 0.5s ease;
+        }
+
+        .service-slide {
+            min-width: 440px;
+            height: 600px;
+        }
+
+        .service-inline-item {
+            border-radius: 20px;
+            background-color: var(--color-primary-11);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .service-inline-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-inline-item.two {
+            background-color: var(--color-primary-22);
+        }
+
+        .service-inline-item.three {
+            background-color: var(--color-secondary-2);
+        }
+
+        .service-inline-item.four {
+            background-color: #c5ceff;
+        }
+
+        .service-inline-image-wrap {
+            width: auto;
+            margin: 30px;
+            padding: 2px;
+            position: relative;
+            transform: translate3d(130px, -60px, 0px);
+            transition: transform 0.4s ease;
+        }
+
+        .service-inline-item:hover .service-inline-image-wrap {
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        .service-inline-image-wrap.one {
+            background-color: var(--color-primary-11);
+        }
+
+        .service-inline-image-wrap.two {
+            background-color: var(--color-primary-22);
+        }
+
+        .service-inline-image-wrap.three {
+            background-color: var(--color-secondary-22);
+        }
+
+        .service-inline-image-wrap.four {
+            background-color: #c5ceff;
+        }
+
+        .service-inline-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        .service-inline-image-shape {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .service-inline-content {
+            padding: 0 40px 40px;
+            flex-grow: 1;
+        }
+
+        .service-inline-content.one {
+            color: var(--color-primary-33);
+        }
+
+        .service-inline-title {
+            font-family: var(--font-family-heading);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--color-white);
+        }
+
+        .service-inline-title.one {
+            color: var(--color-primary-33);
+        }
+
+        .service-inline-title.two,
+        .service-inline-title.three,
+        .service-inline-title.four {
+            color: var(--color-primary-11);
+        }
+
+        .service-inline-content p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            color: inherit;
+        }
+
+        .service-inline-content.one p {
+            color: var(--color-primary-33);
+        }
+
+        .service-inline-content.two p,
+        .service-inline-content.three p,
+        .service-inline-content.four p {
+            color: var(--color-primary-11);
+        }
+
+        .service-slider-arrow {
+            border-radius: 12px;
+            background-color: var(--color-primary-22);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: absolute;
+            bottom: 80px;
+            z-index: 10;
+        }
+
+        .service-slider-arrow.left {
+            left: -60px;
+        }
+
+        .service-slider-arrow.right {
+            right: -60px;
+        }
+
+        .service-slider-arrow:hover {
+            background-color: var(--color-primary-11);
+        }
+
+        .service-slider-arrow:hover .service-slider-icon {
+            color: var(--color-white);
+        }
+
+        .service-slider-icon {
+            color: #000;
+            font-size: 24px !important;
+            font-weight: 600;
+        }
+        .servicesSwiper .swiper-wrapper{
+          overflow: visible;
+        }
+  /* Custom Swiper Navigation Buttons */
+        .swiper-button-prev,
+        .swiper-button-next {
+            border-radius: 12px;
+            background-color: var(--white);
+            width: 50px;
+            height: 50px;
+            position: relative;
+            transition: all 0.3s ease;
+            /* bottom: 80px; */
+            top: 0;
+            /* right: 0; */
+        }
+        .pos-relative{
+          position: relative;
+    display: flex;
+   position: relative;
+    display: flex;
+    /* justify-content: center; */
+    gap: 10px;
+    padding-top: 25px;
+        }
+        /* .swiper-button-prev {
+            left: -60px;
+        }
+
+        .swiper-button-next {
+            right: -60px;
+        } */
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background-color: var(--color-primary-1);
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .swiper-button-prev:hover:after,
+        .swiper-button-next:hover:after {
+            color: var(--color-white);
+        }
+
+        @media (max-width: 1200px) {
+            .service-slide {
+                min-width: 380px;
+            }
+            .swiper-slide {
+                width: 380px;
+            }
+
+            .swiper-button-prev {
+                left: 10px;
+            }
+
+            .swiper-button-next {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .section-title h2 {
+                font-size: 36px;
+            }
+
+            .service-slide {
+                min-width: 320px;
+            }
+ .swiper-slide {
+                width: 320px;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 40px;
+                height: 40px;
+            }
+
+            .swiper-button-prev:after,
+            .swiper-button-next:after {
+                font-size: 18px;
+            }
+            .service-slider-arrow {
+                display: none;
+            }
+        }
+        .service-inline-image-shape {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0%;
+}
+.service-pos-absolute{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    bottom: -100px;
+   
+    justify-content: center;
+}
+
+  .service-slider-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .service-slider-wrap {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .service-slider {
+            background-color: transparent;
+            height: 100%;
+            overflow: visible;
+            position: relative;
+        }
+
+        .service-mask {
+            width: 30%;
+            height: 600px;
+            margin-bottom: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: visible;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            perspective: 1200px;
+            white-space: nowrap;
+            transition: transform 500ms ease-in-out;
+        }
+
+        .service-slide {
+            display: inline-block;
+            width: 100%;
+            height: 550px;
+            perspective: 800px;
+            vertical-align: top;
+            white-space: normal;
+            flex-shrink: 0;
+            transition: all 500ms ease-in-out;
+        }
+
+        .service-slide-inner {
+            transform-style: preserve-3d;
+            width: 100%;
+            height: 100%;
+            transition: all 500ms ease-in-out;
+        }
+
+        /* Center slide - full opacity, no rotation */
+        .service-slide.center .service-slide-inner {
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        }
+
+        /* Side slides - reduced opacity, rotated */
+        .service-slide:not(.center) .service-slide-inner {
+            opacity: 0.5;
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-30deg) rotateZ(0deg) skew(0deg, 0deg);
+        }
+
+        /* Left side slides get positive Y rotation */
+        .service-slide.left .service-slide-inner {
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(30deg) rotateZ(0deg) skew(0deg, 0deg);
+        }
+
+        .service-item1 {
+            /* border: 1px solid #1a1a1a; */
+            /* border-radius: 20px; */
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: #dedede;
+            transform: rotate(0);
+        }
+
+        .service-item1:hover {
+            transform: scale(1.02);
+        }
+
+        .service-image-wrap {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .service-content-wrap {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .service-content-title {
+            color: #ffffff;
+            margin-bottom: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Arrow buttons */
+        .service-arrow {
+            border-radius: 50%;
+            /* background-color: #ffffff; */
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            /* position: absolute; */
+            z-index: 10;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* border: 1px solid #e0e0e0; */
+            /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+        }
+
+        .service-arrow:hover {
+            background-color: #000;
+            transform: scale(1.1);
+        }
+        .service-arrow-icon.left{
+          transform: rotate(180deg);
+        }
+        /* .service-left-arrow {
+            left: -60px;
+            bottom: 40px;
+        }
+
+        .service-right-arrow {
+            right: -60px;
+            bottom: 40px;
+        } */
+
+        .service-arrow-icon {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+        }
+
+        /* Navigation dots */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d0d0d0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background-color: #1a1a1a;
+            transform: scale(1.3);
+        }
+
+        .slider-dot:hover {
+            background-color: #666;
+        }
+
+        @media (max-width: 1200px) {
+            .service-mask {
+                width: 40%;
+            }
+
+            .service-left-arrow {
+                left: 20px;
+            }
+
+            .service-right-arrow {
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title h1,
+            .section-title .services-text {
+                font-size: 36px;
+            }
+
+            .service-mask {
+                width: 80%;
+                /* height: 450px; */
+                height: 310px;
+            }
+
+            .service-slide {
+                height: 400px;
+            }
+
+            .service-slide[data-position="-1"],
+            .service-slide[data-position="1"] {
+                transform: translateX(0) translateZ(-200px) scale(0.7);
+                opacity: 0.3;
+            }
+
+            .service-slide[data-position="-2"],
+            .service-slide[data-position="2"] {
+                display: none;
+            }
+        }
+
+
+      .text {
+        font-weight: 800;
+        font-size: 280px;
+        line-height: 0.9;
+        text-transform: uppercase;
+        background-image: url("images/text-img.jpg"); /* Explicitly set background-image */
+        background-size: cover; /* Ensures the background covers the text */
+        background-repeat: no-repeat; /* Prevent tiling */
+        background-position: center; /* Centers the image on the text */
+        -webkit-text-fill-color: transparent; /* Makes text transparent to show the background */
+        -webkit-background-clip: text; /* Clips the background to the text area */
+        color: transparent; /* Fallback for browsers not supporting background-clip */
+        display: inline-block;
+      }
+      /* Update the active state to match hover state opacity */
+      .award-item.active::before {
+        opacity: 0.15;
+      }
+
+      /* Remove hover effect since we're using click instead */
+      .award-item:hover::before {
+        opacity: 0; /* Remove the hover effect */
+      }
+     
+    </style>
   </head>
   <body>
     <!-- Preloader Start -->
@@ -100,7 +695,7 @@
         </div>
     </div>
 
-   <header class="main-header">
+  <header class="main-header">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -133,7 +728,7 @@
                                 
                                 <!-- MEGA MENU - Products -->
                                 <li class="nav-item mega-menu-item submenu">
-                                    <a class="nav-link active" href="offload.html">Products</a>
+                                    <a class="nav-link " href="offload.html">Products</a>
                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a class="nav-link" href="about.html">History</a></li>
                                         <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
@@ -141,8 +736,8 @@
                                     </ul>
                                     <div class="mega-menu sm-none">
                                         <div class="segment-tabs">
-                                            <a href="offload.html" class="segment-tab" data-tab="tab1">Off-Load Distribution Transformer</a>
-                                            <a href="onload.html" class="segment-tab active" data-tab="tab2">On-Load Distribution Transformer</a>
+                                            <a href="offload.html" class="segment-tab active" data-tab="tab1">Off-Load Distribution Transformer</a>
+                                            <a href="onload.html" class="segment-tab" data-tab="tab2">On-Load Distribution Transformer</a>
                                             <a href="Furnace-transformer.html" class="segment-tab" data-tab="tab3">Furnace Transformer</a>
                                             <a href="power-transformer-product.html" class="segment-tab" data-tab="tab4">Power Transformer</a>
                                             <a href="#!" class="segment-tab" data-tab="tab5">Three-Phase Transformer</a>
@@ -329,9 +924,9 @@
                                     <a class="nav-link" href="industry-serve.html">Industry Served</a>
                                 </li>
                                   <li class="nav-item mega-menu-item submenu submenu-n">
-                                    <a class="nav-link" href="#!">Resources</a>
+                                    <a class="nav-link active" href="#!">Resources</a>
                                     <ul class="n-flex">                                        
-                                        <li class="nav-item"><a class="nav-link" href="gallery-main.html">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link active" href="gallery-main.html">Gallery</a></li>
                                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                                         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                                         <li class="nav-item"><a class="nav-link" href="case-study.html">Case Studies</a></li>
@@ -401,6 +996,7 @@
 
 
 
+
     <script>
         // Segment tabs functionality - Switch on hover
         const tabs = document.querySelectorAll('.segment-tab');
@@ -443,11 +1039,11 @@
                     <div class="col-lg-12">
                         <!-- Page Header Content Start -->
                         <div class="page-header-content text-center">
-                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">On-Load Distribution Transformer</span></h1>
+                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Gallery</span></h1>
                             <nav class="wow fadeInUp" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
                                 <ol class="breadcrumb" style="justify-content: center !important;">
                                     <li class="breadcrumb-item"><a href="index1.html">home /</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">On-Load Distribution Transformer</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                                 </ol>
                             </nav>
                         </div>
@@ -458,162 +1054,181 @@
         </div>	
         <!-- Page Header Box End -->	
 	</div>
-   <section class="tp-portfolio-details-ptb pt-150px pb-150px">
-        <div class="container">
-            <div class="row"> 
-                <div class="col-lg-12">
-                    <div class="tp-portfolio-details-thumb-main mb-60">
-                        <img src="./images/banner-ett-01.png" alt="Off-Load Distribution Transformer">
-                    </div>
-                </div>
-            </div>
+  
+  <section class="blog-section pt-200px pb-200px">
+     
+        
+        <div class="container-1288">
+            <!-- <div class="blog-heading">
+             <div class="section-title mb-5">
+                <h3 class="">Lorem, ipsum dolor</h3>
+                <h2 class="tp-section-title">
+                  Lorem ipsum dolor sit amet 
+                </h2>
+              </div>
+            </div> -->
             
-            <div class="tp-portfolio-details-info-box pb-90">
-                <!-- <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tp-portfolio-details-item" style="text-align: center; margin-bottom: 20px;">
-                            <span>Product</span>
-                            <h4 class="tp-portfolio-details-item-title" style="font-size: 28px; margin-bottom: 10px;">Off-Load Distribution Transformer</h4>
-                            <p style="font-size: 18px; color: #555; margin: 0;">Energy-Efficient Power with Minimal Maintenance</p>
+            <div class="blog-grid">
+           
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <a href="gallery.html" class="tag">lorem</a>
+                         
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="gallery.html" class="title-link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus</a>
+                        </h3>
+                    </div>
+                    <div class="blog-thumbnail">
+                        <img src="./images/whyus-ett.png" alt="Solar panel inspection">
+                        <div class="blog-overlay-btn">
+                            <a href="gallery.html" class="details-btn">
+                                Details 
+                                <span class="icon-circle">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H9V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
                         </div>
                     </div>
-                </div> -->
+                </article>
                 
-                <div class="tech-specs-slider">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 25px; text-align: center; color: #333;">Technical Specifications</h3>
-                    
-                    <div class="swiper techSwiper pt-70px">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Voltage</span>
-                                    <h4>3.3 / 6.6 / 11 / 22 / 33 KV</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Vector Group</span>
-                                    <h4>Dyn11 / as per requirement</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Frequency</span>
-                                    <h4>50/60 Hz</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Tap Range</span>
-                                    <h4>±10% or +5% to -15% in 1.25% steps (17 positions)</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Winding</span>
-                                    <h4>Paper-insulated copper</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Standards</span>
-                                    <h4>IS-1180, IS-2026, IEC 60076</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Cooling</span>
-                                    <h4>ONAN natural convection</h4>
-                                </div>
-                            </div>
-                             <div class="swiper-slide">
-                                <div class="spec-card">
-                                    <span>Painting</span>
-                                    <h4> Epoxy or as specified</h4>
-                                </div>
-                            </div>
+       
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <a href="gallery.html" class="tag">lorem</a>
+                           
                         </div>
-                        <!-- <div class="swiper-pagination"></div> -->
+                        <h3 class="blog-title">
+                            <a href="gallery.html" class="title-link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus</a>
+                        </h3>
                     </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tp-portfolio-details-text-box mb-70">
-                        <h3 class="tp-portfolio-details-text-title">Product Overview</h3>
-                        <h6 class="mb-2">Smart voltage control. High efficiency. 24/7 reliability.</h6>
-                        <p class="text-1 mb-65">ETT On-Load Distribution Transformers are engineered to deliver stable output voltage even during frequent grid fluctuations. Supported with Automatic Tap Changing functionality, these transformers ensure enhanced energy efficiency, reduced losses, and uninterrupted operations - especially ideal for industrial applications.
-</p>
+                    <div class="blog-thumbnail">
+                        <img src="images/8000 KVA_33_66000.jpg" alt="Solar technician with panels">
+                        <div class="blog-overlay-btn">
+                            <a href="gallery.html" class="details-btn">
+                                Details 
+                                <span class="icon-circle">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H9V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+          
+                <article class="blog-card">
+                   <div class="blog-content">
+                        <div class="blog-tags">
+                            <a href="gallery.html" class="tag">lorem</a>
+                           
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="gallery.html" class="title-link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus</a>
+                        </h3>
+                    </div>
+                    <div class="blog-thumbnail">
+                        <img src="./images/choose_bg.jpg" alt="Solar farm installation">
+                        <div class="blog-overlay-btn">
+                            <a href="gallery.html" class="details-btn">
+                                Details 
+                                <span class="icon-circle">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H9V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                   <article class="blog-card">
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <a href="gallery.html" class="tag">lorem</a>
+                           
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="gallery.html" class="title-link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus</a>
+                        </h3>
+                    </div>
+                    <div class="blog-thumbnail">
+                        <img src="./images/whyus-ett.png" alt="Solar panel inspection">
+                        <div class="blog-overlay-btn">
+                            <a href="gallery.html" class="details-btn">
+                                Details 
+                                <span class="icon-circle">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H9V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+       
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <a href="gallery.html" class="tag">lorem</a>
+                      
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="gallery.html" class="title-link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus</a>
+                        </h3>
+                    </div>
+                    <div class="blog-thumbnail">
+                        <img src="images/8000 KVA_33_66000.jpg" alt="Solar technician with panels">
+                        <div class="blog-overlay-btn">
+                            <a href="gallery.html" class="details-btn">
+                                Details 
+                                <span class="icon-circle">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H9V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+          
+                <article class="blog-card">
+                   <div class="blog-content">
+                        <div class="blog-tags">
+                            <a href="gallery.html" class="tag">lorem</a>
                         
-                        <!-- <h3 class="tp-postfolio-details-text-title">Key Features</h3>
-                        <div class="tp-portfolio-details-text-list">
-                            <ul>
-                                <li>High-grade copper windings for superior conductivity</li>
-                                <li>BIS-approved efficiency standards</li>
-                                <li>Silent operation with minimal noise levels</li>
-                                <li>Stable performance under varying load conditions</li>
-                                <li>Low maintenance requirements</li>
-                                <li>Extended service life and reliability</li>
-                            </ul>
                         </div>
-                        <p>Our transformers are manufactured using advanced technology and quality materials, ensuring consistent performance in diverse environmental conditions. The multi-paper covered copper winding design provides excellent insulation and heat dissipation, contributing to the longevity and efficiency of the unit. Each transformer undergoes rigorous testing to meet international standards and customer specifications.</p> -->
+                        <h3 class="blog-title">
+                            <a href="gallery.html" class="title-link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, minus</a>
+                        </h3>
                     </div>
-                </div>
-                
-                <div class="col-lg-5">
-                    <div class="tp-portfolio-details-thumb">
-                        <img src="./images/onloadtransformers-ett.png" alt="Transformer Detail 1">
+                    <div class="blog-thumbnail">
+                        <img src="./images/choose_bg.jpg" alt="Solar farm installation">
+                        <div class="blog-overlay-btn">
+                            <a href="gallery.html" class="details-btn">
+                                Details 
+                                <span class="icon-circle">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M1 9L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H9V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="tp-portfolio-details-thumb">
-                        <img src="./images/offloadtransformer-ett.png" alt="Transformer Detail 2">
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-    <script>
-        const swiper1 = new Swiper('.techSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 50,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                576: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 25,
-                },
-                992: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-                1200: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
-                }
-            }
-        });
-    </script>
      
     <style>
       .form-control::placeholder {
@@ -787,11 +1402,11 @@
             }
         });
     </script>
-        <!-- Footer Start -->
+     <!-- Footer Start -->
     <footer class="main-footer sm-ps-20px sm-pe-20px  md-pe-20px md-ps-20px pt-100px">
       <div class="container">
         <div class="row">
-                <div class="col-lg-5 col-md-5">
+                <div class="col-lg-4 col-md-4">
                     <!-- About Footer Start -->
                     <div class="about-footer">
                         <!-- Section Title Start -->
@@ -804,34 +1419,14 @@
                     </div>
                     <!-- About Footer End -->
                 </div>
-<!-- <div class="col-lg-2 col-md-2"></div> -->
-                <div class="col-lg-2 col-md-2">
+<div class="col-lg-2 col-md-2"></div>
+                <div class="col-lg-3 col-md-3">
                     <!-- Footer Contact Information Start -->
                     <div class="footer-contact-info">
                         <h3>Contact us</h3>
                          <div class="footer-menu1">
                 <ul>
-                  <li><a href="mailto:info@ettgroups.in">info@ettgroups.in</a></li>
-                  <li><a href="tel:9424733000">+91 9424733000</a></li>
-                  <!-- <li><a href="#!">Lorem</a></li>
-                  <li><a href="#!">Lorem</a></li>
-                  <li><a href="#!">Lorem</a></li> -->
-                </ul>
-              </div>
-                    </div>
-                    <!-- Footer Contact Information End -->
-
-                  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                    <!-- Footer Contact Information Start -->
-                    <div class="footer-contact-info">
-                        <h3>Quick Links</h3>
-                         <div class="footer-menu1">
-                <ul>
-                  <!-- <li><a href="mailto:info@ettgroups.in">info@ettgroups.in</a></li>
-                  <li><a href="tel:9424733000">+91 9424733000</a></li> -->
-                  <li><a href="industry-serve.html">Industries serve</a></li>
+               <li><a href="industry-serve.html">Industries serve</a></li>
                   <li><a href="team.html">Team</a></li>
                   <li><a href="events.html">Events</a></li>
                   <li><a href="certifications.html">Certifications</a></li>
