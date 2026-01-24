@@ -133,9 +133,14 @@
                                 <!-- MEGA MENU - Products -->
                                 <li class="nav-item mega-menu-item submenu">
                                     <a class="nav-link " href="offload.html">Products</a>
-                                      <ul class="n-flex">                                        
-                                        <li class="nav-item"><a class="nav-link" href="about.html">History</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                                       <ul class="n-flex">                                        
+                                        <li class="nav-item"><a href="offload.html">Off-Load Distribution Transformer</a></li>
+                                        <li class="nav-item"><a href="onload.html" >On-Load Distribution Transformer</a></li>
+                                        <li class="nav-item"><a href="Furnace-transformer.html">Furnace Transformer</a></li>
+                                        <li class="nav-item"><a href="power-transformer-product.html">Power Transformer</a></li>
+                                        <li class="nav-item"><a href="#!">Three-Phase Transformer</a></li>
+                                        <li class="nav-item"> <a href="compact-transformer.html">Compact Substation Transformer</a></li>
+                                        <li class="nav-item"><a href="drytype-transformer.html">Dry Type Transformers</a></li>
                                        
                                     </ul>
                                     <div class="mega-menu sm-none">
@@ -459,301 +464,15 @@
         <!-- Page Header Box End -->	
 	</div>
  
-    
-    <style>
-           :root {
-            --tp-theme-primary: var(--color-primary-2);
-            --tp-common-white: #ffffff;
-            --bg-color: #EBF3ED;
-        }
 
-
-        .tp-team-3-heading {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .tp-section-title-pre {
-            display: block;
-            color: var(--tp-theme-primary);
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .tp-section-title {
-            font-size: 42px;
-            font-weight: 700;
-            color: #1a1a1a;
-            line-height: 1.3;
-        }
-
-        .team-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .tp-team-3-item {
-            position: relative;
-            margin-bottom: 30px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .tp-team-3-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .tp-team-3-thumb {
-            overflow: hidden;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .tp-team-3-thumb img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 1.3s;
-            border-radius: 10px;
-        }
-
-        .tp-team-3-item:hover .tp-team-3-thumb img {
-            transform: scale(1.1);
-        }
-
-        .tp-team-3-content {
-            position: absolute;
-            width: 245px;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            visibility: hidden;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            transition: all 0.3s ease-out;
-            z-index: 1;
-            background: var(--tp-theme-primary);
-        }
-
-        .tp-team-3-item:hover .tp-team-3-content {
-            opacity: 1;
-            visibility: visible;
-            bottom: -100px;
-        }
-
-        .tp-team-3-social {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .tp-team-3-social a {
-            color: rgba(255, 255, 255, 0.4);
-            margin: 0 7.5px;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .tp-team-3-social a:hover {
-            color: var(--tp-common-white);
-        }
-
-        .tp-team-3-title {
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 1;
-            letter-spacing: -0.48px;
-            color: var(--tp-common-white);
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .tp-team-3-content p {
-            letter-spacing: -0.32px;
-            color: rgba(255, 255, 255, 0.75);
-            text-align: center;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .read-more-btn {
-               background: unset;
-    color: #fff;
-    /* border-bottom: 1px solid #fff; */
-    border: none;
-    /* border-top: none;
-    border-left: none;
-    border-right: none; */
-    border-radius: none;
-    padding: 0px 20px;
-    /* border-radius: 5px; */
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: block;
-    margin: 0 auto;
-    font-size: 14px;
-        }
-
-        .read-more-btn:hover {
-            /* background: #1a1a1a; */
-            color: var(--tp-common-white);
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 85vh;
-            overflow-y: auto;
-            animation: slideIn 0.3s;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            background: #ebebeb;
-            color: white;
-            padding: 30px;
-            border-radius: 15px 15px 0 0;
-            position: relative;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            color: #000;
-            font-weight: 600;
-            font-size: 32px;
-        }
-
-        .modal-header p {
-            margin: 10px 0 0 0;
-            opacity: 0.9;
-            color: #000;
-            font-size: 18px;
-        }
-
-        .close {
-            color: #000;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .close:hover {
-            transform: rotate(90deg);
-        }
-
-        .modal-body {
-            padding: 40px;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .modal-body h3 {
-           color: var(--tp-theme-primary);
-    /* margin-top: 25px; */
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 19px;
-        }
-
-        .modal-body p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            text-align: justify;
-        }
-
-        .modal-body ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .modal-body ul li {
-            margin-bottom: 8px;
-        }
-
-        .quote {
-            background: #f8f9fa;
-            border-left: 4px solid var(--tp-theme-primary);
-            padding: 20px;
-            margin: 25px 0;
-            font-style: italic;
-            border-radius: 5px;
-        }
-
-        .signature {
-            margin-top: 30px;
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-
-        @media (max-width: 768px) {
-            .tp-section-title {
-                font-size: 32px;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-            }
-
-            .modal-body {
-                padding: 25px;
-            }
-
-            .modal-header h2 {
-                font-size: 24px;
-            }
-        }
-    </style>
-     <section class="tp-team-3-ptb pt-200px pb-200px">
+     <section class="tp-team-3-ptb pt-200px pb-200px sm-pt-50px sm-pb-50px">
         <div class="container">
    
         <!-- Introduction -->
         <div class="infra-intro-section col-md-12">
            <div class="row">
             <div class="col-md-6">
-                 <div class="section-title mb-5">
+                 <div class="section-title mb-5 sm-mb-20">
                     <h3>Infrastructure</h3>
                     <h2 class="tp-section-title">Manufacturing that Defines Reliability</h2>
              
@@ -776,7 +495,7 @@
         <div class="machinery-grid-wrapper">
             <!-- Card 1: Oil Filling Machine -->
             <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&h=600&fit=crop" alt="Oil Filling Machine" class="machinery-card-img">
+                <img src="./images/whyus-ett.png" alt="Oil Filling Machine" class="machinery-card-img">
                 <div class="machinery-content-overlay">
                     <div class="machinery-inner-content">
                         <h3 class="machinery-title-heading">
@@ -790,7 +509,7 @@
 
             <!-- Card 2: Mark Screw Air Compressor -->
             <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop" alt="Mark Screw Air Compressor" class="machinery-card-img">
+                <img src="./images/25 KVA 11_433 EEL-1.jpeg" alt="Mark Screw Air Compressor" class="machinery-card-img">
                 <div class="machinery-content-overlay">
                     <div class="machinery-inner-content">
                         <h3 class="machinery-title-heading">
@@ -804,7 +523,7 @@
 
             <!-- Card 3: Electric Oven -->
             <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&h=600&fit=crop" alt="Electric Oven" class="machinery-card-img">
+                <img src="./images/whyus-ett.png" alt="Electric Oven" class="machinery-card-img">
                 <div class="machinery-content-overlay">
                     <div class="machinery-inner-content">
                         <h3 class="machinery-title-heading">
@@ -818,7 +537,7 @@
 
             <!-- Card 4: Vacuum Plant -->
             <div class="machinery-card-item">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" alt="Vacuum Plant for Dry Type Transformers" class="machinery-card-img">
+                <img src="./images/25 KVA 11_433 EEL-1.jpeg" alt="Vacuum Plant for Dry Type Transformers" class="machinery-card-img">
                 <div class="machinery-content-overlay">
                     <div class="machinery-inner-content">
                         <h3 class="machinery-title-heading">
@@ -1193,7 +912,7 @@
         });
     </script>
       <!-- Footer Start -->
-    <footer class="main-footer sm-ps-20px sm-pe-20px  md-pe-20px md-ps-20px pt-100px">
+    <footer class="main-footer sm-pt-50px pt-100px">
       <div class="container">
         <div class="row">
                 <div class="col-lg-5 col-md-5">
