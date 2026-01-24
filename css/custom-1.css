@@ -844,6 +844,10 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover{
             text-decoration: none;
             display: block;
         }
+        .main-menu ul li a.active{
+          color: var(--color-primary-2) !important;
+          font-weight: 700;
+        }
          .main-menu .submenu-n  ul li a{
           color: var(--dark-color);
           font-weight: 600;
@@ -11372,7 +11376,8 @@ right: 27%;
             font-weight: 600;
             text-decoration: underline;
             font-family: var(--tp-ff-heading);
-            color: var(--tp-common-white);
+            /* color: var(--tp-common-white); */
+            color: var(--color-primary-2);
         }
 
         /* Responsive Design */
@@ -12299,9 +12304,9 @@ right: 27%;
         .tp-brand-item img {
             max-width: 150px;
             height: auto;
-            opacity: 0.4;
+            opacity: 0.9;
             transition: all 0.3s ease-out;
-            filter: grayscale(100%);
+            /* filter: grayscale(100%); */
         }
 
         .tp-brand-item:hover img {
@@ -14307,12 +14312,15 @@ color: #191818;
             box-shadow: 0px 4px 8px 0px rgba(32, 33, 36, 0.15);
             transform: translateY(-2px);
         }
-
+        .tp-service-sidebar-list ul li a.active{
+          color: var(--color-primary-2);
+        }
         .tp-service-sidebar-list ul li a {
             padding: 15px 20px 15px 20px;
             display: block;
             text-decoration: none;
             color: inherit;
+            line-height: 1.1;
         }
 
         .tp-service-sidebar-list svg {
