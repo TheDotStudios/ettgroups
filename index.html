@@ -59,16 +59,18 @@
             <!-- Main Divisions Slide -->
             <div class="carousel-banner-item active">
                 <div class="divisions-row">
-                    <div class="division division-1">
+                  <div class="division division-1" data-link="index1.html">
+
                         <div class="division-content">
                             <h2>Transformers</h2>
                             <p>Leading manufacturers of high-quality transformers for industrial and commercial applications.</p>
-                            <span class="website-link"><a href="https://ettgroups.vercel.app/index1.html" target="_blank">www.ettgroups.in <i class="fas fa-angle-double-right"></i></a> </span>
+                            <span class="website-link"><a href="index1.html" target="_blank">www.ettgroups.in <i class="fas fa-angle-double-right"></i></a> </span>
                           
                         </div>
                     </div>
 
-                    <div class="division division-2">
+                    <div class="division division-2" data-link="http://www.strikeco.co.in">
+
                         <div class="division-content">
                             <h2>Electric Two-wheelers/ Three wheelers</h2>
                             <p>Innovative electric vehicle solutions for sustainable transportation.</p>
@@ -79,7 +81,8 @@
                         </div>
                     </div>
 
-                    <div class="division division-3">
+              <div class="division division-3" data-link="http://www.strikecobatteries.com">
+
                         <div class="division-content">
                             <h2>Lead Acid Batteries & Chargers</h2>
                             <p>Premium quality batteries and charging solutions for all your power needs.</p>
@@ -115,7 +118,17 @@
       </div>
     </div> -->
     <!-- Jquery Library File -->
- 
+ <script>
+document.querySelectorAll('.division').forEach(division => {
+    division.addEventListener('click', function () {
+        const link = this.getAttribute('data-link');
+        if (link) {
+            window.open(link, '_blank'); // open in new tab
+        }
+    });
+});
+</script>
+
     <div class="modal fade" id="contentModal" tabindex="-1" aria-labelledby="contentModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">

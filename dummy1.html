@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Services - Clean Energy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Awards Section */
+.ett-awards-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.ett-awards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Header */
+.ett-awards-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ett-awards-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.ett-awards-description {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Swiper Container */
+.ett-awards-swiper {
+    padding: 20px 0 60px;
+    position: relative;
+}
+
+/* Award Card */
+.ett-award-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 2px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ett-award-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #52a867, #3d8a52);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.ett-award-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(82, 168, 103, 0.2);
+    border-color: #52a867;
+}
+
+.ett-award-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Award Icon */
+.ett-award-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #EBF3ED, #d4e8d9);
+    border-radius: 50%;
+    color: #52a867;
+    transition: all 0.4s ease;
+}
+
+.ett-award-card:hover .ett-award-icon {
+    background: linear-gradient(135deg, #52a867, #3d8a52);
+    color: #ffffff;
+    transform: rotateY(360deg);
+}
+
+/* Award Title */
+.ett-award-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Award Year */
+.ett-award-year {
+    font-size: 16px;
+    font-weight: 600;
+    color: #52a867;
+    margin-bottom: 15px;
+}
+
+/* Award Text */
+.ett-award-text {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Swiper Navigation Buttons */
+.ett-swiper-next,
+.ett-swiper-prev {
+    width: 50px;
+    height: 50px;
+    background: #52a867;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.ett-swiper-next:after,
+.ett-swiper-prev:after {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ett-swiper-next:hover,
+.ett-swiper-prev:hover {
+    background: #3d8a52;
+    transform: scale(1.1);
+}
+
+/* Swiper Pagination */
+.ett-swiper-pagination {
+    bottom: 20px;
+}
+
+.ett-swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #d0d0d0;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.ett-swiper-pagination .swiper-pagination-bullet-active {
+    background: #52a867;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ett-awards-title {
+        font-size: 36px;
+    }
+    
+    .ett-awards-description {
+        font-size: 16px;
+    }
+    
+    .ett-award-card {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ett-awards-section {
+        padding: 60px 0;
+    }
+    
+    .ett-awards-header {
+        margin-bottom: 40px;
+    }
+    
+    .ett-awards-title {
+        font-size: 32px;
+    }
+    
+    .ett-awards-description {
+        font-size: 15px;
+    }
+    
+    .ett-award-card {
+        padding: 30px 20px;
+    }
+    
+    .ett-award-title {
+        font-size: 20px;
+        min-height: auto;
+    }
+    
+    .ett-swiper-next,
+    .ett-swiper-prev {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ett-swiper-next:after,
+    .ett-swiper-prev:after {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .ett-awards-title {
+        font-size: 28px;
+    }
+    
+    .ett-award-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .ett-award-icon svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .ett-award-title {
+        font-size: 18px;
+    }
+    
+    .ett-award-text {
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards & Accreditations</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="awards-slider.css">
+</head>
+<body>
+    <section class="ett-awards-section">
+        <div class="ett-awards-container">
+            <!-- Section Header -->
+            <div class="ett-awards-header">
+                <h2 class="ett-awards-title">Awards & Accreditations</h2>
+                <p class="ett-awards-description">
+                    ETT stands among India's leading transformer manufacturers with recognitions that reflect our commitment to excellence:
+                </p>
+            </div>
+            
+            <!-- Swiper Slider -->
+            <div class="swiper ett-awards-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="ett-award-card">
+                            <div class="ett-award-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="ett-award-title">India's Most Trusted Transformer Brand</h3>
+                            <p class="ett-award-year">2025</p>
+                            <p class="ett-award-text">Recognized as the most trusted transformer brand in India</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="ett-award-card">
+                            <div class="ett-award-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="ett-award-title">ISO Certified Organization</h3>
+                            <p class="ett-award-year">ISO 9001:2015 & ISO 14001:2015</p>
+                            <p class="ett-award-text">Certified for quality management and environmental standards</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="ett-award-card">
+                            <div class="ett-award-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 11 12 14 22 4"></polyline>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                </svg>
+                            </div>
+                            <h3 class="ett-award-title">BIS & BEE Approved</h3>
+                            <p class="ett-award-year">Manufacturer</p>
+                            <p class="ett-award-text">Approved by Bureau of Indian Standards and Bureau of Energy Efficiency</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="ett-award-card">
+                            <div class="ett-award-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="ett-award-title">NABL-Tested Products</h3>
+                            <p class="ett-award-year">Quality Assured</p>
+                            <p class="ett-award-text">Products meeting stringent quality norms through NABL testing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next ett-swiper-next"></div>
+                <div class="swiper-button-prev ett-swiper-prev"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination ett-swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.ett-awards-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.ett-swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.ett-swiper-next',
+                prevEl: '.ett-swiper-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

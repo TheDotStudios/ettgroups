@@ -739,7 +739,7 @@
                                        
                                     </ul>
                                     <div class="mega-menu sm-none">
-                                        <div class="segment-tabs">
+                                        <div class="segment-tabs" style="display: none;">
                                             <a href="offload.html" class="segment-tab active" data-tab="tab1">Off-Load Distribution Transformer</a>
                                             <a href="onload.html" class="segment-tab" data-tab="tab2">On-Load Distribution Transformer</a>
                                             <a href="Furnace-transformer.html" class="segment-tab" data-tab="tab3">Furnace Transformer</a>
@@ -753,12 +753,48 @@
                                         <div id="tab1" class="tabcontent active">
                                             <div class="row">
                                                 <div class="text-center">
+                                                    <a href="offload.html">
+                                                        <div><img src="./images/offload-product.jpg" class="img-fluid" alt="Power Transformer"></div>
+                                                        <div>Off-Load Distribution Transformer</div>
+                                                    </a>
+                                                </div>
+                                                <div class="text-center">
+                                                    <a href="onload.html">
+                                                        <div><img src="./images/onload-product.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
+                                                        <div>On-Load Distribution Transformer</div>
+                                                    </a>
+                                                </div>
+                                                 <div class="text-center">
+                                                    <a href="Furnace-transformer.html">
+                                                        <div><img src="./images/furnace-product.jpg" class="img-fluid" alt="Power Transformer"></div>
+                                                        <div>Furnace Transformer</div>
+                                                    </a>
+                                                </div>
+                                                <div class="text-center">
+                                                    <a href="power-transformer-product.html">
+                                                        <div><img src="./images/power-transformer-product.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
+                                                        <div>Power Transformer</div>
+                                                    </a>
+                                                </div>
+                                                 <div class="text-center">
+                                                    <a href="compact-transformer.html">
+                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
+                                                        <div>Compact Substation Transformer</div>
+                                                    </a>
+                                                </div>
+                                                <div class="text-center">
+                                                    <a href="drytype-transformer.html">
+                                                        <div><img src="./images/dry type.png" class="img-fluid" alt="Distribution Transformer"></div>
+                                                        <div>Dry Type Transformers</div>
+                                                    </a>
+                                                </div>
+                                                 <!-- <div class="text-center">
                                                     <a href="#!">
                                                         <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
                                                         <div>Power Transformer</div>
                                                     </a>
-                                                </div>
-                                                <div class="text-center">
+                                                </div> -->
+                                                <!-- <div class="text-center">
                                                     <a href="#!">
                                                         <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
                                                         <div>Distribution Transformer</div>
@@ -787,43 +823,7 @@
                                                         <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
                                                         <div>Distribution Transformer</div>
                                                     </a>
-                                                </div>
-                                                 <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
-                                                        <div>Power Transformer</div>
-                                                    </a>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
-                                                        <div>Distribution Transformer</div>
-                                                    </a>
-                                                </div>
-                                                 <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
-                                                        <div>Power Transformer</div>
-                                                    </a>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
-                                                        <div>Distribution Transformer</div>
-                                                    </a>
-                                                </div>
-                                                 <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
-                                                        <div>Power Transformer</div>
-                                                    </a>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
-                                                        <div>Distribution Transformer</div>
-                                                    </a>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                         
@@ -1061,518 +1061,323 @@
  
     
     <style>
-           :root {
-            --tp-theme-primary: var(--color-primary-2);
-            --tp-common-white: #ffffff;
-            --bg-color: #EBF3ED;
-        }
+      
+     
 
-
-        .tp-team-3-heading {
+     
+        .section-header {
             text-align: center;
-            margin-bottom: 55px;
+            margin-bottom: 60px;
         }
 
-        .tp-section-title-pre {
+        .section-subtitle {
             display: block;
-            color: var(--tp-theme-primary);
+            color: var(--color-primary-2);
             font-weight: 600;
             font-size: 14px;
             letter-spacing: 2px;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
-
-        .tp-section-title {
+        .section-title{
+            margin-bottom: 25px !important;
+        }
+           .section-description {
+            max-width: 700px;
+             margin: 0 auto;
+           }
+        /* .section-title {
             font-size: 42px;
             font-weight: 700;
             color: #1a1a1a;
             line-height: 1.3;
-        }
-
-        .team-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .tp-team-3-item {
-            position: relative;
-            margin-bottom: 30px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .tp-team-3-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .tp-team-3-thumb {
-            overflow: hidden;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .tp-team-3-thumb img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 1.3s;
-            border-radius: 10px;
-        }
-
-        .tp-team-3-item:hover .tp-team-3-thumb img {
-            transform: scale(1.1);
-        }
-
-        .tp-team-3-content {
-            position: absolute;
-            width: 245px;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            visibility: hidden;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            transition: all 0.3s ease-out;
-            z-index: 1;
-            background: var(--tp-theme-primary);
-        }
-
-        .tp-team-3-item:hover .tp-team-3-content {
-            opacity: 1;
-            visibility: visible;
-            bottom: -100px;
-        }
-
-        .tp-team-3-social {
             margin-bottom: 20px;
-            text-align: center;
         }
 
-        .tp-team-3-social a {
-            color: rgba(255, 255, 255, 0.4);
-            margin: 0 7.5px;
+        .section-description {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
             font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .tp-team-3-social a:hover {
-            color: var(--tp-common-white);
-        }
-
-        .tp-team-3-title {
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 1;
-            letter-spacing: -0.48px;
-            color: var(--tp-common-white);
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .tp-team-3-content p {
-            letter-spacing: -0.32px;
-            color: rgba(255, 255, 255, 0.75);
-            text-align: center;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .read-more-btn {
-               background: unset;
-    color: #fff;
-    /* border-bottom: 1px solid #fff; */
-    border: none;
-    /* border-top: none;
-    border-left: none;
-    border-right: none; */
-    border-radius: none;
-    padding: 0px 20px;
-    /* border-radius: 5px; */
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: block;
-    margin: 0 auto;
-    font-size: 14px;
-        }
-
-        .read-more-btn:hover {
-            /* background: #1a1a1a; */
-            color: var(--tp-common-white);
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 85vh;
-            overflow-y: auto;
-            animation: slideIn 0.3s;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            background: #ebebeb;
-            color: white;
-            padding: 30px;
-            border-radius: 15px 15px 0 0;
-            position: relative;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            color: #000;
-            font-weight: 600;
-            font-size: 32px;
-        }
-
-        .modal-header p {
-            margin: 10px 0 0 0;
-            opacity: 0.9;
-            color: #000;
-            font-size: 18px;
-        }
-
-        .close {
-            color: #000;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            font-size: 24px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .close:hover {
-            transform: rotate(90deg);
-        }
-
-        .modal-body {
-            padding: 40px;
             line-height: 1.8;
-            color: #333;
+        } */
+
+        .team-member {
+            /* background: white; */
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid #ebebeb;
+            /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .modal-body h3 {
-           color: var(--tp-theme-primary);
-    /* margin-top: 25px; */
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 19px;
+        .team-member:hover {
+            transform: translateY(-5px);
+            /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
         }
 
-        .modal-body p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            text-align: justify;
+        .member-header {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            background: #ebebeb;
+            border-bottom: 1px solid var(--color-primary-2);
         }
 
-        .modal-body ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
         }
 
-        .modal-body ul li {
+        .member-info {
+            margin-left: 30px;
+            flex: 1;
+        }
+
+        .member-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
             margin-bottom: 8px;
+        }
+
+        .member-position {
+            font-size: 18px;
+            color: var(--color-primary-2);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .member-company {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .member-content {
+            padding: 40px;
         }
 
         .quote {
             background: #f8f9fa;
-            border-left: 4px solid var(--tp-theme-primary);
-            padding: 20px;
-            margin: 25px 0;
+            border-left: 4px solid var(--color-primary-2);
+            padding: 25px;
+            margin-bottom: 30px;
             font-style: italic;
             border-radius: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-section h3 {
+            color: var(--color-primary-2);
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.8;
+            /* color: #444; */
+            text-align: justify;
+        }
+
+        .content-section ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content-section ul li {
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 15px;
         }
 
         .signature {
             margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
             font-weight: 600;
             color: #1a1a1a;
+            text-align: right;
+            font-size: 16px;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .tp-section-title {
+            .section-title {
                 font-size: 32px;
             }
-
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
+.section-subtitle {
+  
+    margin-bottom: 5px !important;
+}
+            .member-header {
+                flex-direction: row;
+                text-align: center;
+                padding: 30px 20px;
             }
 
-            .modal-body {
-                padding: 25px;
+            .member-info {
+                margin-left: 0;
+                margin-top: 20px;
             }
 
-            .modal-header h2 {
-                font-size: 24px;
+            .member-name {
+                font-size: 26px;
+            }
+
+            .member-position {
+                font-size: 16px;
+            }
+
+            .member-content {
+                padding: 25px 20px;
+            }
+
+            .tp-team-section {
+                padding: 50px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .member-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section-title {
+                font-size: 28px;
             }
         }
     </style>
-     <section class="tp-team-3-ptb pt-200px pb-200px sm-pt-50px sm-pb-50px">
+    <section class="tp-team-section pt-150px pb-150px">
         <div class="container">
-          <div class="blog-heading">
-             <div class="section-title mb-5">
-                <h3 class="">Team</h3>
-                <h2 class="tp-section-title">
-                Our Team
-                </h2>
-                <p class="max-width">The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
-</p>
-              </div>
+            <div class="section-header">
+                <span class="section-subtitle">Team</span>
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-description">
+                    The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
+                </p>
             </div>
-            <div class="team-row">
-                <!-- Rohit Jain - Managing Director -->
-                <div class="tp-team-3-item" onclick="openModal('rohit')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Rohit Jain">
-                    </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Rohit Jain</h4>
-                        <p>Managing Director</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('rohit')">Read More <span class="fa  fa-arrow-right"></span></button>
+
+            <!-- Rohit Jain - Managing Director -->
+            <div class="team-member">
+                <div class="member-header">
+                    <img src="./images/team-rohit.png" alt="Rohit Jain" class="member-image">
+                    <div class="member-info">
+                        <h3 class="member-name">Rohit Jain</h3>
+                        <p class="member-position">Managing Director</p>
+                        <p class="member-company">ETT Groups</p>
                     </div>
                 </div>
-
-                <!-- Prachi Jain - Director -->
-                <div class="tp-team-3-item" onclick="openModal('prachi')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Prachi Jain">
+                <div class="member-content">
+                    <div class="quote">
+                        "Do not wait; the time will never be just right. Begin now, with what you have. The rest will follow."
                     </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Prachi Jain</h4>
-                        <p>Director</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('prachi')">Read More <span class="fa  fa-arrow-right"></span></button>
+                    
+                    <div class="content-section">
+                        <p>This belief has shaped ETT since its inception. We started small, with limited resources but a clear vision - to build reliable and efficient transformer solutions for India's growing energy needs.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Our Journey</h3>
+                        <p>Over the years, we have:</p>
+                        <ul>
+                            <li>Expanded our product portfolio</li>
+                            <li>Modernized our manufacturing infrastructure</li>
+                            <li>Strengthened our technical capabilities</li>
+                            <li>Built strong customer relationships based on trust</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <p>Our success comes from a committed team, continuous innovation, and our focus on sustainability. We aim to deliver energy-efficient transformers that meet industry standards while minimizing environmental impact.</p>
+
+                        <p>At ETT, quality is not just a priority - it is part of our culture. We learn, adapt, and innovate to stay ahead in a competitive industry.</p>
+
+                        <p>With our technology-driven approach and commitment to excellence, I believe we will continue to build milestones in power and distribution technologies - not just for India, but across international markets as well.</p>
+                    </div>
+
+                    <p class="signature">– Rohit Jain<br>Managing Director, ETT Groups</p>
+                </div>
+            </div>
+
+            <!-- Amit Kumar Gautam - CCO -->
+            <div class="team-member">
+                <div class="member-header">
+                    <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam" class="member-image">
+                    <div class="member-info">
+                        <h3 class="member-name">Amit Kumar Gautam</h3>
+                        <p class="member-position">Chief Commercial Officer</p>
+                        <p class="member-company">Electro-Tech Transmission Pvt. Ltd.</p>
                     </div>
                 </div>
-
-                <!-- Amit Kumar Gautam - CCO -->
-                <div class="tp-team-3-item" onclick="openModal('amit')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam">
+                <div class="member-content">
+                    <div class="content-section">
+                        <h3>Professional Background</h3>
+                        <p>With over 14 years of diverse professional experience spanning financial consultancy, corporate finance, banking, and audit, Mr. Amit Gautam brings strong commercial acumen and strategic leadership to Electro-Tech Transmission Pvt. Ltd. He holds an MBA in Banking and Finance, supported by a robust foundation in audit practices and financial controls.</p>
                     </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Amit Kumar Gautam</h4>
-                        <p>Chief Commercial Officer</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('amit')">Read More <span class="fa  fa-arrow-right"></span></button>
+
+                    <div class="content-section">
+                        <h3>Career Journey</h3>
+                        <p>Mr. Gautam began his career with a three-year internship at a reputed Chartered Accountancy firm, gaining extensive hands-on exposure to revenue audits, concurrent audits, tax audits, and statutory audits. This early experience strengthened his understanding of compliance, risk management, and financial discipline—elements that continue to guide his professional approach.</p>
+
+                        <p>He subsequently joined a leading financial consultancy firm in Indore, where he spent four years and rose to the position of Team Leader. Working closely with several corporates, banks, and NBFCs across Indore and Bhopal, he developed deep expertise in credit evaluation, financial structuring, and lender coordination.</p>
+
+                        <p>Further advancing his career, Mr. Gautam served as Chief Financial Officer (CFO) of an EPC company for nearly three years, where he led financial planning, budgeting, commercial operations, and strategic decision-making initiatives. He then transitioned into the banking sector, gaining valuable exposure in the SME divisions of Yes Bank and HDFC Bank. His experience includes handling credit appraisals under sole banking, multiple banking, and consortium arrangements, along with effective portfolio and risk management.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Role at ETT</h3>
+                        <p>As Chief Commercial Officer at Electro-Tech Transmission, Mr. Gautam plays a critical role in shaping the company's commercial and operational growth strategy. His multidimensional experience enables him to evaluate opportunities with a balanced perspective—combining financial prudence, risk assessment, and long-term sustainability. He believes that structured decision-making, strong financial controls, and agile commercial strategies are key to building a resilient and scalable organization.</p>
+
+                        <p>By leveraging his deep understanding of finance, banking, and corporate operations, Mr. Gautam contributes to informed leadership decisions that support business expansion, strengthen stakeholder confidence, and ensure sustainable growth. His forward-looking approach continues to help ETT navigate market dynamics while aligning growth initiatives with the company's vision and values.</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Bhavya Jain - COO -->
-                <div class="tp-team-3-item" onclick="openModal('bhavya')">
-                    <div class="tp-team-3-thumb">
-                        <img src="./images/dummy-person-testi.png" alt="Bhavya Jain">
+            <!-- Bhavya Jain - COO -->
+            <div class="team-member">
+                <div class="member-header">
+                    <img src="./images/dummy-person-testi.png" alt="Bhavya Jain" class="member-image">
+                    <div class="member-info">
+                        <h3 class="member-name">Bhavya Jain</h3>
+                        <p class="member-position">Chief Operating Officer</p>
+                        <p class="member-company">Electro-Tech Transmission Pvt. Ltd.</p>
                     </div>
-                    <div class="tp-team-3-content">
-                        <!-- <div class="tp-team-3-social">
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                            <a href="#" onclick="event.stopPropagation()"><i class="fa-brands fa-instagram"></i></a>
-                        </div> -->
-                        <h4 class="tp-team-3-title">Bhavya Jain</h4>
-                        <p>Chief Operating Officer</p>
-                        <button class="read-more-btn" onclick="event.stopPropagation(); openModal('bhavya')">Read More <span class="fa  fa-arrow-right"></span></button>
+                </div>
+                <div class="member-content">
+                    <div class="content-section">
+                        <h3>Academic Excellence</h3>
+                        <p>Bhavya Jain serves as the Chief Operating Officer at Electro-Tech Transmission Pvt. Ltd., equipped with a strong academic foundation and a dynamic multi-disciplinary skill set. She holds an MBA in Business Economics and Finance from DAVV Indore, along with a Diploma in Security Analysis and Portfolio Management from Maharaja Sayajirao University of Baroda.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Unique Expertise</h3>
+                        <p>With diverse experience across corporate finance, investment analysis, and digital marketing, Bhavya brings a balanced and insightful perspective to business leadership. Her unique ability to combine analytical precision with creative problem-solving empowers her to drive operational efficiency, enhance financial performance, and contribute meaningfully to the company's long-term growth strategy.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>Leadership Role</h3>
+                        <p>As COO, Bhavya leads the company's day-to-day operations, streamlines processes, and drives key initiatives aimed at strengthening Electro-Tech Transmission's position in a rapidly evolving and competitive industry.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Modals -->
-    <!-- Rohit Jain Modal -->
-    <div id="rohit-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('rohit')">&times;</span>
-                <h2>Rohit Jain</h2>
-                <p>Managing Director, ETT Groups</p>
-            </div>
-            <div class="modal-body">
-                <div class="quote">
-                    "Do not wait; the time will never be just right. Begin now, with what you have. The rest will follow."
-                </div>
-                
-                <p>This belief has shaped ETT since its inception. We started small, with limited resources but a clear vision - to build reliable and efficient transformer solutions for India's growing energy needs.</p>
-
-                <h3>Our Journey</h3>
-                <p>Over the years, we have:</p>
-                <ul>
-                    <li>Expanded our product portfolio</li>
-                    <li>Modernized our manufacturing infrastructure</li>
-                    <li>Strengthened our technical capabilities</li>
-                    <li>Built strong customer relationships based on trust</li>
-                </ul>
-
-                <p>Our success comes from a committed team, continuous innovation, and our focus on sustainability. We aim to deliver energy-efficient transformers that meet industry standards while minimizing environmental impact.</p>
-
-                <p>At ETT, quality is not just a priority - it is part of our culture. We learn, adapt, and innovate to stay ahead in a competitive industry.</p>
-
-                <p>With our technology-driven approach and commitment to excellence, I believe we will continue to build milestones in power and distribution technologies - not just for India, but across international markets as well.</p>
-
-                <p class="signature">– Rohit Jain<br>Managing Director, ETT Groups</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Prachi Jain Modal -->
-    <div id="prachi-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('prachi')">&times;</span>
-                <h2>Prachi Jain</h2>
-                <p>Director, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-            <div class="modal-body">
-                <p>At Electro-Tech Transmission Pvt. Ltd. (ETT), our journey is not defined only by the transformers we manufacture - it is shaped by the people who build them, the relationships we nurture, and the values we uphold every day.</p>
-
-                <h3>Our People-First Philosophy</h3>
-                <p>From our engineers and office teams to technicians and shop-floor workers, every individual at ETT contributes meaningfully to our success. I truly believe that teamwork, respect, and shared purpose are the pillars of a progressive organization. When people collaborate with trust and dedication, excellence naturally becomes the outcome.</p>
-
-                <p>We work hard to maintain a workplace culture built on fairness, transparency, and equal opportunity. At ETT, growth and respect are not limited to designations - everyone's voice matters, and every contribution is valued, irrespective of role, background, or gender.</p>
-
-                <h3>Our Commitment</h3>
-                <p>Our deepest responsibility lies with the backbone of our operations - our labour force. Their safety, well-being, and dignity are priorities we will never compromise. Through training, skill development, and a safe environment, we aim to uplift the people who are integral to our success.</p>
-
-                <p>As we continue to grow and expand, our mission remains clear - to build a company rooted in human values, engineering excellence, and long-term trust. Together, we aspire to create a responsible, inclusive, and people-centric organization that stands strong today and for the generations to come.</p>
-
-                <p class="signature">– Prachi Jain<br>Director, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Amit Kumar Gautam Modal -->
-    <div id="amit-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('amit')">&times;</span>
-                <h2>Amit Kumar Gautam</h2>
-                <p>Chief Commercial Officer, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-            <div class="modal-body">
-                <h3>Professional Background</h3>
-                <p>With over 14 years of diverse professional experience spanning financial consultancy, corporate finance, banking, and audit, Mr. Amit Gautam brings strong commercial acumen and strategic leadership to Electro-Tech Transmission Pvt. Ltd. He holds an MBA in Banking and Finance, supported by a robust foundation in audit practices and financial controls.</p>
-
-                <h3>Career Journey</h3>
-                <p>Mr. Gautam began his career with a three-year internship at a reputed Chartered Accountancy firm, gaining extensive hands-on exposure to revenue audits, concurrent audits, tax audits, and statutory audits. This early experience strengthened his understanding of compliance, risk management, and financial discipline—elements that continue to guide his professional approach.</p>
-
-                <p>He subsequently joined a leading financial consultancy firm in Indore, where he spent four years and rose to the position of Team Leader. Working closely with several corporates, banks, and NBFCs across Indore and Bhopal, he developed deep expertise in credit evaluation, financial structuring, and lender coordination.</p>
-
-                <p>Further advancing his career, Mr. Gautam served as Chief Financial Officer (CFO) of an EPC company for nearly three years, where he led financial planning, budgeting, commercial operations, and strategic decision-making initiatives. He then transitioned into the banking sector, gaining valuable exposure in the SME divisions of Yes Bank and HDFC Bank. His experience includes handling credit appraisals under sole banking, multiple banking, and consortium arrangements, along with effective portfolio and risk management.</p>
-
-                <h3>Role at ETT</h3>
-                <p>As Chief Commercial Officer at Electro-Tech Transmission, Mr. Gautam plays a critical role in shaping the company's commercial and operational growth strategy. His multidimensional experience enables him to evaluate opportunities with a balanced perspective—combining financial prudence, risk assessment, and long-term sustainability. He believes that structured decision-making, strong financial controls, and agile commercial strategies are key to building a resilient and scalable organization.</p>
-
-                <p>By leveraging his deep understanding of finance, banking, and corporate operations, Mr. Gautam contributes to informed leadership decisions that support business expansion, strengthen stakeholder confidence, and ensure sustainable growth. His forward-looking approach continues to help ETT navigate market dynamics while aligning growth initiatives with the company's vision and values.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bhavya Jain Modal -->
-    <div id="bhavya-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal('bhavya')">&times;</span>
-                <h2>Bhavya Jain</h2>
-                <p>Chief Operating Officer, Electro-Tech Transmission Pvt. Ltd.</p>
-            </div>
-            <div class="modal-body">
-                <h3>Academic Excellence</h3>
-                <p>Bhavya Jain serves as the Chief Operating Officer at Electro-Tech Transmission Pvt. Ltd., equipped with a strong academic foundation and a dynamic multi-disciplinary skill set. She holds an MBA in Business Economics and Finance from DAVV Indore, along with a Diploma in Security Analysis and Portfolio Management from Maharaja Sayajirao University of Baroda.</p>
-
-                <h3>Unique Expertise</h3>
-                <p>With diverse experience across corporate finance, investment analysis, and digital marketing, Bhavya brings a balanced and insightful perspective to business leadership. Her unique ability to combine analytical precision with creative problem-solving empowers her to drive operational efficiency, enhance financial performance, and contribute meaningfully to the company's long-term growth strategy.</p>
-
-                <h3>Leadership Role</h3>
-                <p>As COO, Bhavya leads the company's day-to-day operations, streamlines processes, and drives key initiatives aimed at strengthening Electro-Tech Transmission's position in a rapidly evolving and competitive industry.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openModal(person) {
-            document.getElementById(person + '-modal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(person) {
-            document.getElementById(person + '-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modals = document.getElementsByClassName('modal');
-            for (let modal of modals) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modals = document.getElementsByClassName('modal');
-                for (let modal of modals) {
-                    modal.style.display = 'none';
-                }
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
    
    
     <style>
