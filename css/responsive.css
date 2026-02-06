@@ -48,6 +48,12 @@
         font-size: 14px !important;
         line-height: 1.6 !important;
     }
+    .stats-slider-track{
+        padding-top: 15px;
+    }
+    .stats-slider-container .section-title h2{
+        display: none !important;
+    }
         .portfolio-stats {
         padding: 40px 0 0;
         text-align: unset !important;
