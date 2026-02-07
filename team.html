@@ -1106,7 +1106,7 @@
             /* background: white; */
             border-radius: 15px;
             overflow: hidden;
-            margin-bottom: 40px;
+            /* margin-bottom: 40px; */
             border: 1px solid #ebebeb;
             /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1180,7 +1180,8 @@
         }
 
         .content-section h3 {
-            color: var(--color-primary-2);
+            /* color: var(--color-primary-2); */
+            color: #000;
             margin-bottom: 15px;
             font-weight: 600;
             font-size: 20px;
@@ -1379,7 +1380,194 @@
         </div>
     </section>
    
-   
+    <div class="tm__slider__container container pb-150px">
+        <!-- Swiper -->
+            <div class="section-header">
+                <!-- <span class="section-subtitle">Team</span> -->
+                <h2 class="section-title">Team Members</h2>
+              
+            </div>
+        <div class="swiper tm__swiper__wrapper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 - ETT Team -->
+                <div class="swiper-slide">
+                    <div class="tm__slide__item">
+                        <div class="tm__card__3d">
+                            <div class="tm__card__inner">
+                                <figure class="tm__figure__box">
+                                    <img class="tm__team__image" src="images/team-m-01.png" alt="ETT Team">
+                                    <figcaption class="tm__caption__overlay">
+                                        
+                                        <span class="tm__dept__title">ETT Department</span>
+                                       
+                                        <div class="tm__gradient__base"></div>
+                                        <div class="tm__gradient__hover"></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Finance -->
+                <div class="swiper-slide">
+                    <div class="tm__slide__item">
+                        <div class="tm__card__3d">
+                            <div class="tm__card__inner">
+                                <figure class="tm__figure__box">
+                                    <img class="tm__team__image" src="images/team-m-02.png" alt="Finance Department">
+                                    <figcaption class="tm__caption__overlay">
+                                      
+                                        <span class="tm__dept__title">Finance Department</span>
+                                       
+                                        <div class="tm__gradient__base"></div>
+                                        <div class="tm__gradient__hover"></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 - HR -->
+                <div class="swiper-slide">
+                    <div class="tm__slide__item">
+                        <div class="tm__card__3d">
+                            <div class="tm__card__inner">
+                                <figure class="tm__figure__box">
+                                    <img class="tm__team__image" src="images/team-hr.png" alt="HR Department">
+                                    <figcaption class="tm__caption__overlay">
+                                       
+                                        <span class="tm__dept__title">HR Department</span>
+                                      
+                                        <div class="tm__gradient__base"></div>
+                                        <div class="tm__gradient__hover"></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 - General Team -->
+                <div class="swiper-slide">
+                    <div class="tm__slide__item">
+                        <div class="tm__card__3d">
+                            <div class="tm__card__inner">
+                                <figure class="tm__figure__box">
+                                    <img class="tm__team__image" src="images/team-m-11.png" alt="Team">
+                                    <figcaption class="tm__caption__overlay">
+                                       
+                                        <span class="tm__dept__title">Core Team</span>
+                                     
+                                        <div class="tm__gradient__base"></div>
+                                        <div class="tm__gradient__hover"></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 - Strikeco -->
+                <div class="swiper-slide">
+                    <div class="tm__slide__item">
+                        <div class="tm__card__3d">
+                            <div class="tm__card__inner">
+                                <figure class="tm__figure__box">
+                                    <img class="tm__team__image" src="images/team-strikeco.png" alt="Strikeco Department">
+                                    <figcaption class="tm__caption__overlay">
+                                    
+                                        <span class="tm__dept__title">Strikeco Department</span>
+                                  
+                                        <div class="tm__gradient__base"></div>
+                                        <div class="tm__gradient__hover"></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 - Supervisor -->
+                <div class="swiper-slide">
+                    <div class="tm__slide__item">
+                        <div class="tm__card__3d">
+                            <div class="tm__card__inner">
+                                <figure class="tm__figure__box">
+                                    <img class="tm__team__image" src="images/team-supervisor.png" alt="Supervisor Department">
+                                    <figcaption class="tm__caption__overlay">
+                                       
+                                        <span class="tm__dept__title">Supervisor Team</span>
+                                     
+                                        <div class="tm__gradient__base"></div>
+                                        <div class="tm__gradient__hover"></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="swiper-button-next tm__swiper__button__next" style="display: none;"></div>
+            <div class="swiper-button-prev tm__swiper__button__prev" style="display: none;"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination tm__swiper__pagination" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Initialize Swiper
+        const teamSwiper = new Swiper('.tm__swiper__wrapper', {
+            // Slides per view
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            
+            // Navigation arrows
+            navigation: {
+                nextEl: '.tm__swiper__button__next',
+                prevEl: '.tm__swiper__button__prev',
+            },
+            
+            // Pagination
+            pagination: {
+                el: '.tm__swiper__pagination',
+                clickable: true,
+            },
+            
+            // Autoplay
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            
+            // Responsive breakpoints
+            breakpoints: {
+                // When window width is >= 480px
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // When window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 25
+                },
+                // When window width is >= 1024px
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
+    </script>
     <style>
       .form-control::placeholder {
     color: #3131313d !important;

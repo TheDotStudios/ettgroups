@@ -31,14 +31,13 @@
     <!-- Font Awesome Icon Css-->
     <link href="css/all.css" rel="stylesheet" media="screen" />
     <!-- Animated Css -->
-    <!-- <link href="css/animate.css" rel="stylesheet" /> -->
+    <link href="css/animate.css" rel="stylesheet" />
     <!-- Magnific Popup Core Css File -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
     <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- Main Custom Css -->
-     
     <link href="css/custom-1.css" rel="stylesheet" media="screen" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
@@ -46,6 +45,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+         @media screen and (min-width:1200px)  {
+            .portfolio-card-image {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+        }
    :root {
             --color-primary-11: #1c1f3b;
             --color-primary-22: #ffdc69;
@@ -652,7 +660,8 @@
     </div> -->
     <!-- Preloader End -->
 
-   <!-- Header Top -->
+
+  <!-- Header Top -->
     <div class="header-top">
         <div class="container">
             <div class="header-row">
@@ -695,7 +704,7 @@
         </div>
     </div>
 
-   <header class="main-header">
+  <header class="main-header">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -710,12 +719,12 @@
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item">
-                                    <a class="nav-link " href="index1.html">Home</a>
+                                    <a class="nav-link" href="index1.html">Home</a>
                                 </li>
                                 <li class="nav-item mega-menu-item submenu submenu-n">
-                                    <a class="nav-link active" href="about.html">Company</a>
+                                    <a class="nav-link" href="about.html">Company</a>
                                       <ul class="n-flex">                                        
-                                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                                         <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
                                         <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
                                         <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
@@ -729,7 +738,7 @@
                                 <!-- MEGA MENU - Products -->
                                 <li class="nav-item mega-menu-item submenu">
                                     <a class="nav-link " href="offload.html">Products</a>
-                                      <ul class="n-flex">                                        
+                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a href="offload.html">Off-Load Distribution Transformer</a></li>
                                         <li class="nav-item"><a href="onload.html" >On-Load Distribution Transformer</a></li>
                                         <li class="nav-item"><a href="Furnace-transformer.html">Furnace Transformer</a></li>
@@ -739,7 +748,7 @@
                                         <li class="nav-item"><a href="drytype-transformer.html">Dry Type Transformers</a></li>
                                        
                                     </ul>
-                                    <div class="mega-menu sm-none">
+                                  <div class="mega-menu sm-none">
                                         <div class="segment-tabs" style="display: none;">
                                             <a href="offload.html" class="segment-tab active" data-tab="tab1">Off-Load Distribution Transformer</a>
                                             <a href="onload.html" class="segment-tab" data-tab="tab2">On-Load Distribution Transformer</a>
@@ -929,9 +938,9 @@
                                     <a class="nav-link" href="industry-serve.html">Industry Served</a>
                                 </li>
                                   <li class="nav-item mega-menu-item submenu submenu-n">
-                                    <a class="nav-link" href="#!">Resources</a>
+                                    <a class="nav-link active" href="#!">Resources</a>
                                     <ul class="n-flex">                                        
-                                        <li class="nav-item"><a class="nav-link" href="gallery-main.html">Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link active" href="gallery-main.html">Gallery</a></li>
                                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                                         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                                         <li class="nav-item"><a class="nav-link" href="case-study.html">Case Studies</a></li>
@@ -1002,7 +1011,6 @@
 
 
 
-
     <script>
         // Segment tabs functionality - Switch on hover
         const tabs = document.querySelectorAll('.segment-tab');
@@ -1045,11 +1053,11 @@
                     <div class="col-lg-12">
                         <!-- Page Header Content Start -->
                         <div class="page-header-content text-center">
-                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">About <span>us</span></h1>
+                            <h1 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Gallery</span></h1>
                             <nav class="wow fadeInUp" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
                                 <ol class="breadcrumb" style="justify-content: center !important;">
                                     <li class="breadcrumb-item"><a href="index1.html">home /</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">About us</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                                 </ol>
                             </nav>
                         </div>
@@ -1060,787 +1068,51 @@
         </div>	
         <!-- Page Header Box End -->	
 	</div>
-    <!-- Hero Section End -->
-    <div class="our-expertise pt-200px pb-200px sm-pt-50px sm-pb-70px" id="about-section">
+  
+  <section class="portfolio-showcase-wrapper pt-150px pb-150px sm-pt-50px sm-pb-50px">
+        <!-- <div class="portfolio-showcase-header">
+            <span class="portfolio-showcase-subtitle">CHECK OUR PORTFOLIO</span>
+            <h2 class="portfolio-showcase-title">Latest projects we have<br>done for you</h2>
+        </div> -->
+
+        <div class="portfolio-showcase-grid">
+        
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-card-container">
+                <img src="./images/gallery-main-birthday.JPG" alt="Solar Installation" class="portfolio-card-image">
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-info">
+                       <div class="portfolio-card-details">
+                            <p class="portfolio-card-category">Birthday</p>
+                            <h4 class="portfolio-card-heading">
+                                <a href="#">Monthly Birthday Celebration</a>
+                            </h4>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+          <div class="portfolio-card-container">
+                <img src="./images/gallery-main-birthday-01.JPG" alt="Solar Panel Installation" class="portfolio-card-image">
+                <div class="portfolio-card-overlay">
+                   <div class="portfolio-card-info">
+                       <div class="portfolio-card-details">
+                            <p class="portfolio-card-category">Birthday </p>
+                            <h4 class="portfolio-card-heading">
+                                <a href="#">Monthly Birthday Celebration</a>
+                            </h4>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+         
+        </div>
+    </section>
      
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 about_arrow">
-            <!-- <div class="section-title banner_title">
-              <h2><span class="highlight">Our</span> Approach</h2>
-            </div> -->
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><path d="M14.374,15.999 L5.562,15.999 L5.562,14.374 L13.238,14.374 L0.0,1.135 L1.137,0.1 L14.374,13.236 L14.374,5.562 L15.999,5.562 L15.999,14.374 L15.999,15.999 L14.374,15.999 Z"></path></svg>
-          </div>
-
-          <div class="col-lg-7">
-            <!-- Our Expertise Content Start -->
-            <div class="our-expertise-content">
-              <!-- Section Title Start -->
-              <!-- <div class="">
-                <div class="service-item row wow fadeInUp">
-                  <div class="col-md-4">
-                    <div class="icon-box">
-                      <img src="images/icon-services-1.svg" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="icon-box">
-                      <img src="images/icon-services-2.svg" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="icon-box">
-                      <img src="images/icon-services-3.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <div class="section-title">
-                <h3 class="wow fadeInUp">About us</h3>
-                <h2 class="wow fadeInUp" data-wow-delay="0.25s">
-                Leading the Future of Reliable and Efficient Transformer Manufacturing
-                  <!-- <span>coaching professionals</span> -->
-                </h2>
-                <p>Electro-Tech Transmission Pvt. Ltd. (ETT) is one of India’s fastest-growing transformer manufacturers, delivering reliable, energy-efficient, and custom-engineered power solutions trusted by industries, utilities, government bodies, and infrastructure developers.
-                    <br><br>
-Since 2014, we have focused on quality, safety, and performance, backed by BIS, BEE, ISO certifications and the trust of 200+ distributors and 294+ government projects across India. </p>
-                <p class="wow fadeInUp about-dark-text" data-wow-delay="0.5s">
-                Trusted by Industries, Utilities, and Infrastructure developers across India.
-                </p>
-                <a href="contact.html" class="custom-button sm-none mt-3">
-                  Get in Touch
-                    <svg class="arrow" viewBox="0 0 24 24">
-                      <line x1="7" y1="12" x2="21" y2="12"></line>
-                      <polyline points="14 5 21 12 14 19"></polyline>
-                    </svg>
-                    <svg class="right-arrow" viewBox="0 0 24 24">
-                      <line x1="7" y1="12" x2="21" y2="12"></line>
-                      <polyline points="14 5 21 12 14 19"></polyline>
-                    </svg>
-                  </a>
-              </div>
-              <!-- Section Title End -->
-
-              <!-- Expertise Button Start -->
-              <!-- <div class="expertise-btn wow fadeInUp" data-wow-delay="0.75s">
-                            <a href="#" class="btn-default">contact now</a>
-                        </div> -->
-              <!-- Expertise Button End -->
-            </div>
-            <!-- Our Expertise Content End -->
-          </div>
-        </div>
-    
-          <div class="row g-5 rs-about-twelve">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="rs-about-wrapper">
-                            <div class="rs-about-shape">
-                                <img src="./images/about-shape-06.png" alt="image">
-                            </div>
-                            <div class="rs-about-thumb">
-                                <img src="./images/about-thumb-18.png" alt="image">
-                            </div>
-                            <div class="rs-about-content">
-                                <h6 class="rs-about-title">Our Mission</h6>
-                                <p>At Electro-Tech Transmission Pvt. Ltd., our mission is to provide reliable, energy-efficient, and eco-friendly transformer solutions at competitive prices. We focus on delivering high-quality power and distribution transformers backed by dependable services. Our aim is to build long-term trust and grow as one of India’s most preferred transformer manufacturers, both locally and globally.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="rs-about-wrapper">
-                            <div class="rs-about-shape">
-                                <img src="./images/about-shape-07.png" alt="image">
-                            </div>
-                            <div class="rs-about-thumb">
-                                <img src="./images/about-thumb-19.png" alt="image">
-                            </div>
-                            <div class="rs-about-content">
-                                <h6 class="rs-about-title">Our Vision</h6>
-                                <p>Our vision is to become a globally recognized transformer manufacturing leader by delivering affordable, advanced, and high-performance solutions. We aspire to support industries worldwide with innovative transformer technology that meets today’s energy needs and tomorrow’s challenges.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-      </div>
-    </div>
-  <style>
-    @media screen and (min-width:1200px) {
-        .intro-video{
-            padding: 350px 0 200px;
-    }
-    }
-  </style>
-
-<div class="intro-video sm-pt-50px parallaxie" style="background-image: url(&quot;images/8000 KVA_33_66000.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 68.9977px;">
-         <img src="images/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-one">
-    <div class="container ">
-      <div class="row ">
-        <div class="col-lg-6 col-md-8">
-          <!-- Section Title Start -->
-          <div class="section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <h2>Engineering <span>Excellence</span></h2>
-        </div>
-          <!-- Section Title End -->
-        </div>
-        <div class="col-lg-6 col-md-8 ">
-           <p class="text-white">Every transformer manufactured at ETT follows <br> strict BIS, BEE, and IEC standards</p>
-        </div>
-        
-        <div class="col-lg-12">
-          <!-- Intro Video List Start -->
-         <div class="intro-video-list  wow fadeInUp" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
-  <ul>
-    <li>
-      <a href="#!" target="_blank" class="text-white">
-       99.9% Pure Copper (Sterlite)
-      </a>
-    </li>
-    <li>
-      <a href="#!" target="_blank" class="text-white">
-       Imported CRGO laminations (M-4 grade)
-      </a>
-    </li>
-    <li>
-      <a href="#!" target="_blank" class="text-white">
-       A-Grade IS-335 certified transformer oil
-      </a>
-    </li>
-    
-  </ul>
-</div>
-
-          <!-- Intro Video List End -->
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- pt-200px sm-pt-50px sm-pb-100px -->
-
-  <section class="what-we-stand-for-section pt-150px pb-200px sm-pb-50px sm-pt-50px">
-    <div class="container">
-        <!-- Header Section -->
-        <div class="row">
-            <div class="col-xl-6 section-title mb-0 col-lg-7 md-mb-20px">
-                <h3 class="wow fadeInUp animated" style="visibility: visible;">Lorem, ipsum</h3>
-                <h2 class="wow fadeInUp animated" data-wow-delay="0.25s" style="visibility: visible; animation-delay: 0.25s;">
-                    What We Stand For
-                </h2>
-            </div>
-            <div class="col-lg-5 offset-xl-1 last-paragraph-no-margin">
-                <p>We are committed to providing cutting-edge electrical solutions that power your success. Our dedication to quality, innovation, and customer satisfaction sets us apart in the industry.</p>
-            </div>
-        </div>
-
-        <!-- DESKTOP VERSION - Features Grid -->
-        <div class="desktop-grid pt-100px sm-pt-20px">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <!-- Feature items (first row) -->
-                        <div class="col-md-4 col-6 icon-with-text-style-03">
-                            <div class="feature-box p-8 overflow-hidden">
-                                <div class="feature-box-icon mb-25px">
-                                    <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                        <path d="M57 32L43 32C42.4477 32 42 32.4477 42 33L42 67C42 67.5523 42.4477 68 43 68L57 68C57.5523 68 58 67.5523 58 67L58 33C58 32.4477 57.5523 32 57 32Z" stroke="#ad1a1a" stroke-width="2.5"/>
-                                        <path d="M38 45H62M38 52H62" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                        <circle cx="50" cy="38" r="2" fill="#ad1a1a"/>
-                                        <path d="M46 60L54 60" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                        <path d="M30 42L35 42M65 42L70 42M50 27L50 32M36 33L33 30M64 33L67 30" stroke="#ad1a1a" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="feature-title">Advanced Engineering</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-6 icon-with-text-style-03">
-                            <div class="feature-box p-8 overflow-hidden">
-                                <div class="feature-box-icon mb-25px">
-                                    <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                        <path d="M55 28L40 50H50L45 72L65 45H52L55 28Z" stroke="#ad1a1a" stroke-width="2.5" stroke-linejoin="round"/>
-                                        <circle cx="50" cy="50" r="22" stroke="#ad1a1a" stroke-width="2" stroke-dasharray="3 3" opacity="0.3"/>
-                                    </svg>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="feature-title">Sustainable Power Solutions</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-6 icon-with-text-style-03">
-                            <div class="feature-box p-8 overflow-hidden">
-                                <div class="feature-box-icon mb-25px">
-                                    <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                        <circle cx="50" cy="50" r="18" stroke="#ad1a1a" stroke-width="2.5"/>
-                                        <path d="M50 32V38M50 62V68M32 50H38M62 50H68" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                        <path d="M50 40L50 60M46 50L54 50" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="feature-title">Cost-Efficient Designs</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="row">
-                        <!-- Feature items (second row) -->
-                        <div class="col-md-4 col-6 icon-with-text-style-03">
-                            <div class="feature-box p-8 overflow-hidden">
-                                <div class="feature-box-icon mb-25px">
-                                    <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                        <circle cx="50" cy="50" r="18" stroke="#ad1a1a" stroke-width="2.5"/>
-                                        <path d="M50 38V50L58 54" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M50 28V32M72 50H68M50 72V68M28 50H32" stroke="#ad1a1a" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="feature-title">Timely Delivery</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-6 icon-with-text-style-03">
-                            <div class="feature-box p-8 overflow-hidden">
-                                <div class="feature-box-icon mb-25px">
-                                    <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                        <path d="M65 35H35C33.3431 35 32 36.3431 32 38V58C32 59.6569 33.3431 61 35 61H42L50 68L58 61H65C66.6569 61 68 59.6569 68 58V38C68 36.3431 66.6569 35 65 35Z" stroke="#ad1a1a" stroke-width="2.5" stroke-linejoin="round"/>
-                                        <circle cx="42" cy="48" r="2" fill="#ad1a1a"/>
-                                        <circle cx="50" cy="48" r="2" fill="#ad1a1a"/>
-                                        <circle cx="58" cy="48" r="2" fill="#ad1a1a"/>
-                                    </svg>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="feature-title">After-Sales Support</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-6 icon-with-text-style-03">
-                            <div class="feature-box p-8 overflow-hidden">
-                                <div class="feature-box-icon mb-25px">
-                                    <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                        <path d="M50 68C59.9411 68 68 59.9411 68 50C68 40.0589 59.9411 32 50 32C40.0589 32 32 40.0589 32 50C32 59.9411 40.0589 68 50 68Z" stroke="#ad1a1a" stroke-width="2.5"/>
-                                        <path d="M44 48L48 52L56 44" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M50 28V32M50 68V72M28 50H32M68 50H72" stroke="#ad1a1a" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="feature-title">Transparent Work Culture</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- MOBILE VERSION - Swiper Slider -->
-        <div class="mobile-slider pt-100px sm-pt-20px">
-            <div class="swiper features-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="feature-box p-8 overflow-hidden">
-                            <div class="feature-box-icon mb-25px">
-                                <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                    <path d="M57 32L43 32C42.4477 32 42 32.4477 42 33L42 67C42 67.5523 42.4477 68 43 68L57 68C57.5523 68 58 67.5523 58 67L58 33C58 32.4477 57.5523 32 57 32Z" stroke="#ad1a1a" stroke-width="2.5"/>
-                                    <path d="M38 45H62M38 52H62" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                    <circle cx="50" cy="38" r="2" fill="#ad1a1a"/>
-                                    <path d="M46 60L54 60" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                    <path d="M30 42L35 42M65 42L70 42M50 27L50 32M36 33L33 30M64 33L67 30" stroke="#ad1a1a" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="feature-title">Advanced Engineering</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="feature-box p-8 overflow-hidden">
-                            <div class="feature-box-icon mb-25px">
-                                <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                    <path d="M55 28L40 50H50L45 72L65 45H52L55 28Z" stroke="#ad1a1a" stroke-width="2.5" stroke-linejoin="round"/>
-                                    <circle cx="50" cy="50" r="22" stroke="#ad1a1a" stroke-width="2" stroke-dasharray="3 3" opacity="0.3"/>
-                                </svg>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="feature-title">Sustainable Power Solutions</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="feature-box p-8 overflow-hidden">
-                            <div class="feature-box-icon mb-25px">
-                                <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                    <circle cx="50" cy="50" r="18" stroke="#ad1a1a" stroke-width="2.5"/>
-                                    <path d="M50 32V38M50 62V68M32 50H38M62 50H68" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                    <path d="M50 40L50 60M46 50L54 50" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="feature-title">Cost-Efficient Designs</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <div class="feature-box p-8 overflow-hidden">
-                            <div class="feature-box-icon mb-25px">
-                                <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                    <circle cx="50" cy="50" r="18" stroke="#ad1a1a" stroke-width="2.5"/>
-                                    <path d="M50 38V50L58 54" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M50 28V32M72 50H68M50 72V68M28 50H32" stroke="#ad1a1a" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="feature-title">Timely Delivery</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide">
-                        <div class="feature-box p-8 overflow-hidden">
-                            <div class="feature-box-icon mb-25px">
-                                <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                    <path d="M65 35H35C33.3431 35 32 36.3431 32 38V58C32 59.6569 33.3431 61 35 61H42L50 68L58 61H65C66.6569 61 68 59.6569 68 58V38C68 36.3431 66.6569 35 65 35Z" stroke="#ad1a1a" stroke-width="2.5" stroke-linejoin="round"/>
-                                    <circle cx="42" cy="48" r="2" fill="#ad1a1a"/>
-                                    <circle cx="50" cy="48" r="2" fill="#ad1a1a"/>
-                                    <circle cx="58" cy="48" r="2" fill="#ad1a1a"/>
-                                </svg>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="feature-title">After-Sales Support</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 6 -->
-                    <div class="swiper-slide">
-                        <div class="feature-box p-8 overflow-hidden">
-                            <div class="feature-box-icon mb-25px">
-                                <svg class="h-100px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="50" cy="50" r="45" fill="#fff"/>
-                                    <path d="M50 68C59.9411 68 68 59.9411 68 50C68 40.0589 59.9411 32 50 32C40.0589 32 32 40.0589 32 50C32 59.9411 40.0589 68 50 68Z" stroke="#ad1a1a" stroke-width="2.5"/>
-                                    <path d="M44 48L48 52L56 44" stroke="#ad1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M50 28V32M50 68V72M28 50H32M68 50H72" stroke="#ad1a1a" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="feature-box-content last-paragraph-no-margin">
-                                <span class="feature-title">Transparent Work Culture</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Pagination -->
-                <div class="swiper-pagination sm-none"></div>
-            </div>
-        </div>
-
-        <!-- Bottom CTA -->
-        <div class="row justify-content-center">
-            <div class="col-auto text-center">
-                <div class="icon-with-text-style-06">
-                    <div class="feature-box feature-box-left-icon-middle">
-                        <div class="feature-box-icon me-10px">
-                            <svg class="icon-very-medium text-base-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
-                        </div>
-                        <div class="feature-box-content last-paragraph-no-margin">
-                            <div class="bottom-text">We provide <span class="fw-600">quality electrical solutions</span> to power your success.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Swiper JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-    // Initialize Swiper only on mobile
-    if (window.innerWidth <= 767) {
-        const swiper = new Swiper('.features-swiper', {
-            slidesPerView: 2,
-            spaceBetween: 15,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 10
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 15
-                }
-            }
-        });
-    }
-</script>
-
-       <section class="ett-awards-tabs-section pt-100px pb-200px sm-pt-50px sm-pb-50px">
-        <img src="images/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-two">
-        <div class="container pt-100px sm-pt-0px">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ett-awards-tabs-header">
-                        <span class="ett-awards-tabs-subtitle">KNOW ABOUT US</span>
-                        <h2 class="ett-awards-tabs-title">Awards & Accreditations</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-50px sm-pt-0px">
-                <!-- Left Side - Tabs Navigation -->
-                <div class="col-lg-4">
-                    <div class="ett-awards-tabs-nav">
-                        <div class="nav flex-column nav-pills" id="ett-awards-tab" role="tablist" aria-orientation="vertical">
-                            <button class="nav-link active" id="ett-tab-brand" data-bs-toggle="pill" data-bs-target="#ett-content-brand" type="button" role="tab" aria-controls="ett-content-brand" aria-selected="true">
-                                India's Most Trusted Brand
-                            </button>
-                            <button class="nav-link" id="ett-tab-iso" data-bs-toggle="pill" data-bs-target="#ett-content-iso" type="button" role="tab" aria-controls="ett-content-iso" aria-selected="false">
-                                ISO Certified Organization
-                            </button>
-                            <button class="nav-link" id="ett-tab-bis" data-bs-toggle="pill" data-bs-target="#ett-content-bis" type="button" role="tab" aria-controls="ett-content-bis" aria-selected="false">
-                                BIS & BEE Approved
-                            </button>
-                            <button class="nav-link" id="ett-tab-nabl" data-bs-toggle="pill" data-bs-target="#ett-content-nabl" type="button" role="tab" aria-controls="ett-content-nabl" aria-selected="false">
-                                NABL-Tested Products
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Side - Tab Content -->
-                <div class="col-lg-8">
-                    <div class="ett-awards-tabs-content-wrapper">
-                        <div class="tab-content" id="ett-awards-tabContent">
-                            <!-- Tab 1 - Most Trusted Brand -->
-                            <div class="tab-pane fade show active" id="ett-content-brand" role="tabpanel" aria-labelledby="ett-tab-brand">
-                                <div class="ett-awards-tabs-item">
-                                    <div class="ett-awards-tabs-item-thumb">
-                                        <img src="./images/aw-ett-01.jpg" alt="India's Most Trusted Transformer Brand">
-                                    </div>
-                                    <div class="ett-awards-tabs-item-content">
-                                        <h3 class="ett-awards-tabs-item-title">
-                                            <a href="#">India's Most Trusted Transformer Brand</a>
-                                        </h3>
-                                        <p>Awarded India's Most Trusted Transformer Brand (2025), <br>
-                                           recognizing our unwavering commitment to quality</p>
-                                     
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tab 2 - ISO Certified -->
-                            <div class="tab-pane fade" id="ett-content-iso" role="tabpanel" aria-labelledby="ett-tab-iso">
-                                <div class="ett-awards-tabs-item">
-                                    <div class="ett-awards-tabs-item-thumb">
-                                        <img src="./images/aw-ett-04.jpg" alt="ISO Certified Organization">
-                                    </div>
-                                    <div class="ett-awards-tabs-item-content">
-                                        <h3 class="ett-awards-tabs-item-title">
-                                            <a href="#">ISO Certified Organization</a>
-                                        </h3>
-                                        <p>ISO 9001:2015 & ISO 14001:2015 certified, <br>
-                                           ensuring world-class quality and environmental standards</p>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tab 3 - BIS & BEE Approved -->
-                            <div class="tab-pane fade" id="ett-content-bis" role="tabpanel" aria-labelledby="ett-tab-bis">
-                                <div class="ett-awards-tabs-item">
-                                    <div class="ett-awards-tabs-item-thumb">
-                                        <img src="./images/aw-ett-03.jpg" alt="BIS & BEE Approved">
-                                    </div>
-                                    <div class="ett-awards-tabs-item-content">
-                                        <h3 class="ett-awards-tabs-item-title">
-                                            <a href="#">BIS & BEE Approved Manufacturer</a>
-                                        </h3>
-                                        <p>Approved by Bureau of Indian Standards and <br>
-                                           Bureau of Energy Efficiency for superior quality</p>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tab 4 - NABL-Tested -->
-                            <div class="tab-pane fade" id="ett-content-nabl" role="tabpanel" aria-labelledby="ett-tab-nabl">
-                                <div class="ett-awards-tabs-item">
-                                    <div class="ett-awards-tabs-item-thumb">
-                                        <img src="./images/aw-ett-05.jpg" alt="NABL-Tested Products">
-                                    </div>
-                                    <div class="ett-awards-tabs-item-content">
-                                        <h3 class="ett-awards-tabs-item-title">
-                                            <a href="#">NABL-Tested Products</a>
-                                        </h3>
-                                        <p>All our products undergo rigorous NABL testing, <br>
-                                           meeting the most stringent quality norms</p>
-                                      
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-     <section class="client-feedback-area pt-200px pb-100px sm-pt-50px sm-pb-0px" style="background: unset !important;">
-
-
-      <div class="container-1288">
-       <script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-b71ef634-2275-4ef7-9616-96e3247ce54a" data-elfsight-app-lazy></div>
-      </div>
-      <style>
-        .tp-brand-breadcrumb-ptb {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-      </style>
-     <div class="tp-brand-breadcrumb-ptb">
-        <div class="container">
-             <div class="text-center">
-            <div class="c-title">Our Clientele</div>
-        </div>
-            <div class="row">
-                <div class="tp-brand-slide-wrap-2">
-                    <div class="tp-brand-slider">
-                        <div class="tp-brand-item">
-                            <img src="./images/client-01.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                            <img src="./images/client-02.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                               <img src="./images/client-03.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                             <img src="./images/client-04.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                              <img src="./images/client-05.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                              <img src="./images/client-06.png" alt="client img">
-                        </div>
-                        
-                        <!-- Duplicate for seamless loop -->
-                        <div class="tp-brand-item">
-                              <img src="./images/client-07.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                              <img src="./images/client-08.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                               <img src="./images/client-09.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                            <img src="./images/client-10.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                              <img src="./images/client-11.png" alt="client img">
-                        </div>
-                        <div class="tp-brand-item">
-                          <img src="./images/client-12.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-13.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-14.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-15.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-16.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-17.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-18.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-19.png" alt="client img">
-                        </div>
-                         <div class="tp-brand-item">
-                          <img src="./images/client-20.png" alt="client img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center pt-50px">
-            <div class="clientele-title">Every project tells a story. Here are the ones our clients share about working with us</div>
-        </div>
-    </div>
-    </section>
- <script>
-        class TouchSliderController {
-            constructor(viewportEl, trackEl, options = {}) {
-                this.viewportEl = viewportEl;
-                this.trackEl = trackEl;
-                this.currentIndex = 0;
-                this.slidesPerView = options.slidesPerView || 2;
-                this.autoplayDelay = options.autoplayDelay || 4000;
-                this.isDragging = false;
-                this.startX = 0;
-                this.currentTranslate = 0;
-                this.prevTranslate = 0;
-                this.autoplayTimer = null;
-
-                this.cardElements = Array.from(this.trackEl.children);
-                this.totalSlides = this.cardElements.length;
-                this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
-
-                this.init();
-            }
-
-            init() {
-                this.setupEventListeners();
-                this.startAutoplay();
-            }
-
-            setupEventListeners() {
-                // Mouse events
-                this.viewportEl.addEventListener('mousedown', this.handleDragStart.bind(this));
-                this.viewportEl.addEventListener('mousemove', this.handleDragMove.bind(this));
-                this.viewportEl.addEventListener('mouseup', this.handleDragEnd.bind(this));
-                this.viewportEl.addEventListener('mouseleave', this.handleDragEnd.bind(this));
-
-                // Touch events
-                this.viewportEl.addEventListener('touchstart', this.handleDragStart.bind(this));
-                this.viewportEl.addEventListener('touchmove', this.handleDragMove.bind(this));
-                this.viewportEl.addEventListener('touchend', this.handleDragEnd.bind(this));
-
-                // Window resize
-                window.addEventListener('resize', this.handleResize.bind(this));
-            }
-
-            handleResize() {
-                if (window.innerWidth <= 991) {
-                    this.slidesPerView = 1;
-                } else {
-                    this.slidesPerView = 2;
-                }
-                this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
-                this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
-                this.updateSlidePosition();
-            }
-
-            handleDragStart(evt) {
-                this.isDragging = true;
-                this.startX = this.getPositionX(evt);
-                this.trackEl.classList.add('dragging');
-                this.stopAutoplay();
-            }
-
-            handleDragMove(evt) {
-                if (!this.isDragging) return;
-                
-                const currentPosition = this.getPositionX(evt);
-                const diff = currentPosition - this.startX;
-                this.currentTranslate = this.prevTranslate + diff;
-                
-                this.trackEl.style.transform = `translateX(${this.currentTranslate}px)`;
-            }
-
-            handleDragEnd() {
-                if (!this.isDragging) return;
-                
-                this.isDragging = false;
-                this.trackEl.classList.remove('dragging');
-                
-                const movedBy = this.currentTranslate - this.prevTranslate;
-                const slideWidth = this.cardElements[0].offsetWidth + 30;
-                
-                if (movedBy < -100 && this.currentIndex < this.maxIndex) {
-                    this.currentIndex++;
-                } else if (movedBy > 100 && this.currentIndex > 0) {
-                    this.currentIndex--;
-                }
-                
-                this.updateSlidePosition();
-                this.startAutoplay();
-            }
-
-            getPositionX(evt) {
-                return evt.type.includes('mouse') ? evt.pageX : evt.touches[0].clientX;
-            }
-
-            updateSlidePosition() {
-                const slideWidth = this.cardElements[0].offsetWidth + 30;
-                this.currentTranslate = -this.currentIndex * slideWidth;
-                this.prevTranslate = this.currentTranslate;
-                
-                this.trackEl.style.transform = `translateX(${this.currentTranslate}px)`;
-            }
-
-            moveToNextSlide() {
-                if (this.currentIndex >= this.maxIndex) {
-                    this.currentIndex = 0;
-                } else {
-                    this.currentIndex++;
-                }
-                this.updateSlidePosition();
-            }
-
-            startAutoplay() {
-                this.stopAutoplay();
-                this.autoplayTimer = setInterval(() => {
-                    this.moveToNextSlide();
-                }, this.autoplayDelay);
-            }
-
-            stopAutoplay() {
-                if (this.autoplayTimer) {
-                    clearInterval(this.autoplayTimer);
-                    this.autoplayTimer = null;
-                }
-            }
-        }
-
-        // Initialize the slider
-        const viewportArea = document.getElementById('viewportArea');
-        const testimonialTrack = document.getElementById('testimonialTrack');
-        
-        new TouchSliderController(viewportArea, testimonialTrack, {
-            slidesPerView: 2,
-            autoplayDelay: 4000
-        });
-    </script>
     <style>
       .form-control::placeholder {
     color: #3131313d !important;
@@ -2013,11 +1285,11 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
             }
         });
     </script>
-    <!-- Footer Start -->
+     <!-- Footer Start -->
     <footer class="main-footer sm-pt-50px pt-100px">
       <div class="container">
         <div class="row">
-                <div class="col-lg-5 col-md-5">
+                <div class="col-lg-4 col-md-4">
                     <!-- About Footer Start -->
                     <div class="about-footer">
                         <!-- Section Title Start -->
@@ -2030,34 +1302,14 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
                     </div>
                     <!-- About Footer End -->
                 </div>
-<!-- <div class="col-lg-2 col-md-2"></div> -->
-                <div class="col-lg-2 col-md-2">
+<div class="col-lg-2 col-md-2"></div>
+                <div class="col-lg-3 col-md-3">
                     <!-- Footer Contact Information Start -->
                     <div class="footer-contact-info">
                         <h3>Contact us</h3>
                          <div class="footer-menu1">
                 <ul>
-                  <li><a href="mailto:info@ettgroups.in">info@ettgroups.in</a></li>
-                  <li><a href="tel:9424733000">+91 9424733000</a></li>
-                  <!-- <li><a href="#!">Lorem</a></li>
-                  <li><a href="#!">Lorem</a></li>
-                  <li><a href="#!">Lorem</a></li> -->
-                </ul>
-              </div>
-                    </div>
-                    <!-- Footer Contact Information End -->
-
-                  
-                </div>
-                <div class="col-lg-2 col-md-2">
-                    <!-- Footer Contact Information Start -->
-                    <div class="footer-contact-info">
-                        <h3>Quick Links</h3>
-                         <div class="footer-menu1">
-                <ul>
-                  <!-- <li><a href="mailto:info@ettgroups.in">info@ettgroups.in</a></li>
-                  <li><a href="tel:9424733000">+91 9424733000</a></li> -->
-                  <li><a href="industry-serve.html">Industries serve</a></li>
+               <li><a href="industry-serve.html">Industries serve</a></li>
                   <li><a href="team.html">Team</a></li>
                   <li><a href="events.html">Events</a></li>
                   <li><a href="certifications.html">Certifications</a></li>
