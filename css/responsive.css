@@ -54,6 +54,22 @@
     .stats-slider-container .section-title h2{
         display: none !important;
     }
+      .tp-service-details-thumb img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto !important;
+    object-fit: cover;
+}
+    .c-title {
+    color: #191818;
+    font-size: 32px !important;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px !important;
+}
+    .last-paragraph-no-margin p {
+ margin-top: 15px !important;
+}
         .portfolio-stats {
         padding: 40px 0 0;
         text-align: unset !important;
@@ -392,7 +408,7 @@
 }
 .tp-brand-breadcrumb-ptb {
     padding-top: 0px !important;
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
 }
 .quotation-mark-icon {
     flex-shrink: 0;
