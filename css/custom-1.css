@@ -16040,7 +16040,7 @@ color: #191818;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.7);
             transition: all 0.4s ease;
         }
 
@@ -16133,8 +16133,7 @@ color: #191818;
 }
 
 .division-1 h2 {
-    /* color: var(--color-primary-2) !important; */
-    color: #fff !important;
+    color: #e12727 !important;
 }
 
 /* 2️⃣ Center image – primary color overlay */
@@ -16165,8 +16164,7 @@ color: #191818;
 
 
         .division-3 h2 {
-     /* color: var(--color-primary-2) !important; */
-    color: #fff !important;
+         color: #e12727 !important;
         }
 
         /* Carousel Indicators */
