@@ -1218,6 +1218,9 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .team-member {
+       margin-bottom: 30px !important;
+            }
             .section-title {
                 font-size: 32px;
             }
@@ -1226,11 +1229,15 @@
     margin-bottom: 5px !important;
 }
             .member-header {
-                flex-direction: row;
+                flex-direction: column;
                 text-align: center;
                 padding: 30px 20px;
             }
-
+.member-company {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0 !important;
+}
             .member-info {
                 margin-left: 0;
                 margin-top: 20px;
@@ -1249,7 +1256,7 @@
             }
 
             .tp-team-section {
-                padding: 50px 15px;
+                padding: 50px 0px 0;
             }
         }
 
@@ -1380,7 +1387,7 @@
         </div>
     </section>
    
-    <div class="tm__slider__container container pb-150px">
+    <div class="tm__slider__container container pb-150px sm-pb-70px">
         <!-- Swiper -->
             <div class="section-header">
                 <!-- <span class="section-subtitle">Team</span> -->
