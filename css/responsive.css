@@ -51,6 +51,9 @@
     .stats-slider-track{
         padding-top: 15px;
     }
+    .tm__slider__container .section-header{
+        margin-bottom: 0 !important;
+    }
     .stats-slider-container .section-title h2{
         display: none !important;
     }
@@ -498,7 +501,7 @@
 }
     .portfolio-showcase-grid {
         grid-template-columns: 1fr;
-        padding: 20px 20px 0px 20px;
+        padding: 0px 20px 0px 20px;
     }
 }
 @media screen and (min-width:300px) and (max-width:375px) {
