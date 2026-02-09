@@ -16244,8 +16244,13 @@ color: #191818;
         }
 
         @media (max-width: 576px) {
+          .division-content .website-link {
+
+    margin-bottom: 0px !important;
+
+}
             .division-content {
-                padding: 20px;
+                padding: 0px 20px 0px 20px;
             }
 
             .division-content h2 {
@@ -16538,6 +16543,7 @@ color: #191818;
 
             .ett-popup-content {
                 max-width: 95%;
+                width: 400px;
             }
 
             .ett-popup-close {

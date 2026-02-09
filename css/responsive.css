@@ -51,6 +51,12 @@
     .stats-slider-track{
         padding-top: 15px;
     }
+    .tp-team-section .section-header{
+        margin-bottom: 20px !important;
+    }
+    .tp-team-section .section-title{
+        margin-bottom: 10px !important;
+    }
     .tm__slider__container .section-header{
         margin-bottom: 0 !important;
     }
@@ -506,12 +512,12 @@
 }
 @media screen and (min-width:300px) and (max-width:375px) {
      .portfolio-item-swiper img{
-        width: 340px  !important;
+        width: 300px  !important;
         transform: unset !important;
 
     }
     .blog-card{
-        width: 28% !important;
+        width: 25% !important;
     }
 }
 @media screen and (min-width:376px) and (max-width:599px) {
