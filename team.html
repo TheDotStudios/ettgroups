@@ -1063,13 +1063,12 @@
     <style>
       
      
-
-     
+       
+        /* ── SHARED ─────────────────────────────────────── */
         .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
-
         .section-subtitle {
             display: block;
             color: var(--color-primary-2);
@@ -1078,92 +1077,99 @@
             letter-spacing: 2px;
             margin-bottom: 15px;
             text-transform: uppercase;
+            font-family: sans-serif;
         }
-        .section-title{
-            margin-bottom: 25px !important;
-        }
-           .section-description {
-            max-width: 700px;
-             margin: 0 auto;
-           }
-        /* .section-title {
+        .section-title {
             font-size: 42px;
             font-weight: 700;
             color: #1a1a1a;
             line-height: 1.3;
             margin-bottom: 20px;
+            font-family: sans-serif;
         }
-
         .section-description {
             max-width: 700px;
             margin: 0 auto;
             color: #666;
             font-size: 16px;
             line-height: 1.8;
-        } */
+            font-family: sans-serif;
+        }
 
-        .team-member {
-            /* background: white; */
+  
+       
+
+        /* ── SIDE-BY-SIDE LAYOUT (first 2 members) ──────── */
+        .team-member-split {
+            display: flex;
             border-radius: 15px;
             overflow: hidden;
-            /* margin-bottom: 40px; */
             border: 1px solid #ebebeb;
-            /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
+            margin-bottom: 50px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 520px;
         }
-
-        .team-member:hover {
+        .team-member-split:hover {
             transform: translateY(-5px);
-            /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
+            box-shadow: 0 12px 40px rgba(0,0,0,0.10);
         }
 
-        .member-header {
+        /* Left image column */
+        .split-image-col {
+            flex: 0 0 420px;
+            width: 420px;
+            /* background: #ebebeb; */
             display: flex;
+            flex-direction: column;
             align-items: center;
-            padding: 40px;
-            background: #ebebeb;
-            border-bottom: 1px solid var(--color-primary-2);
+            justify-content: flex-start;
+            padding: 50px 30px 40px;
+            border-right: 1px solid #e9e9e9;
+            position: relative;
         }
-
-        .member-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+        .split-image-col img {
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
             object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
+            border: 4px solid white;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+            margin-bottom: 28px;
         }
-
-        .member-info {
-            margin-left: 30px;
-            flex: 1;
-        }
-
-        .member-name {
-            font-size: 32px;
+        .split-member-name {
+            font-size: 26px;
             font-weight: 700;
             color: #1a1a1a;
+            text-align: center;
             margin-bottom: 8px;
+            font-family: sans-serif;
         }
-
-        .member-position {
-            font-size: 18px;
+        .split-member-position {
+            font-size: 15px;
             color: var(--color-primary-2);
             font-weight: 600;
-            margin-bottom: 15px;
+            text-align: center;
+            margin-bottom: 6px;
+            font-family: sans-serif;
         }
-
-        .member-company {
-            font-size: 14px;
-            color: #666;
+        .split-member-company {
+            font-size: 13px;
+            color: #888;
             font-style: italic;
+            text-align: center;
+            font-family: sans-serif;
         }
 
-        .member-content {
-            padding: 40px;
+        /* Right content column */
+        .split-content-col {
+            flex: 1;
+            padding: 45px 50px;
+            overflow-y: auto;
         }
 
+        /* ── OLD CARD LAYOUT – no longer used ─────────── */
+
+        /* ── SHARED CONTENT STYLES ───────────────────────── */
         .quote {
             background: #f8f9fa;
             border-left: 4px solid var(--color-primary-2);
@@ -1173,219 +1179,165 @@
             border-radius: 5px;
             font-size: 16px;
             color: #555;
+            line-height: 1.7;
         }
-
-        .content-section {
-            margin-bottom: 30px;
-        }
-
+        .content-section { margin-bottom: 28px; }
         .content-section h3 {
-            /* color: var(--color-primary-2); */
             color: #000;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 600;
-            font-size: 20px;
+            font-size: 18px;
+            font-family: sans-serif;
         }
-
         .content-section p {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             font-size: 15px;
             line-height: 1.8;
-            /* color: #444; */
+            color: #444;
             text-align: justify;
         }
-
-        .content-section ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        .content-section ul li {
-            margin-bottom: 10px;
-            color: #444;
-            font-size: 15px;
-        }
-
+        .content-section ul { margin-left: 25px; margin-bottom: 14px; }
+        .content-section ul li { margin-bottom: 9px; color: #444; font-size: 15px; }
         .signature {
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 28px;
+            padding-top: 18px;
             border-top: 2px solid #eee;
             font-weight: 600;
             color: #1a1a1a;
             text-align: right;
-            font-size: 16px;
+            font-size: 15px;
+            font-family: sans-serif;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .team-member {
-       margin-bottom: 30px !important;
-            }
-            .section-title {
-                font-size: 32px;
-            }
-.section-subtitle {
-  
-    margin-bottom: 5px !important;
-}
-            .member-header {
+        /* ── RESPONSIVE ──────────────────────────────────── */
+        @media (max-width: 900px) {
+            .team-member-split {
                 flex-direction: column;
-                text-align: center;
-                padding: 30px 20px;
+                min-height: auto;
             }
-.member-company {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 0 !important;
-}
-            .member-info {
-                margin-left: 0;
-                margin-top: 20px;
+            .split-image-col {
+                flex: none;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--color-primary-2);
+                padding: 40px 20px 30px;
             }
-
-            .member-name {
-                font-size: 26px;
-            }
-
-            .member-position {
-                font-size: 16px;
-            }
-
-            .member-content {
-                padding: 25px 20px;
-            }
-
-            .tp-team-section {
-                padding: 50px 0px 0;
+            .split-content-col {
+                padding: 30px 24px;
             }
         }
-
-        @media (max-width: 480px) {
-            .member-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
+        @media (max-width: 768px) {
+            .member-header { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .member-info { margin-left: 0; margin-top: 20px; }
+            .member-name { font-size: 26px; }
+            .member-position { font-size: 16px; }
+            .member-content { padding: 25px 20px; }
+            .section-title { font-size: 32px; }
         }
     </style>
-    <section class="tp-team-section pt-150px pb-150px">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Team</span>
-                <h2 class="section-title">Our Team</h2>
-                <p class="section-description">
-                    The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
-                </p>
+    <section class="tp-team-section pt-150px pb-150px sm-pb-50px sm-pt-50px">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Team</span>
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-description">
+                The leadership at Electro-Tech Transmission Pvt. Ltd. (ETT) is driven by vision, integrity, and engineering excellence. Our management team brings together experience, innovation, and a passion for building reliable power solutions.
+            </p>
+        </div>
+
+        <!-- ── Rohit Jain – SIDE-BY-SIDE ── -->
+        <div class="team-member-split">
+            <div class="split-image-col">
+                <img src="./images/team-rohit.png" alt="Rohit Jain">
+                <p class="split-member-name">Rohit Jain</p>
+                <p class="split-member-position">Managing Director</p>
+                <p class="split-member-company">ETT Groups</p>
             </div>
-
-            <!-- Rohit Jain - Managing Director -->
-            <div class="team-member">
-                <div class="member-header">
-                    <img src="./images/team-rohit.png" alt="Rohit Jain" class="member-image">
-                    <div class="member-info">
-                        <h3 class="member-name">Rohit Jain</h3>
-                        <p class="member-position">Managing Director</p>
-                        <p class="member-company">ETT Groups</p>
-                    </div>
+            <div class="split-content-col">
+                <div class="quote">
+                    "Do not wait; the time will never be just right. Begin now, with what you have. The rest will follow."
                 </div>
-                <div class="member-content">
-                    <div class="quote">
-                        "Do not wait; the time will never be just right. Begin now, with what you have. The rest will follow."
-                    </div>
-                    
-                    <div class="content-section">
-                        <p>This belief has shaped ETT since its inception. We started small, with limited resources but a clear vision - to build reliable and efficient transformer solutions for India's growing energy needs.</p>
-                    </div>
 
-                    <div class="content-section">
-                        <h3>Our Journey</h3>
-                        <p>Over the years, we have:</p>
-                        <ul>
-                            <li>Expanded our product portfolio</li>
-                            <li>Modernized our manufacturing infrastructure</li>
-                            <li>Strengthened our technical capabilities</li>
-                            <li>Built strong customer relationships based on trust</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-section">
-                        <p>Our success comes from a committed team, continuous innovation, and our focus on sustainability. We aim to deliver energy-efficient transformers that meet industry standards while minimizing environmental impact.</p>
-
-                        <p>At ETT, quality is not just a priority - it is part of our culture. We learn, adapt, and innovate to stay ahead in a competitive industry.</p>
-
-                        <p>With our technology-driven approach and commitment to excellence, I believe we will continue to build milestones in power and distribution technologies - not just for India, but across international markets as well.</p>
-                    </div>
-
-                    <p class="signature">– Rohit Jain<br>Managing Director, ETT Groups</p>
+                <div class="content-section">
+                    <p>This belief has shaped ETT since its inception. We started small, with limited resources but a clear vision - to build reliable and efficient transformer solutions for India's growing energy needs.</p>
                 </div>
+
+                <div class="content-section">
+                    <h3>Our Journey</h3>
+                    <p>Over the years, we have:</p>
+                    <ul>
+                        <li>Expanded our product portfolio</li>
+                        <li>Modernized our manufacturing infrastructure</li>
+                        <li>Strengthened our technical capabilities</li>
+                        <li>Built strong customer relationships based on trust</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <p>Our success comes from a committed team, continuous innovation, and our focus on sustainability. We aim to deliver energy-efficient transformers that meet industry standards while minimizing environmental impact.</p>
+                    <p>At ETT, quality is not just a priority - it is part of our culture. We learn, adapt, and innovate to stay ahead in a competitive industry.</p>
+                    <p>With our technology-driven approach and commitment to excellence, I believe we will continue to build milestones in power and distribution technologies - not just for India, but across international markets as well.</p>
+                </div>
+
+                <p class="signature">– Rohit Jain<br>Managing Director, ETT Groups</p>
             </div>
+        </div>
 
-            <!-- Amit Kumar Gautam - CCO -->
-            <div class="team-member">
-                <div class="member-header">
-                    <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam" class="member-image">
-                    <div class="member-info">
-                        <h3 class="member-name">Amit Kumar Gautam</h3>
-                        <p class="member-position">Chief Commercial Officer</p>
-                        <p class="member-company">Electro-Tech Transmission Pvt. Ltd.</p>
-                    </div>
-                </div>
-                <div class="member-content">
-                    <div class="content-section">
-                        <h3>Professional Background</h3>
-                        <p>With over 14 years of diverse professional experience spanning financial consultancy, corporate finance, banking, and audit, Mr. Amit Gautam brings strong commercial acumen and strategic leadership to Electro-Tech Transmission Pvt. Ltd. He holds an MBA in Banking and Finance, supported by a robust foundation in audit practices and financial controls.</p>
-                    </div>
-
-                    <div class="content-section">
-                        <h3>Career Journey</h3>
-                        <p>Mr. Gautam began his career with a three-year internship at a reputed Chartered Accountancy firm, gaining extensive hands-on exposure to revenue audits, concurrent audits, tax audits, and statutory audits. This early experience strengthened his understanding of compliance, risk management, and financial discipline—elements that continue to guide his professional approach.</p>
-
-                        <p>He subsequently joined a leading financial consultancy firm in Indore, where he spent four years and rose to the position of Team Leader. Working closely with several corporates, banks, and NBFCs across Indore and Bhopal, he developed deep expertise in credit evaluation, financial structuring, and lender coordination.</p>
-
-                        <p>Further advancing his career, Mr. Gautam served as Chief Financial Officer (CFO) of an EPC company for nearly three years, where he led financial planning, budgeting, commercial operations, and strategic decision-making initiatives. He then transitioned into the banking sector, gaining valuable exposure in the SME divisions of Yes Bank and HDFC Bank. His experience includes handling credit appraisals under sole banking, multiple banking, and consortium arrangements, along with effective portfolio and risk management.</p>
-                    </div>
-
-                    <div class="content-section">
-                        <h3>Role at ETT</h3>
-                        <p>As Chief Commercial Officer at Electro-Tech Transmission, Mr. Gautam plays a critical role in shaping the company's commercial and operational growth strategy. His multidimensional experience enables him to evaluate opportunities with a balanced perspective—combining financial prudence, risk assessment, and long-term sustainability. He believes that structured decision-making, strong financial controls, and agile commercial strategies are key to building a resilient and scalable organization.</p>
-
-                        <p>By leveraging his deep understanding of finance, banking, and corporate operations, Mr. Gautam contributes to informed leadership decisions that support business expansion, strengthen stakeholder confidence, and ensure sustainable growth. His forward-looking approach continues to help ETT navigate market dynamics while aligning growth initiatives with the company's vision and values.</p>
-                    </div>
-                </div>
+        <!-- ── Amit Kumar Gautam – SIDE-BY-SIDE ── -->
+        <div class="team-member-split">
+            <div class="split-image-col">
+                <img src="./images/dummy-person-testi.png" alt="Amit Kumar Gautam">
+                <p class="split-member-name">Amit Kumar Gautam</p>
+                <p class="split-member-position">Chief Commercial Officer</p>
+                <p class="split-member-company">Electro-Tech Transmission Pvt. Ltd.</p>
             </div>
-
-            <!-- Bhavya Jain - COO -->
-            <div class="team-member">
-                <div class="member-header">
-                    <img src="./images/dummy-person-testi.png" alt="Bhavya Jain" class="member-image">
-                    <div class="member-info">
-                        <h3 class="member-name">Bhavya Jain</h3>
-                        <p class="member-position">Chief Operating Officer</p>
-                        <p class="member-company">Electro-Tech Transmission Pvt. Ltd.</p>
-                    </div>
+            <div class="split-content-col">
+                <div class="content-section">
+                    <h3>Professional Background</h3>
+                    <p>With over 14 years of diverse professional experience spanning financial consultancy, corporate finance, banking, and audit, Mr. Amit Gautam brings strong commercial acumen and strategic leadership to Electro-Tech Transmission Pvt. Ltd. He holds an MBA in Banking and Finance, supported by a robust foundation in audit practices and financial controls.</p>
                 </div>
-                <div class="member-content">
-                    <div class="content-section">
-                        <h3>Academic Excellence</h3>
-                        <p>Bhavya Jain serves as the Chief Operating Officer at Electro-Tech Transmission Pvt. Ltd., equipped with a strong academic foundation and a dynamic multi-disciplinary skill set. She holds an MBA in Business Economics and Finance from DAVV Indore, along with a Diploma in Security Analysis and Portfolio Management from Maharaja Sayajirao University of Baroda.</p>
-                    </div>
 
-                    <div class="content-section">
-                        <h3>Unique Expertise</h3>
-                        <p>With diverse experience across corporate finance, investment analysis, and digital marketing, Bhavya brings a balanced and insightful perspective to business leadership. Her unique ability to combine analytical precision with creative problem-solving empowers her to drive operational efficiency, enhance financial performance, and contribute meaningfully to the company's long-term growth strategy.</p>
-                    </div>
+                <div class="content-section">
+                    <h3>Career Journey</h3>
+                    <p>Mr. Gautam began his career with a three-year internship at a reputed Chartered Accountancy firm, gaining extensive hands-on exposure to revenue audits, concurrent audits, tax audits, and statutory audits. This early experience strengthened his understanding of compliance, risk management, and financial discipline—elements that continue to guide his professional approach.</p>
+                    <p>He subsequently joined a leading financial consultancy firm in Indore, where he spent four years and rose to the position of Team Leader. Working closely with several corporates, banks, and NBFCs across Indore and Bhopal, he developed deep expertise in credit evaluation, financial structuring, and lender coordination.</p>
+                    <p>Further advancing his career, Mr. Gautam served as Chief Financial Officer (CFO) of an EPC company for nearly three years, where he led financial planning, budgeting, commercial operations, and strategic decision-making initiatives. He then transitioned into the banking sector, gaining valuable exposure in the SME divisions of Yes Bank and HDFC Bank.</p>
+                </div>
 
-                    <div class="content-section">
-                        <h3>Leadership Role</h3>
-                        <p>As COO, Bhavya leads the company's day-to-day operations, streamlines processes, and drives key initiatives aimed at strengthening Electro-Tech Transmission's position in a rapidly evolving and competitive industry.</p>
-                    </div>
+                <div class="content-section">
+                    <h3>Role at ETT</h3>
+                    <p>As Chief Commercial Officer at Electro-Tech Transmission, Mr. Gautam plays a critical role in shaping the company's commercial and operational growth strategy. His multidimensional experience enables him to evaluate opportunities with a balanced perspective—combining financial prudence, risk assessment, and long-term sustainability.</p>
+                    <p>By leveraging his deep understanding of finance, banking, and corporate operations, Mr. Gautam contributes to informed leadership decisions that support business expansion, strengthen stakeholder confidence, and ensure sustainable growth.</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- ── Bhavya Jain – SPLIT LAYOUT (same as above) ── -->
+        <div class="team-member-split">
+            <div class="split-image-col">
+                <img src="./images/dummy-person-testi.png" alt="Bhavya Jain">
+                <p class="split-member-name">Bhavya Jain</p>
+                <p class="split-member-position">Chief Operating Officer</p>
+                <p class="split-member-company">Electro-Tech Transmission Pvt. Ltd.</p>
+            </div>
+            <div class="split-content-col">
+                <div class="content-section">
+                    <h3>Academic Excellence</h3>
+                    <p>Bhavya Jain serves as the Chief Operating Officer at Electro-Tech Transmission Pvt. Ltd., equipped with a strong academic foundation and a dynamic multi-disciplinary skill set. She holds an MBA in Business Economics and Finance from DAVV Indore, along with a Diploma in Security Analysis and Portfolio Management from Maharaja Sayajirao University of Baroda.</p>
+                </div>
+                <div class="content-section">
+                    <h3>Unique Expertise</h3>
+                    <p>With diverse experience across corporate finance, investment analysis, and digital marketing, Bhavya brings a balanced and insightful perspective to business leadership. Her unique ability to combine analytical precision with creative problem-solving empowers her to drive operational efficiency, enhance financial performance, and contribute meaningfully to the company's long-term growth strategy.</p>
+                </div>
+                <div class="content-section">
+                    <h3>Leadership Role</h3>
+                    <p>As COO, Bhavya leads the company's day-to-day operations, streamlines processes, and drives key initiatives aimed at strengthening Electro-Tech Transmission's position in a rapidly evolving and competitive industry.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
    
     <div class="tm__slider__container container pb-150px sm-pb-70px">
         <!-- Swiper -->
