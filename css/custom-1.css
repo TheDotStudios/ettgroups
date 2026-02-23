@@ -7648,10 +7648,12 @@ margin-top: 150px;
 }
 
 .award-item .icon-box img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%);
+    left: 50%;
+    /* left: 25px; */
+    transition: opacity 0.3s ease;
 }
 
 /* Initially show the first logo */
@@ -7707,8 +7709,12 @@ margin-top: 150px;
 }
 
 .award-left {
-  padding-top: 230px;
+    padding-top: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .award-icon {
   color: var(--dark-color);
@@ -7719,6 +7725,7 @@ margin-top: 150px;
 .award-title {
   font-size: 1.75rem;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 1rem;
   color: #121c22;
 }
@@ -7726,6 +7733,7 @@ margin-top: 150px;
 .award-description {
   opacity: 0.9;
   line-height: 1.6;
+  text-align: center;
   /* color: var(--white-color); */
   color: #8f8f8f;
 }
@@ -8576,9 +8584,7 @@ padding-top: 150px !important;
     .award-item .icon-box img {
     position: absolute;
     height: 80px !important;
-    top: 0;
-    left: 0;
-    transition: opacity 0.3s ease;
+   
 }
   .tp-fun-fact-ptb{
     margin-bottom: 100px !important;
@@ -10860,6 +10866,11 @@ right: 27%;
 .blog-title {
     font-size: 22px;
     font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     color: #000;
     margin-bottom: 15px;
     letter-spacing: -0.44px;
@@ -14913,8 +14924,9 @@ color: #191818;
     /* Main fix: Use object-fit: contain instead of cover */
     .portfolio-card-image {
         width: 100%;
-        height: auto; /* Let height adjust naturally */
-        max-height: 470px; /* Maximum height limit */
+        height: 300px; /* Let height adjust naturally */
+        /* max-height: 470px;  */
+        max-height: 470px; 
         /* object-fit: contain;  */
         object-fit: cover; 
         border-radius: 10px;
@@ -18616,4 +18628,48 @@ font-size: 60px;
                 height: 280px;
             }
         }
-  
+        .aboutus-image {
+       height: 450px;
+    width: 450px;
+    margin-right: 40px;
+    /* padding-right: 40px; */
+    object-fit: cover;
+    border-radius: 5px;
+        }
+
+        /* YouTube Popup Modal */
+.yt-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
+.yt-modal-overlay.active {
+    display: flex;
+}
+.yt-modal-box {
+    position: relative;
+    width: 85%;
+    max-width: 900px;
+    aspect-ratio: 16/9;
+}
+.yt-modal-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.yt-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+}
