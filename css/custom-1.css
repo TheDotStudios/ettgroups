@@ -922,7 +922,7 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover {
     box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
     z-index: 999;
-    border-radius: 0 0 20px 20px;
+    border-radius:7px;
     border: 1px solid rgba(220, 53, 69, 0.1);
     pointer-events: none;
 }
