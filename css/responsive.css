@@ -49,7 +49,7 @@
         line-height: 1.6 !important;
     }
     .h-100px {
-    height: 60px !important;
+    height: 50px !important;
     width: auto;
 }
 .tp-portfolio-details-thumb-main img {
@@ -74,8 +74,26 @@
     overflow: hidden;
     cursor: pointer;
 }
+.tp-service-sidebar-list ul li {
+    font-size: 14px !important;
+}
+.kCYTWX {
+    display: flex;
+    flex-wrap: unset !important;
+    /* justify-content: space-between; */
+    align-items: unset !important;
+    gap: 20px;
+    background-color: unset !important;
+    padding: 60px 24px 24px 24px !important;
+    flex-direction: column !important;
+}
+.icon-very-medium {
+    width: 22px !important;
+    height: 22px !important;
+    color: var(--color-primary-2);
+}
 .feature-box {
-    gap: 0 !important;
+    gap: 10px !important;
     align-items: start !important;
 }
     .history-tab-image{
@@ -83,6 +101,9 @@
     }
     .contact-us-form .form-group{
         width: 50%;
+    }
+    .contact-us-form .text-area-form{
+        width: 100% !important;
     }
     .spec-card{
         padding: 0 !important;
@@ -237,7 +258,7 @@ width: 100% !important;
 .excellence-hero-section {
     position: relative;
     width: 100%;
-    height: 80vh !important;
+    height: 90vh !important;
 }
 .tech-specs-slider {
     margin-top: 20px !important;
@@ -551,8 +572,14 @@ width: 100% !important;
   
     margin-bottom: 15px !important;
 }
+.faqs-cta-content {
+    margin-bottom: 20px;
+}
+.job-openings-table tbody td:first-child{
+    width: 100% !important;
+}
 .ett-section-header h2 {
-    font-size: 36px !important;
+    font-size: 26px !important;
     font-weight: 600;
 }
 .ett-date-container::before{
@@ -593,22 +620,22 @@ width: 100% !important;
 }
 @media screen and (min-width:300px) and (max-width:375px) {
      .portfolio-item-swiper img{
-        width: 300px  !important;
+        width: 270px  !important;
         transform: unset !important;
 
     }
     .blog-card{
-        width: 25% !important;
+        width: 23% !important;
     }
 }
 @media screen and (min-width:376px) and (max-width:599px) {
      .portfolio-item-swiper img{
-        width: 380px  !important;
+        width: 350px  !important;
         transform: unset !important;
 
     }
     .blog-card{
-        width: 30% !important;
+        width: 26% !important;
     }
 }
 @media screen and (min-width:1200px) and (max-width:1599px) {

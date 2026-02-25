@@ -15377,7 +15377,8 @@ color: #191818;
     }
 
     .p-8 {
-        padding: 6% !important;
+        /* padding: 6% !important; */
+        padding: 0% !important;
     }
 
     .feature-title {
@@ -17166,7 +17167,7 @@ color: #191818;
 
             .ett-date-box {
                 position: static;
-                margin: 0 auto 20px;
+                margin: 0 0;
                 transform: none;
             }
 
@@ -17884,6 +17885,7 @@ color: #191818;
             .tvs-interactive-product-card {
                 flex-direction: column;
                 text-align: center;
+                    background: linear-gradient(135deg, rgb(0 0 0 / 5%), transparent);
                 padding: 30px 20px;
             }
 
@@ -18393,8 +18395,8 @@ font-size: 36px;
     }
     
     .ett-awards-tabs-nav .nav-pills .nav-link {
-        font-size: 16px;
-        padding: 14px 20px 16px;
+      font-size: 14px;
+        padding: 7px 12px 7px;
     }
     
     .ett-awards-tabs-item-content {
