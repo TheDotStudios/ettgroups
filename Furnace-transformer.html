@@ -585,43 +585,39 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-    <script>
-        const swiper1 = new Swiper('.techSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 50,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+<script>
+    const swiper1 = new Swiper('.techSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,        /* single consistent gap value */
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 2,
+                spaceBetween: 16,
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            576: {
+                slidesPerView: 3,
+                spaceBetween: 20,
             },
-             breakpoints: {
-                 300: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                576: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 25,
-                },
-                992: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-                1200: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
-                }
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 5,
+                spaceBetween: 20,
             }
-        });
-    </script>
+        }
+    });
+</script>
      
     <style>
       .form-control::placeholder {

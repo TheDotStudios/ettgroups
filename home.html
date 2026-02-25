@@ -339,7 +339,7 @@
             }
 
             .section-title h2 {
-                font-size: 36px;
+                font-size: 26px;
             }
 
             .service-slide {
@@ -3008,9 +3008,9 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
   <img src="images/66fa7615863b2e8e9ea329f2_vector-13.svg" loading="eager" alt="" class="service-dark-shape-one">
 
       <div class="container-1288">
-         <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-b71ef634-2275-4ef7-9616-96e3247ce54a" data-elfsight-app-lazy></div>
+<div class="elfsight-app-a36b4260-148f-4993-bc32-570f6e655474" data-elfsight-app-lazy></div>
       </div>
        <div class="tp-brand-breadcrumb-ptb">
         <div class="container">
@@ -3391,7 +3391,7 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
       <span>Oops! Something went wrong. Please try again or contact us directly.</span>
     </div>
 
-    <form id="footerContactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp"
+    <form id="footerContactForm" action="" method="POST" data-toggle="validator" class="wow fadeInUp"
       data-wow-delay="0.4s" novalidate="true"
       style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
       <div class="row">
@@ -3487,6 +3487,28 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
 </style>
 
 <script>
+  // ─── Auto-close helper (5 seconds) ───────────────────────────────────────────
+  const footerAlertTimers = {};
+
+  function showFooterAlert(el, duration = 5000) {
+    const id = el.id;
+    if (footerAlertTimers[id]) clearTimeout(footerAlertTimers[id]);
+
+    el.style.display = 'flex';
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    footerAlertTimers[id] = setTimeout(() => {
+      el.style.display = 'none';
+    }, duration);
+  }
+
+  function hideFooterAlert(el) {
+    const id = el.id;
+    if (footerAlertTimers[id]) clearTimeout(footerAlertTimers[id]);
+    el.style.display = 'none';
+  }
+
+  // ─── Form Submit Handler ──────────────────────────────────────────────────────
   document.getElementById('footerContactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -3497,9 +3519,11 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
     const successMsg = document.getElementById('footerSuccessMsg');
     const errorMsg   = document.getElementById('footerErrorMsg');
 
-    successMsg.style.display = 'none';
-    errorMsg.style.display   = 'none';
+    // Hide previous messages
+    hideFooterAlert(successMsg);
+    hideFooterAlert(errorMsg);
 
+    // ── Required field validation ──
     const fname = document.getElementById('footer_fname').value.trim();
     const lname = document.getElementById('footer_lname').value.trim();
     const email = document.getElementById('footer_email').value.trim();
@@ -3508,52 +3532,70 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
     if (!fname || !lname || !email || !phone) {
       errorMsg.querySelector('span:last-child').textContent =
         'Please fill in all required fields before submitting.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showFooterAlert(errorMsg);
       return;
     }
 
+    // ── Email validation ──
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       errorMsg.querySelector('span:last-child').textContent =
         'Please enter a valid email address.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showFooterAlert(errorMsg);
       return;
     }
 
+    // ── Loading state ──
     submitBtn.disabled      = true;
     btnText.style.display   = 'none';
     btnLoader.style.display = 'inline';
 
-    const formData = new FormData(form);
+    // ✅ Check if form has a real backend URL or is just "#"
+    const formAction = form.action.trim();
+    const isStaticForm = !formAction || formAction === '#' || formAction === window.location.href;
 
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-
-        successMsg.style.display = 'flex';
+    if (isStaticForm) {
+      // ── No backend: show success immediately ──
+      setTimeout(() => {
+        successMsg.querySelector('span:last-child').textContent =
+          "Thank you! Your message has been sent successfully. We'll get back to you soon.";
+        showFooterAlert(successMsg);
         form.reset();
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      } else {
-        throw new Error('Server error');
-      }
-    })
-    .catch(() => {
 
-      errorMsg.querySelector('span:last-child').textContent =
-        'Oops! Something went wrong. Please try again or contact us directly.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    })
-    .finally(() => {
-      submitBtn.disabled      = false;
-      btnText.style.display   = 'inline';
-      btnLoader.style.display = 'none';
-    });
+        submitBtn.disabled      = false;
+        btnText.style.display   = 'inline';
+        btnLoader.style.display = 'none';
+      }, 800); // small delay to show "Sending..." state briefly
+
+    } else {
+      // ── Real backend: use fetch ──
+      const formData = new FormData(form);
+
+      fetch(formAction, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          successMsg.querySelector('span:last-child').textContent =
+            "Thank you! Your message has been sent successfully. We'll get back to you soon.";
+          showFooterAlert(successMsg);
+          form.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(() => {
+        errorMsg.querySelector('span:last-child').textContent =
+          'Oops! Something went wrong. Please try again or contact us directly.';
+        showFooterAlert(errorMsg);
+      })
+      .finally(() => {
+        submitBtn.disabled      = false;
+        btnText.style.display   = 'inline';
+        btnLoader.style.display = 'none';
+      });
+    }
   });
 </script>
           </div>

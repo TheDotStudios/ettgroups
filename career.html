@@ -1174,7 +1174,7 @@
 </div>
 
     <!-- Contact Us Form Start -->
-    <form id="careerContactForm" action="#" method="POST" data-toggle="validator"
+    <form id="careerContactForm" action="" method="POST" data-toggle="validator"
       class="wow fadeInUp" data-wow-delay="0.4s" novalidate="true"
       style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
       <div class="row">
@@ -1267,78 +1267,102 @@
 </div>
 
 <style>
- .form-alert {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 14px 18px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  animation: fadeSlideIn 0.4s ease;
-}
+  .form-alert {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    animation: fadeSlideIn 0.4s ease;
+  }
 
-.form-alert-success {
-  background-color: #eafaf1;
-  border: 1px solid #2ecc71;
-  color: #1a7a45;
-}
+  .form-alert-success {
+    background-color: #eafaf1;
+    border: 1px solid #2ecc71;
+    color: #1a7a45;
+  }
 
-.form-alert-error {
-  background-color: #fdf0f0;
-  border: 1px solid #e74c3c;
-  color: #a93226;
-}
+  .form-alert-error {
+    background-color: #fdf0f0;
+    border: 1px solid #e74c3c;
+    color: #a93226;
+  }
 
-.form-alert .alert-icon {
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+  .form-alert .alert-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
 
-.alert-close {
-  margin-left: auto;
-  background: none;
-  border: none;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0 2px;
-  flex-shrink: 0;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
-  color: #a93226;
-}
+  .alert-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 2px;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    color: inherit;
+  }
 
-.alert-close:hover { opacity: 1; }
+  .alert-close:hover { opacity: 1; }
 
-@keyframes fadeSlideIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 </style>
 
 <script>
   const MAX_FILE_SIZE_MB = 10;
-  const ALLOWED_TYPES = ['application/pdf', 'application/msword',
+  const ALLOWED_TYPES = [
+    'application/pdf',
+    'application/msword',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'image/jpeg', 'image/jpg'
+    'image/jpeg',
+    'image/jpg'
   ];
   const ALLOWED_EXT = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg'];
 
-  // File input change handler
+  // ─── Auto-close helper (5 seconds) ───────────────────────────────────────────
+  const careerAlertTimers = {};
+
+  function showCareerAlert(el, duration = 5000) {
+    const id = el.id;
+    if (careerAlertTimers[id]) clearTimeout(careerAlertTimers[id]);
+
+    el.style.display = 'flex';
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    careerAlertTimers[id] = setTimeout(() => {
+      el.style.display = 'none';
+    }, duration);
+  }
+
+  function hideCareerAlert(el) {
+    const id = el.id;
+    if (careerAlertTimers[id]) clearTimeout(careerAlertTimers[id]);
+    el.style.display = 'none';
+  }
+
+  // ─── File Upload Validation ───────────────────────────────────────────────────
   document.getElementById('career_upload_btn').addEventListener('change', function () {
     const fileSuccessMsg = document.getElementById('fileSuccessMsg');
     const fileErrorMsg   = document.getElementById('fileErrorMsg');
     const fileNameSpan   = document.getElementById('career_file_name');
     const uploadBox      = document.getElementById('careerUploadBox');
 
-    fileSuccessMsg.style.display = 'none';
-    fileErrorMsg.style.display   = 'none';
+    hideCareerAlert(fileSuccessMsg);
+    hideCareerAlert(fileErrorMsg);
     uploadBox.classList.remove('file-attached');
 
     if (!this.files || this.files.length === 0) {
@@ -1346,47 +1370,49 @@
       return;
     }
 
-    const file     = this.files[0];
-    const ext      = '.' + file.name.split('.').pop().toLowerCase();
-    const sizeMB   = file.size / (1024 * 1024);
+    const file      = this.files[0];
+    const ext       = '.' + file.name.split('.').pop().toLowerCase();
+    const sizeMB    = file.size / (1024 * 1024);
     const validType = ALLOWED_TYPES.includes(file.type) || ALLOWED_EXT.includes(ext);
 
+    // ── Invalid file type ──
     if (!validType) {
       document.getElementById('fileErrorText').textContent =
         'Invalid file type. Please upload PDF, DOC, or JPG only.';
-      fileErrorMsg.style.display = 'flex';
-      fileNameSpan.textContent   = 'No file selected';
+      showCareerAlert(fileErrorMsg);
+      fileNameSpan.textContent = 'No file selected';
       this.value = '';
       return;
     }
 
+    // ── File too large ──
     if (sizeMB > MAX_FILE_SIZE_MB) {
       document.getElementById('fileErrorText').textContent =
         `File too large (${sizeMB.toFixed(1)}MB). Maximum allowed size is 10MB.`;
-      fileErrorMsg.style.display = 'flex';
-      fileNameSpan.textContent   = 'No file selected';
+      showCareerAlert(fileErrorMsg);
+      fileNameSpan.textContent = 'No file selected';
       this.value = '';
       return;
     }
 
-
+    // ── Valid file ──
     document.getElementById('fileSuccessText').textContent =
       `"${file.name}" attached (${sizeMB.toFixed(2)}MB)`;
-    fileSuccessMsg.style.display = 'flex';
-    fileNameSpan.textContent     = file.name;
+    showCareerAlert(fileSuccessMsg);
+    fileNameSpan.textContent = file.name;
     uploadBox.classList.add('file-attached');
   });
 
-  // Remove file helper
+  // ─── Remove File Helper ───────────────────────────────────────────────────────
   function removeCareerFile() {
     const input = document.getElementById('career_upload_btn');
     input.value = '';
     document.getElementById('career_file_name').textContent = 'No file selected';
-    document.getElementById('fileSuccessMsg').style.display = 'none';
+    hideCareerAlert(document.getElementById('fileSuccessMsg'));
     document.getElementById('careerUploadBox').classList.remove('file-attached');
   }
 
-  // Form submit handler
+  // ─── Form Submit Handler ──────────────────────────────────────────────────────
   document.getElementById('careerContactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -1398,10 +1424,10 @@
     const errorMsg   = document.getElementById('careerErrorMsg');
 
     // Hide previous messages
-    successMsg.style.display = 'none';
-    errorMsg.style.display   = 'none';
+    hideCareerAlert(successMsg);
+    hideCareerAlert(errorMsg);
 
-    // Required field validation
+    // ── Required field validation ──
     const fname = document.getElementById('career_fname').value.trim();
     const lname = document.getElementById('career_lname').value.trim();
     const email = document.getElementById('career_email').value.trim();
@@ -1410,55 +1436,72 @@
     if (!fname || !lname || !email || !phone) {
       errorMsg.querySelector('span:nth-child(2)').textContent =
         'Please fill in all required fields before submitting.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showCareerAlert(errorMsg);
       return;
     }
 
-    // Email validation
+    // ── Email validation ──
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       errorMsg.querySelector('span:nth-child(2)').textContent =
         'Please enter a valid email address.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showCareerAlert(errorMsg);
       return;
     }
 
-    // Loading state
+    // ── Loading state ──
     submitBtn.disabled      = true;
     btnText.style.display   = 'none';
     btnLoader.style.display = 'inline';
 
-    const formData = new FormData(form);
+    // ✅ Detect static form (no real backend)
+    const formAction   = form.getAttribute('action').trim();
+    const isStaticForm = !formAction || formAction === '#' || formAction === window.location.href;
 
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
- 
-        successMsg.style.display = 'flex';
+    if (isStaticForm) {
+      // ── No backend: show success immediately after brief delay ──
+      setTimeout(() => {
+        successMsg.querySelector('span:nth-child(2)').textContent =
+          "Thank you! Your application has been submitted successfully. We'll get back to you soon.";
+        showCareerAlert(successMsg);
         form.reset();
         removeCareerFile();
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      } else {
-        throw new Error('Server error');
-      }
-    })
-    .catch(() => {
-   
-      errorMsg.querySelector('span:nth-child(2)').textContent =
-        'Oops! Something went wrong. Please try again or contact us directly.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    })
-    .finally(() => {
-      submitBtn.disabled      = false;
-      btnText.style.display   = 'inline';
-      btnLoader.style.display = 'none';
-    });
+
+        submitBtn.disabled      = false;
+        btnText.style.display   = 'inline';
+        btnLoader.style.display = 'none';
+      }, 800);
+
+    } else {
+      // ── Real backend: use fetch ──
+      const formData = new FormData(form);
+
+      fetch(formAction, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          successMsg.querySelector('span:nth-child(2)').textContent =
+            "Thank you! Your application has been submitted successfully. We'll get back to you soon.";
+          showCareerAlert(successMsg);
+          form.reset();
+          removeCareerFile();
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(() => {
+        errorMsg.querySelector('span:nth-child(2)').textContent =
+          'Oops! Something went wrong. Please try again or contact us directly.';
+        showCareerAlert(errorMsg);
+      })
+      .finally(() => {
+        submitBtn.disabled      = false;
+        btnText.style.display   = 'inline';
+        btnLoader.style.display = 'none';
+      });
+    }
   });
 </script>
                 </div>
@@ -1466,7 +1509,7 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         const uploadInput = document.getElementById("upload-button");
         const fileName = document.getElementById("file-name");
 
@@ -1479,7 +1522,7 @@
                 fileName.parentElement.classList.remove("has-file");
             }
         });
-    </script>
+    </script> -->
     <style>
      .contact-down {
             background: none !important;

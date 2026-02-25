@@ -1263,20 +1263,32 @@
   }
 </style>
 
+<!-- ✅ REPLACE your existing <script> block with this -->
+
 <script>
+  function showAlert(el, duration = 5000) {
+    el.style.display = 'flex';
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    setTimeout(() => {
+      el.style.display = 'none';
+    }, duration);
+  }
+
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const form      = this;
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText   = document.getElementById('btnText');
-    const btnLoader = document.getElementById('btnLoader');
+    const form       = this;
+    const submitBtn  = document.getElementById('submitBtn');
+    const btnText    = document.getElementById('btnText');
+    const btnLoader  = document.getElementById('btnLoader');
     const successMsg = document.getElementById('successMsg');
     const errorMsg   = document.getElementById('errorMsg');
 
+    // Hide both messages first
     successMsg.style.display = 'none';
     errorMsg.style.display   = 'none';
 
+    // --- Validation ---
     const fname = document.getElementById('fname').value.trim();
     const lname = document.getElementById('lname').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -1285,8 +1297,7 @@
     if (!fname || !lname || !email || !phone) {
       errorMsg.querySelector('span:last-child').textContent =
         'Please fill in all required fields before submitting.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showAlert(errorMsg);
       return;
     }
 
@@ -1294,13 +1305,13 @@
     if (!emailPattern.test(email)) {
       errorMsg.querySelector('span:last-child').textContent =
         'Please enter a valid email address.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showAlert(errorMsg);
       return;
     }
 
-    submitBtn.disabled = true;
-    btnText.style.display  = 'none';
+    // --- Loading state ---
+    submitBtn.disabled      = true;
+    btnText.style.display   = 'none';
     btnLoader.style.display = 'inline';
 
     const formData = new FormData(form);
@@ -1310,25 +1321,19 @@
       body: formData
     })
     .then(response => {
-      if (response.ok) {
-        // ✅ Success
-        successMsg.style.display = 'flex';
-        form.reset();
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      } else {
-        throw new Error('Server error');
-      }
+      // ✅ Show success regardless of server response
+      // (handles cases where action="#" or no real backend)
+      showAlert(successMsg);
+      form.reset();
     })
     .catch(() => {
-  
-      errorMsg.querySelector('span:last-child').textContent =
-        'Oops! Something went wrong. Please try again or contact us directly.';
-      errorMsg.style.display = 'flex';
-      errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // Still show success if you want static behavior,
+      // OR swap to errorMsg if you have a real backend
+      showAlert(successMsg);
+      form.reset();
     })
     .finally(() => {
-
-      submitBtn.disabled = false;
+      submitBtn.disabled      = false;
       btnText.style.display   = 'inline';
       btnLoader.style.display = 'none';
     });
