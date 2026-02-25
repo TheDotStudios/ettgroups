@@ -48,8 +48,38 @@
         font-size: 14px !important;
         line-height: 1.6 !important;
     }
+    .h-100px {
+    height: 60px !important;
+    width: auto;
+}
+.bottom-text {
+    color: #1a1a1a;
+    font-size: 16px !important;
+    /* letter-spacing: -0.5px; */
+}
+.ett-event-thumbnail {
+    position: relative !important;
+    right: 0;
+    top: 50%;
+    transform: unset !important;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.feature-box {
+    gap: 0 !important;
+    align-items: start !important;
+}
+    .history-tab-image{
+        display: none;
+    }
     .contact-us-form .form-group{
         width: 50%;
+    }
+    .spec-card{
+        padding: 0 !important;
     }
     .tp-portfolio-details-thumb {
     height: 100%;
@@ -204,7 +234,7 @@ width: 100% !important;
     height: 80vh !important;
 }
 .tech-specs-slider {
-    margin-top: 0px !important;
+    margin-top: 20px !important;
 }
 .tp-service-details-feature-content{
     font-size: 14px !important;
@@ -618,14 +648,83 @@ width: 100% !important;
     font-size: 11px !important;
     }
     .container {
-    max-width: 1200px !important;
+    max-width: 1100px !important;
 }
 .main-header .container-fluid {
     position: relative;
     max-width: 1200px !important;
 }
+.ett-awards-tabs-nav .nav-pills .nav-link {
+    text-align: left;
+    font-size: 18px;
+    border-radius: 7px !important;
+    font-weight: 500;
+    padding: 10px 20px 10px !important;
+    letter-spacing: -0.36px;
+}
+.footer-social-links ul li a {
+   
+    width: 30px !important;
+    height: 30px !important;
+  
+}
+.tp-portfolio-details-thumb img {
+    height: 450px !important;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.stats-showcase-container {
+    max-width: 1100px !important;
+    margin: 0 auto;
+    position: relative;
+    z-index: 99;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+.rs-about-twelve .rs-about-content {
+    padding: 25px 30px 25px 25px !important;
+
+    margin-inline-start: 120px !important;
+
+}
+.ett-event-details {
+    position: relative;
+    display: block;
+    width: 250px !important;
+    /* padding-right: 160px; */
+}
+.container-1288 {
+    max-width: 1100px !important;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.ett-event-details {
+    position: relative;
+    display: block;
+    width: 320px !important;
+    /* padding-right: 160px; */
+}
+.ett-event-thumbnail {
+    width: 200px !important;
+    height: 200px !important;
+
+}
+.machinery-description-text {
+    height: 240px !important;
+    font-size: 13px !important;
+}
+
+
+.stats-slide-item {
+        flex: calc(26% - 19.5px) !important;
+        min-width: calc(26% - 19.5px) !important;
+    }
+.stats-card{
+    height: 300px !important;
+}
 .main-menu ul li a {
-        padding: 12px 0 12px 12px !important;
+        padding: 12px 0 12px 0px !important;
         font-size: 14px !important;
     }
     .lap-none{

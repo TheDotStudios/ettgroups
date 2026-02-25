@@ -426,11 +426,12 @@ body {
 }
 
 .section-title h2 {
-     font-size: 60px;
+     /* font-size: 60px; */
+     font-size: 36px;
     font-weight: 600;
     line-height: 1;
     /* margin-bottom: 20px; */
-    letter-spacing: -2.4px;
+    /* letter-spacing: -2.4px; */
   color: #000;
   margin-bottom: 0;
 }
@@ -743,7 +744,7 @@ header.main-header.scroll-up .main-menu ul li a {
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
-    padding: 15px 0px 15px 15px !important;
+    padding: 15px 0px 15px 15px;
     color: #fff;
 }
 
@@ -822,7 +823,7 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover {
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
-    padding: 15px 0px 15px 15px !important;
+    padding: 15px 0px 15px 15px ;
     color: #fff;
     /* font-family: 'Plus Jakarta Sans', sans-serif !important; */
     text-transform: capitalize;
@@ -966,7 +967,7 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover {
 .tabcontent .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    /* gap: 30px; */
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -1036,9 +1037,10 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover {
 
 /* PRODUCT IMAGE */
 .tabcontent .text-center img {
-    width: 230px;
-    height: 230px;
+      width: 200px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 7px;
     margin: 0 auto 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(10%) brightness(1);
@@ -1293,7 +1295,8 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover {
   position: absolute;
   width: 100%;
   padding: 0;
-  background-color: var(--color-primary-2);
+  /* background-color: var(--color-primary-2); */
+  background-color: #232323;
 }
 
 .slicknav_menu ul {
@@ -5312,7 +5315,7 @@ right: 15% !important;
       overflow: hidden;
       position: relative;
       top: 70px;
-      left:130px !important;
+      left:190px !important;
         transition: padding 0.3s ease;
     
     }
@@ -6428,7 +6431,8 @@ right: 15% !important;
   }
 
   .section-title h2 {
-    font-size: 36px;
+    font-size: 26px !important;
+    line-height: 1.2 !important;
   }
 
   .section-title p {
@@ -7597,9 +7601,9 @@ margin-top: 150px;
   font-weight: bold;
   opacity: 0.1;
 }
-.nav-pills .nav-link {
+/* .nav-pills .nav-link {
   border-radius: 0px !important;
-}
+} */
 /* Add a subtle gradient overlay to enhance text readability */
 .service-card::after {
   content: "";
@@ -7628,7 +7632,7 @@ margin-top: 150px;
 
 .awards-list {
   display: flex;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 /* .awards-list.desktop-view {
   display: flex;
@@ -10755,17 +10759,11 @@ right: 27%;
     z-index: 1;
 }
 
-
-/* ========================================
-   Blog Heading
-======================================== */
 .blog-heading {
     text-align: center;
     margin-bottom: 60px;
 }
 
-
-/* CSS Variables - Add these to your root if not already present */
 :root {
     --border-radius: 12px;
     --color-border: #e0e0e0;
@@ -10775,12 +10773,8 @@ right: 27%;
     --color-tag-text: #666;
     --color-black: #000;
     --color-white: #fff;
-    --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ========================================
-   Utility Classes
-======================================== */
 .pt-200px {
     padding-top: 200px;
 }
@@ -10795,18 +10789,12 @@ right: 27%;
     padding: 0 20px;
 }
 
-/* ========================================
-   Blog Grid
-======================================== */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
-/* ========================================
-   Blog Card
-======================================== */
 .blog-card {
     padding: 10px;
     border-radius: var(--border-radius);
@@ -10834,9 +10822,6 @@ right: 27%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ========================================
-   Blog Content
-======================================== */
 .blog-content {
     padding: 30px 30px 0 30px;
     margin-bottom: 30px;
@@ -10893,9 +10878,6 @@ right: 27%;
     background-size: 0% 2px, 100% 2px;
 }
 
-/* ========================================
-   Case Study Teaser - NEW
-======================================== */
 .case-study-teaser {
     font-size: 14px;
     line-height: 1.6;
@@ -10905,9 +10887,6 @@ right: 27%;
     font-weight: 500;
 }
 
-/* ========================================
-   Blog Thumbnail
-======================================== */
 .blog-thumbnail {
     position: relative;
     overflow: hidden;
@@ -10926,7 +10905,6 @@ right: 27%;
     transform: scale(1.1);
 }
 
-/* Overlay */
 .blog-thumbnail::after {
     content: "";
     position: absolute;
@@ -10949,9 +10927,7 @@ right: 27%;
     visibility: visible;
 }
 
-/* ========================================
-   Blog Overlay Button
-======================================== */
+
 .blog-overlay-btn {
     position: absolute;
     top: 50%;
@@ -11100,7 +11076,8 @@ right: 27%;
         }
 
         .section-title h3 {
-            font-size: 18px;
+            /* font-size: 18px; */
+            font-size: 16px;
             color: var(--color-primary-2);
             margin-bottom: 10px;
             font-weight: 500;
@@ -11971,7 +11948,7 @@ right: 27%;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 20px;
+            gap: 10px;
         }
 
         .excellence-hero-carousel-slide {
@@ -12045,7 +12022,7 @@ right: 27%;
             font-size: 80px;
             font-weight: 700;
             line-height: 0.94;
-            letter-spacing: -3.6px;
+            /* letter-spacing: -3.6px; */
             color: #fff;
             margin-bottom: 34px;
             opacity: 0;
@@ -12250,7 +12227,8 @@ right: 27%;
     padding-left:0px !important;
 }
 .service-top{
-  max-width: 1300px;
+  /* max-width: 1300px; */
+  max-width: 1100px;
   margin:0 auto;
 }
         }
@@ -13092,11 +13070,12 @@ right: 27%;
 }
 
 .tp-section-title {
-    font-size: 60px;
-    font-weight: 700;
+    /* font-size: 60px; */
+    font-size: 36px;
+    font-weight: 600;
     line-height: 1;
     margin-bottom: 20px;
-    letter-spacing: -2.4px;
+    /* letter-spacing: -2.4px; */
 
     
 }
@@ -13657,7 +13636,7 @@ color: #191818;
             }
 
             .history-tab-title {
-                font-size: 24px;
+                font-size: 19px;
             }
         }
         .history-tab-overlay-wrap.left {
@@ -14399,47 +14378,52 @@ color: #191818;
         }
         
         /* Swiper Slider Styles */
-        .tech-specs-slider {
-            margin-top: 40px;
-        }
-      
-        .tech-swiper {
-            width: 100%;
-            padding: 20px 0 40px;
-        }
-        
-        .tech-swiper-slide {
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            height: auto;
-        }
-        
-        .tech-swiper-slide:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-        }
-        
-        .spec-card span {
-            display: block;
-            font-size: 13px;
-            font-weight: 500;
-            text-transform: uppercase;
-            color: #828282;
-            letter-spacing: 0.8px;
-            /* margin-bottom: 12px; */
-            margin-bottom: 7px;
-        }
-        
-        .spec-card h4 {
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.5;
-            color: #333;
-            margin: 0;
-        }
+       .tech-specs-slider {
+        margin-top: 100px;
+    }
+
+    .techSwiper {
+        width: 100%;
+        padding: 20px 0 40px;
+    }
+
+    /* Force every slide to be same width and box model */
+    .techSwiper .swiper-slide {
+        box-sizing: border-box;
+        height: auto;
+        display: flex;           /* make inner card stretch full height */
+    }
+
+    .spec-card {
+        box-sizing: border-box;
+        width: 100%;             /* fill the slide's full width */
+        padding: 24px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .spec-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .spec-card span {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #828282;
+        letter-spacing: 0.8px;
+        margin-bottom: 7px;
+    }
+
+    .spec-card h4 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+        word-break: break-word;  /* prevent overflow on long values */
+    }
         
         .tech-swiper-pagination {
             bottom: 0 !important;
@@ -15236,11 +15220,12 @@ color: #191818;
 
 /* Feature Box */
 .feature-box {
-    display: flex;
+   display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    /* text-align: center; */
+    gap: 10px;
     position: relative;
     z-index: 1;
 }
@@ -15255,7 +15240,7 @@ color: #191818;
 
 /* Feature Box Icon */
 .feature-box-icon {
-    margin-bottom: 25px;
+    margin-bottom: 0px !important; 
 }
 
 .mb-25px {
@@ -15263,7 +15248,7 @@ color: #191818;
 }
 
 .h-100px {
-    height: 100px !important;
+    height: 100px;
     width: auto;
 }
 
@@ -15278,7 +15263,6 @@ color: #191818;
     font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 8px;
-    letter-spacing: -0.5px;
 }
 
 .feature-box-content p {
@@ -15326,7 +15310,7 @@ color: #191818;
 .bottom-text {
     color: #1a1a1a;
     font-size: 20px;
-    letter-spacing: -0.5px;
+    /* letter-spacing: -0.5px; */
 }
 
 .fw-600 {
@@ -15397,7 +15381,7 @@ color: #191818;
     }
 
     .feature-title {
-        font-size: 17px;
+        font-size: 14px !important;
     }
 
     .feature-box-content p {
@@ -15766,7 +15750,7 @@ color: #191818;
             position: relative;
             overflow: hidden;
             border-radius: 12px;
-            height: 500px;
+            /* height: 500px; */
             cursor: pointer;
         }
 
@@ -15814,14 +15798,15 @@ color: #191818;
         .machinery-inner-content {
             padding: 45px 35px 15px 35px;
             transition: transform 0.4s ease;
-            transform: translateY(90px);
+            /* transform: translateY(90px); */
+            transform: translateY(200px);
         }
 
         .machinery-card-item:hover .machinery-inner-content {
             transform: translateY(0);
         }
-
-        .machinery-title-heading {
+       
+        .machinery-card-item:hover .machinery-title-heading {
             font-size: 1.6rem;
             margin-bottom: 25px;
             padding-bottom: 20px;
@@ -15833,13 +15818,16 @@ color: #191818;
             text-decoration: none;
             font-weight: 600;
         }
-
+        .machinery-title-heading{
+          font-size: 24px;
+        }
         .machinery-description-text {
             color: #e0e3e5;
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s ease-in-out;
             line-height: 1.7;
+            height: 200px;
             font-size: 0.95rem;
         }
 
@@ -16294,11 +16282,10 @@ color: #191818;
         }
 
         .ett-awards-header h2 {
-         font-size: 60px;
+         font-size: 36px;
     font-weight: 600;
     line-height: 1;
     /* margin-bottom: 20px; */
-    letter-spacing: -2.4px;
     color: #000;
     margin-bottom: 0;
         }
@@ -16713,11 +16700,10 @@ color: #191818;
         }
 
         .ett-section-header h2 {
-           font-size: 60px;
+           font-size: 36px;
     font-weight: 600;
     line-height: 1;
     /* margin-bottom: 20px; */
-    letter-spacing: -2.4px;
     color: #000;
     margin-bottom: 0;
 
@@ -16797,7 +16783,80 @@ color: #191818;
             border-bottom: 1px solid rgba(0, 0, 0, 0.10);
             transition: all 300ms ease;
         }
+/* === Thumbnail on right side of event === */
+.ett-event-content {
+    /* already has padding-left: 140px, add padding-right for thumbnail */
+    padding-right: 180px; /* make room for thumbnail */
+}
 
+.ett-event-thumbnail {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ett-event-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ett-event-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay on hover */
+.ett-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.ett-event-thumbnail:hover .ett-thumb-overlay {
+    opacity: 1;
+}
+
+.ett-thumb-overlay span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.ett-thumb-arrow {
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ett-event-thumbnail:hover .ett-thumb-arrow {
+    background: var(--color-primary-2);
+    color: #fff;
+}
         .ett-event-content {
             position: relative;
             display: block;
@@ -16862,6 +16921,7 @@ color: #191818;
         .ett-event-details {
             position: relative;
             display: block;
+            width: 400px;
             /* padding-right: 160px; */
         }
 
@@ -17094,6 +17154,7 @@ color: #191818;
             .ett-event-content {
                 padding-left: 0;
                 padding-top: 0px;
+                padding-right: 0;
             }
 
             .ett-date-container {
@@ -17111,6 +17172,7 @@ color: #191818;
 
             .ett-event-details {
                 padding-right: 0;
+                width: auto !important;
             }
 
             .ett-read-more-link {
@@ -18097,24 +18159,22 @@ color: #191818;
 }
 
 .ett-awards-tabs-subtitle {
-font-size: 18px;
     color: var(--color-primary-2);
     margin-bottom: 10px;
     font-weight: 500;
     display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.4em;
-    letter-spacing: 0.1em;
- 
 }
 
 .ett-awards-tabs-title {
-font-size: 60px;
+/* font-size: 60px; */
+font-size: 36px;
     font-weight: 600;
     line-height: 1;
     /* margin-bottom: 20px; */
-    letter-spacing: -2.4px;
+    /* letter-spacing: -2.4px; */
     color: #fff;
     margin-bottom: 0;
 }
@@ -18128,7 +18188,7 @@ font-size: 60px;
     text-align: left;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 7px;
     padding: 16px 30px 20px;
     letter-spacing: -0.36px;
     color: #fff;
@@ -18758,4 +18818,15 @@ font-size: 60px;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+}
+
+@media screen and (min-width:1200px) {
+  .dNtlyB {
+    font-size: 36px !important;
+    font-weight: 600 !important;
+    font-style: normal;
+    color: rgb(17, 17, 17);
+    text-wrap: balance;
+    line-height: 1.32;
+}
 }
