@@ -51,6 +51,11 @@
     .contact-us-form .form-group{
         width: 50%;
     }
+    .tp-portfolio-details-thumb {
+    height: 100%;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
     .contact-us-form .text-area-form{
 width: 100% !important;
     }
