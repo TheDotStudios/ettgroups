@@ -12211,12 +12211,14 @@ right: 27%;
   }
 
   @media (max-width: 768px) {
-    .excellence-hero-section { flex-direction: column; height: auto; min-height: 100vh; }
+    .excellence-hero-section { flex-direction: column; height: auto; 
+      /* min-height: 100vh; */
+     }
 
     .excellence-hero-left {
       width: 100%;
-      padding: 100px 28px 48px;
-      background-image: none;
+      padding: 100px 28px 30px;
+      /* background-image: none; */
     }
     .excellence-hero-left::after { display: none; }
 
@@ -12237,15 +12239,16 @@ right: 27%;
     }
 
     .excellence-hero-thumbnail-item {
-      flex: 0 0 calc(50% - 4px);
-      border: 1px solid rgba(255,255,255,0.1);
+      flex: 0 0 calc(100% - 4px);
+      /* border: 1px solid rgba(255,255,255,0.1);
       padding: 10px 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1); */
     }
     .excellence-hero-thumbnail-item::before { display: none; }
     .excellence-hero-thumbnail-item.excellence-hero-active {
       background: rgba(255,85,50,0.12);
       border-color: rgba(255,85,50,0.3);
+      padding: 10px;
     }
     .excellence-hero-thumbnail-progress { display: none; }
   }
@@ -18859,373 +18862,132 @@ font-size: 36px;
     line-height: 1.32;
 }
 }
-/* ============================================
-   INFRASTRUCTURE GRID - infrastructure.css
-   Unique prefix: infra-  /  ig-
-   ============================================ */
-
-.infra-grid-root {
-  --ig-bg: #0d0f14;
-  --ig-surface: #151820;
-  --ig-surface2: #1c2030;
-  --ig-border: #252a3a;
-  --ig-accent: #e8a020;
-  --ig-text: #e8eaf0;
-  --ig-muted: #6b7280;
-  --ig-tag-bg: #1e2535;
-  --ig-radius: 14px;
-  --ig-gap: 16px;
-  color: var(--ig-text);
-
-  /* FIX: prevent horizontal overflow on mobile */
-  overflow-x: hidden;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* FIX: container must not exceed viewport */
-.infra-grid-root *,
-.infra-grid-root *::before,
-.infra-grid-root *::after {
-  box-sizing: border-box;
-}
-
-/* ── Filter bar ── */
-.infra-filterbar {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 28px;
-  /* FIX: prevent overflow */
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Search row */
-.infra-searchrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.infra-searchbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #ebebeb;
-  border: 1px solid #ebebeb;
-  border-radius: 8px;
-  padding: 8px 14px;
-  flex: 1;
-  max-width: 320px;
-  min-width: 200px;
-  transition: border-color 0.2s;
-}
-.infra-searchbox:focus-within {
-  border-color: rgba(232,160,32,0.5);
-}
-.infra-searchbox svg { flex-shrink: 0; color: var(--ig-muted); }
-
-.infra-searchinput {
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 13px;
-  width: 100%;
-  color: #333;
-}
-.infra-searchinput::placeholder { color: var(--ig-muted); }
-
-/* Pills */
-.infra-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.infra-pill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 16px;
-  border-radius: 100px;
-  border: 1px solid #ebebeb;
-  background: #ebebeb;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ig-muted);
-  cursor: pointer;
-  transition: all 0.18s;
-  user-select: none;
-  white-space: nowrap;
-}
-.infra-pill:hover {
-  border-color: var(--color-primary-2, #e8a020);
-  color: var(--color-primary-2, #e8a020);
-}
-.infra-pill.infra-pill--active {
-  background: var(--color-primary-2, #e8a020);
-  border-color: var(--color-primary-2, #e8a020);
-  color: #fff;
-}
-.infra-pill--highlight {
-  background: #ebebeb;
-  border-color: #ebebeb;
-  color: var(--ig-muted);
-}
-
-/* ── Section label ── */
-.infra-seclabel {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  color: var(--ig-muted);
-  text-transform: uppercase;
-  padding: 20px 0 14px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.infra-seclabel::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: #e1e1e1;
-}
-
-/* Result count */
-.infra-resultcount {
-  font-size: 12px;
-  color: var(--ig-muted);
-  margin-bottom: 4px;
-}
-
-/* ── Masonry — default (All view) ── */
-.infra-masonry {
-  columns: 3;
-  column-gap: var(--ig-gap);
-}
-@media(max-width: 1280px) { .infra-masonry { columns: 3; } }
-@media(max-width: 900px)  { .infra-masonry { columns: 2; } }
-@media(max-width: 540px)  { .infra-masonry { columns: 2; } }
-
-/* ── Grid mode — single category expanded view ── */
-.infra-masonry.infra-masonry--grid {
-  columns: unset;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--ig-gap);
-}
-@media(max-width: 900px)  { .infra-masonry.infra-masonry--grid { grid-template-columns: repeat(2, 1fr); } }
-@media(max-width: 540px)  { .infra-masonry.infra-masonry--grid { grid-template-columns: repeat(2, 1fr); } }
-
-/* ── Category Card ── */
-.infra-catcard {
-  break-inside: avoid;
-  margin-bottom: 28px;
-  border-radius: var(--ig-radius);
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.22s, box-shadow 0.22s;
-  animation: infra-fadeup 0.45s ease both;
-  /* FIX: prevent cards from overflowing */
-  width: 100%;
-  max-width: 100%;
-}
-.infra-masonry.infra-masonry--grid .infra-catcard {
-  margin-bottom: 0;
-}
-.infra-catcard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-@keyframes infra-fadeup {
-  from { opacity: 0; transform: translateY(22px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Image wrapper */
-.infra-catthumb-item {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  border-radius: var(--ig-radius);
-  background: #ebebeb;
-  aspect-ratio: 1 / 1;
-}
-.infra-catthumb-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: var(--ig-radius);
-  transition: transform 0.35s ease;
-}
-.infra-catcard:hover .infra-catthumb-item img {
-  transform: scale(1.04);
-}
-
-/* Card info */
-.infra-catinfo {
-  padding: 12px 4px 0;
-}
-.infra-catname {
-  font-size: 22px;
-  font-weight: 600;
-  color: #000;
-  padding: 20px 20px 20px 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  line-height: 1.3;
-}
-.infra-catsub {
-  font-size: 14px;
-  color: #888;
-  margin-top: 3px;
-  line-height: 1.5;
-  display: none;
-}
-
-/* Tags */
-.infra-tag {
-  font-size: 9px;
-  font-weight: 600;
-  border-radius: 4px;
-  padding: 2px 6px;
-  background: var(--ig-tag-bg);
-  color: var(--ig-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.infra-tag--new { background: rgba(232,160,32,0.12); color: #e8a020; }
-.infra-tag--upd { background: rgba(59,130,246,0.12); color: #60a5fa; }
-.infra-tag--ren { background: rgba(168,85,247,0.12); color: #c084fc; }
-
-/* Footer */
-.infra-catfooter { display: none; }
-
-/* Empty state */
-.infra-empty {
-  display: none;
-  text-align: center;
-  padding: 80px 20px;
-  color: var(--ig-muted);
-  font-size: 14px;
-}
-.infra-empty-icon {
-  font-size: 48px;
-  display: block;
-  margin-bottom: 12px;
-  opacity: 0.4;
-}
-
-/* ── MOBILE ── */
-@media (max-width: 768px) {
-  .infra-grid-root {
-    /* FIX: lock to viewport, no overflow */
-    overflow-x: hidden;
-    max-width: 100vw;
+ /* ── PAGE WRAPPER ── */
+   /* ── SECTION ── */
+  .ig-section {
+    margin-bottom: 72px;
   }
 
-  /* FIX: container must be constrained */
-  .container-1288 {
-    overflow-x: hidden;
-    max-width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+  /* Section Title Row */
+  .ig-sec-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
   }
-
-  .infra-filterbar {
-    gap: 10px;
-    margin-bottom: 16px;
+  .ig-sec-num {
+    font-size: 11px;
+    color: #bbb;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    flex-shrink: 0;
   }
-
-  /* FIX: search takes full width on mobile */
-  .infra-searchbox {
-    max-width: 100%;
-    width: 100%;
-    min-width: unset;
-    flex: unset;
+  .ig-sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1;
   }
-  .infra-searchrow {
-    flex-wrap: nowrap;
-    width: 100%;
+  .ig-sec-line {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
   }
-
-  /* FIX: pills scroll horizontally, single row */
-  .infra-pills {
-    gap: 6px;
-    overflow-x: auto;
-    flex-wrap: nowrap;          /* single scrollable row */
-    padding-bottom: 6px;
-    /* hide scrollbar but keep scroll */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    /* FIX: don't exceed container */
-    max-width: 100%;
-    width: 100%;
-  }
-  .infra-pills::-webkit-scrollbar { display: none; }
-
-  .infra-pill {
-    font-size: 12px;
-    padding: 6px 13px;
-    flex-shrink: 0;             /* pills don't shrink, they scroll */
-  }
-
-  /* FIX: 2-column masonry on mobile */
-  .infra-masonry {
-    columns: 2;
-    column-gap: 10px;
-  }
-
-  .infra-catcard {
-    margin-bottom: 10px;
-  }
-
-  /* FIX: smaller card name on mobile */
-  .infra-catname {
-    font-size: 14px;
-    padding: 8px 8px 8px 8px;
-    gap: 4px;
-  }
-
-  .infra-catthumb-item {
-    aspect-ratio: 1 / 1;
-    border-radius: 10px;
-  }
-  .infra-catthumb-item img {
-    border-radius: 10px;
-  }
-  .infra-catcard {
-    border-radius: 10px;
-  }
-
-  .infra-seclabel {
+  .ig-sec-badge {
+    flex-shrink: 0;
     font-size: 9px;
-    padding: 14px 0 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .badge-new  { background: #fff4e0; color: #e8a020; }
+  .badge-ren  { background: #f3eeff; color: #9333ea; }
+
+  /* ── IMAGE GRID — all tiles same fixed size ── */
+  .ig-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
   }
 
-  .infra-resultcount {
-    font-size: 11px;
-  }
-}
+  /* Force 3 cols for 3-image sections */
+  .ig-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-@media (max-width: 380px) {
-  .infra-masonry {
-    columns: 2;   /* keep 2 columns even on very small screens */
-    column-gap: 8px;
+  /* Force 2 cols for 2-image sections */
+  .ig-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Single image — keep it contained, not stretched */
+  .ig-grid-1 { grid-template-columns: repeat(3, 1fr); }
+
+  /* ── IMAGE CARD — strict equal square, no exceptions ── */
+  .ig-img {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #e4e0d8;
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* always a perfect square */
+    position: relative;
+    /* CRITICAL: never let grid stretch this */
+    min-width: 0;
+    max-width: 100%;
+     height: 350px;
   }
-  .infra-catname {
-    font-size: 11px;
-    padding: 6px;
+  .ig-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);
   }
-  .infra-catthumb-item {
-    aspect-ratio: 1 / 1;
+  .ig-img:hover img {
+    transform: scale(1.07);
   }
-}
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .ig-grid,
+    .ig-grid-1 { grid-template-columns: repeat(3, 1fr); }
+    .ig-grid-2  { grid-template-columns: repeat(2, 1fr); }
+    .ig-grid-3  { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .ig-wrap { padding: 36px 18px 80px; }
+    .ig-page-sub { font-size: 11px; margin-bottom: 10px; }
+    .ig-page-title { margin-bottom: 40px; }
+    .ig-section { margin-bottom: 48px; }
+    .ig-sec-head { gap: 10px; margin-bottom: 14px; }
+
+    .ig-grid,
+    .ig-grid-1,
+    .ig-grid-3 { grid-template-columns: repeat(1, 1fr); gap: 10px; }
+    .ig-grid-2  { grid-template-columns: repeat(1, 1fr); gap: 10px; }
+  }
+
+  @media (max-width: 540px) {
+    .ig-wrap { padding: 24px 14px 64px; }
+    .ig-page-sub { font-size: 10px; letter-spacing: 0.14em; margin-bottom: 8px; }
+    .ig-page-title { font-size: 1.85rem; margin-bottom: 32px; }
+    .ig-section { margin-bottom: 40px; }
+    .ig-sec-head { gap: 8px; margin-bottom: 11px;max-width: 390px; }
+    .ig-sec-num { font-size: 10px; }
+    .ig-sec-title { font-size: 1.1rem; }
+    .ig-sec-badge { font-size: 8px; padding: 3px 8px; }
+
+    /* All grids — strict 2 equal columns, no exceptions */
+    .ig-grid,
+    .ig-grid-1,
+    .ig-grid-2,
+    .ig-grid-3,
+    .ig-grid-4,
+    .ig-grid-5,
+    .ig-grid-6,
+    .ig-grid-many {
+     max-width: 390px;
+    }
+
+    .ig-img { border-radius: 10px; }
+  }
