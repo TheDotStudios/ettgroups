@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure – ETT For Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #151820;
+    --surface2: #1c2030;
+    --border: #252a3a;
+    --accent: #e8a020;
+    --accent2: #3b82f6;
+    --text: #e8eaf0;
+    --muted: #6b7280;
+    --tag-bg: #1e2535;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,15,20,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    display: flex; align-items: center; gap: 12px;
+    height: 64px;
+  }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+  .breadcrumb span { color: var(--text); font-weight: 500; }
+  .breadcrumb .sep { color: var(--border); }
+  .badge-new {
+    font-size: 9px; font-family: 'DM Mono', monospace; font-weight: 500;
+    background: var(--accent); color: #000;
+    border-radius: 3px; padding: 1px 5px; letter-spacing: 0.08em;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.7} }
+
+  /* ── Page title ── */
+  .hero {
+    padding: 48px 40px 32px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, #e8eaf0 30%, #6b7280);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero-meta { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; text-align: right; line-height: 1.8; }
+
+  /* ── Filter tabs ── */
+  .filter-area {
+    padding: 0 40px 24px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .filter-tabs {
+    display: flex; gap: 4px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+  }
+  .tab {
+    padding: 10px 20px;
+    font-size: 13px; font-weight: 500;
+    color: var(--muted);
+    border: none; background: none; cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    bottom: -1px;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .tab .count {
+    display: inline-block;
+    font-size: 10px; font-family: 'DM Mono', monospace;
+    background: var(--surface2);
+    border-radius: 10px; padding: 1px 6px; margin-left: 6px;
+    color: var(--muted);
+  }
+  .tab.active .count { background: rgba(232,160,32,0.15); color: var(--accent); }
+
+  /* ── Pills row ── */
+  .pills-row {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  }
+  .pill {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 12px; font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.18s;
+    user-select: none;
+  }
+  .pill:hover { border-color: var(--accent); color: var(--text); }
+  .pill.active {
+    background: rgba(232,160,32,0.12);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .pill .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor; opacity: 0.6;
+  }
+  .pill-new { background: rgba(232,160,32,0.08); border-color: rgba(232,160,32,0.4); color: var(--accent); }
+  .new-tag {
+    font-size: 8px; font-family: 'DM Mono', monospace;
+    background: var(--accent); color: #000;
+    border-radius: 3px; padding: 1px 4px;
+  }
+
+  /* ── Search bar ── */
+  .search-row {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .search-box {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 14px;
+    flex: 1; max-width: 340px;
+  }
+  .search-box input {
+    background: none; border: none; outline: none;
+    color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px;
+    width: 100%;
+  }
+  .search-box input::placeholder { color: var(--muted); }
+  .search-icon { color: var(--muted); font-size: 16px; }
+  .view-toggle { display: flex; gap: 4px; margin-left: auto; }
+  .vtbtn {
+    width: 32px; height: 32px; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--surface);
+    color: var(--muted); cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+    transition: all 0.15s;
+  }
+  .vtbtn.active { background: var(--surface2); border-color: var(--accent); color: var(--accent); }
+
+  /* ── Masonry Grid ── */
+  .gallery-wrapper { padding: 0 40px 80px; }
+
+  /* Section label */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.12em;
+    color: var(--muted); text-transform: uppercase;
+    padding: 20px 0 12px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  .masonry {
+    columns: 4;
+    column-gap: 16px;
+  }
+  @media(max-width:1200px){ .masonry { columns: 3; } }
+  @media(max-width:800px){ .masonry { columns: 2; } }
+  @media(max-width:500px){ .masonry { columns: 1; } }
+
+  .card {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    animation: fadeUp 0.5s ease both;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232,160,32,0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-img {
+    width: 100%; display: block;
+    background: var(--surface2);
+    object-fit: cover;
+  }
+
+  /* Placeholder image using CSS */
+  .card-placeholder {
+    width: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--surface2), var(--tag-bg));
+  }
+
+  .card-body {
+    padding: 12px 14px;
+  }
+  .card-category {
+    font-size: 10px; font-family: 'DM Mono', monospace;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.35;
+  }
+  .card-meta {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 8px;
+  }
+  .card-tag {
+    font-size: 10px; border-radius: 4px; padding: 2px 7px;
+    background: var(--tag-bg); color: var(--muted);
+  }
+  .card-tag.new { background: rgba(232,160,32,0.1); color: var(--accent); }
+  .card-count { font-size: 11px; font-family: 'DM Mono', monospace; color: var(--muted); }
+
+  /* Category group cards */
+  .cat-card {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    animation: fadeUp 0.4s ease both;
+  }
+  .cat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232,160,32,0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+  .cat-thumb {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    background: var(--bg);
+  }
+  .cat-thumb-item {
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    background: var(--surface2);
+  }
+  .cat-thumb-item:first-child { grid-row: 1; grid-column: 1 / 3; aspect-ratio: 2/1; font-size: 48px; }
+  .cat-info { padding: 16px; }
+  .cat-name {
+    font-size: 15px; font-weight: 600; color: var(--text);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .cat-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .cat-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .cat-img-count { font-size: 11px; font-family: 'DM Mono', monospace; color: var(--muted); }
+  .cat-arrow {
+    width: 28px; height: 28px; border-radius: 6px;
+    border: 1px solid var(--border); background: none;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 14px; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .cat-card:hover .cat-arrow { background: var(--accent); border-color: var(--accent); color: #000; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,0.92);
+    align-items: center; justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+  .lightbox.open { display: flex; }
+  .lb-content { position: relative; max-width: 90vw; max-height: 90vh; }
+  .lb-close {
+    position: absolute; top: -40px; right: 0;
+    background: none; border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; border-radius: 6px; padding: 4px 12px;
+    cursor: pointer; font-size: 13px; font-family: 'DM Sans', sans-serif;
+  }
+
+  /* Hidden */
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="breadcrumb">
+    Shared with me
+    <span class="sep">›</span>
+    <span>ETT – For Design</span>
+    <span class="sep">›</span>
+    <span>Infrastructure</span>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;">Gallery / Infrastructure</div>
+    <div class="hero-title">Infrastructure</div>
+  </div>
+  <div class="hero-meta">
+    15 Categories<br>
+    Updated Feb 2026<br>
+    <span style="color:var(--accent);">6 New additions</span>
+  </div>
+</div>
+
+<!-- Filters -->
+<div class="filter-area">
+  <!-- Tabs -->
+  <div class="filter-tabs">
+    <button class="tab active" data-tab="all">All Categories <span class="count">15</span></button>
+    <button class="tab" data-tab="machine">Machines <span class="count">8</span></button>
+    <button class="tab" data-tab="process">Process <span class="count">7</span></button>
+    <button class="tab" data-tab="new">New / Updated <span class="count">6</span></button>
+  </div>
+
+  <!-- Search + Pills -->
+  <div class="search-row">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search categories...">
+    </div>
+    <div class="view-toggle">
+      <button class="vtbtn active" id="viewMasonry" title="Masonry">⊞</button>
+      <button class="vtbtn" id="viewList" title="List">☰</button>
+    </div>
+  </div>
+
+  <!-- Pill filters -->
+  <div class="pills-row" id="pillsRow">
+    <button class="pill active" data-filter="all"><span class="dot"></span>All</button>
+    <button class="pill pill-new" data-filter="air-compressor">Air Compressor <span class="new-tag">NEW</span></button>
+    <button class="pill pill-new" data-filter="electric-oven">Electric Oven <span class="new-tag">NEW</span></button>
+    <button class="pill pill-new" data-filter="mark-screw">Mark Screw Air <span class="new-tag">NEW</span></button>
+    <button class="pill pill-new" data-filter="oil-filling">Oil Filling Machine <span class="new-tag">NEW</span></button>
+    <button class="pill pill-new" data-filter="vacuum-dry">Vacuum Plant Dry Type <span class="new-tag">UPD</span></button>
+    <button class="pill pill-new" data-filter="vacuum-heater">Vacuum Plant Heater <span class="new-tag">UPD</span></button>
+    <button class="pill" data-filter="core-processing">Core Processing</button>
+    <button class="pill" data-filter="winding">Winding Section</button>
+    <button class="pill" data-filter="assembly">Assembly & Tank</button>
+    <button class="pill" data-filter="vacuum-oil">Vacuum Drying & Oil</button>
+    <button class="pill" data-filter="testing">Testing & QC</button>
+    <button class="pill" data-filter="finished">Finished Goods</button>
+    <button class="pill" data-filter="general">General Plant</button>
+    <button class="pill" data-filter="eng-design">Engineering & Design</button>
+    <button class="pill" data-filter="qc-machines">QC & Testing Machines</button>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="gallery-wrapper">
+
+  <!-- Recently Updated -->
+  <div class="section-label" id="newSection">Recently Added & Updated</div>
+  <div class="masonry" id="masonryGrid">
+
+    <!-- Air Compressor -->
+    <div class="cat-card" data-cat="air-compressor" data-tab="machine" data-filter="air-compressor">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🏭</div>
+        <div class="cat-thumb-item">⚙️</div>
+        <div class="cat-thumb-item">🔧</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Air Compressor <span class="card-tag new">NEW</span></div>
+        <div class="cat-sub">Newly added to Infrastructure tab</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Electric Oven -->
+    <div class="cat-card" data-cat="electric-oven" data-tab="machine" data-filter="electric-oven">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🔥</div>
+        <div class="cat-thumb-item">🌡️</div>
+        <div class="cat-thumb-item">⚡</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Electric Oven <span class="card-tag new">NEW IMAGES</span></div>
+        <div class="cat-sub">Industrial drying & curing ovens</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mark Screw Air -->
+    <div class="cat-card" data-cat="mark-screw" data-tab="machine" data-filter="mark-screw">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🔩</div>
+        <div class="cat-thumb-item">🌀</div>
+        <div class="cat-thumb-item">💨</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Mark Screw Air <span class="card-tag new">NEW IMAGES</span></div>
+        <div class="cat-sub">Screw air compressor systems</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oil Filling Machine -->
+    <div class="cat-card" data-cat="oil-filling" data-tab="machine" data-filter="oil-filling">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🛢️</div>
+        <div class="cat-thumb-item">⚗️</div>
+        <div class="cat-thumb-item">🔧</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Oil Filling Machine <span class="card-tag new">NEW IMAGES</span></div>
+        <div class="cat-sub">Transformer oil processing & filling</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vacuum Plant Dry Type -->
+    <div class="cat-card" data-cat="vacuum-dry" data-tab="machine" data-filter="vacuum-dry">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🌀</div>
+        <div class="cat-thumb-item">🏗️</div>
+        <div class="cat-thumb-item">⚙️</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Vacuum Plant Dry Type <span class="card-tag new">RENAMED</span></div>
+        <div class="cat-sub">Formerly: Vacuum Plant for Dry Type Transformers</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vacuum Plant Heater -->
+    <div class="cat-card" data-cat="vacuum-heater" data-tab="machine" data-filter="vacuum-heater">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">♨️</div>
+        <div class="cat-thumb-item">🔥</div>
+        <div class="cat-thumb-item">🌡️</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Vacuum Plant Heater <span class="card-tag new">RENAMED + NEW</span></div>
+        <div class="cat-sub">Formerly: Vacuum Heater. New photos added.</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- All Categories -->
+  <div class="section-label" id="allSection">Engineering & Design Process</div>
+  <div class="masonry" id="masonryGrid2">
+
+    <!-- Core Processing -->
+    <div class="cat-card" data-cat="core-processing" data-tab="process" data-filter="core-processing">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🔲</div>
+        <div class="cat-thumb-item">📐</div>
+        <div class="cat-thumb-item">✂️</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Core Processing</div>
+        <div class="cat-sub">CRGO cutting & stacking</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Winding Section -->
+    <div class="cat-card" data-cat="winding" data-tab="process" data-filter="winding">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🌀</div>
+        <div class="cat-thumb-item">⚡</div>
+        <div class="cat-thumb-item">🔌</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Winding Section</div>
+        <div class="cat-sub">HV / LV winding operations</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assembly & Tank -->
+    <div class="cat-card" data-cat="assembly" data-tab="process" data-filter="assembly">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🏗️</div>
+        <div class="cat-thumb-item">🔧</div>
+        <div class="cat-thumb-item">🛠️</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Assembly & Tank Fabrication</div>
+        <div class="cat-sub">Transformer assembly & tank build</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vacuum Drying & Oil -->
+    <div class="cat-card" data-cat="vacuum-oil" data-tab="process" data-filter="vacuum-oil">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">💧</div>
+        <div class="cat-thumb-item">🛢️</div>
+        <div class="cat-thumb-item">⚗️</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Vacuum Drying & Oil Processing</div>
+        <div class="cat-sub">Drying cycles & oil impregnation</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testing & QC -->
+    <div class="cat-card" data-cat="testing" data-tab="process" data-filter="testing">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🧪</div>
+        <div class="cat-thumb-item">📊</div>
+        <div class="cat-thumb-item">✅</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Testing & Quality Control</div>
+        <div class="cat-sub">Electrical & dielectric testing</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- QC & Testing Machines -->
+    <div class="cat-card" data-cat="qc-machines" data-tab="machine" data-filter="qc-machines">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">⚗️</div>
+        <div class="cat-thumb-item">🔬</div>
+        <div class="cat-thumb-item">📈</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">QC & Testing Machines</div>
+        <div class="cat-sub">Specialized quality assurance equipment</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finished Goods -->
+    <div class="cat-card" data-cat="finished" data-tab="process" data-filter="finished">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">📦</div>
+        <div class="cat-thumb-item">🚚</div>
+        <div class="cat-thumb-item">🏭</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Finished Goods & Dispatch</div>
+        <div class="cat-sub">Packaging, loading & dispatch</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Plant -->
+    <div class="cat-card" data-cat="general" data-tab="process" data-filter="general">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">🏭</div>
+        <div class="cat-thumb-item">🌿</div>
+        <div class="cat-thumb-item">📸</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">General Plant / Infrastructure</div>
+        <div class="cat-sub">Overview of plant & facilities</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Engineering & Design -->
+    <div class="cat-card" data-cat="eng-design" data-tab="process" data-filter="eng-design">
+      <div class="cat-thumb">
+        <div class="cat-thumb-item" style="font-size:64px">📐</div>
+        <div class="cat-thumb-item">🖥️</div>
+        <div class="cat-thumb-item">📋</div>
+      </div>
+      <div class="cat-info">
+        <div class="cat-name">Engineering & Design</div>
+        <div class="cat-sub">Drawings, schematics & design documentation</div>
+        <div class="cat-footer">
+          <span class="cat-img-count">— images</span>
+          <button class="cat-arrow">→</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-content">
+    <button class="lb-close" id="lbClose">✕ Close</button>
+    <img id="lbImg" src="" style="max-width:90vw;max-height:80vh;border-radius:8px;">
+  </div>
+</div>
+
+<script>
+  // Tab switching
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const tabVal = tab.dataset.tab;
+      filterCards(tabVal, getActivePill());
+    });
+  });
+
+  // Pill filters
+  const pills = document.querySelectorAll('.pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      filterCards(getActiveTab(), pill.dataset.filter);
+    });
+  });
+
+  function getActiveTab() {
+    return document.querySelector('.tab.active')?.dataset.tab || 'all';
+  }
+  function getActivePill() {
+    return document.querySelector('.pill.active')?.dataset.filter || 'all';
+  }
+
+  function filterCards(tab, filter) {
+    const allCards = document.querySelectorAll('.cat-card');
+    allCards.forEach(card => {
+      const cardTab = card.dataset.tab;
+      const cardFilter = card.dataset.filter;
+      const isNew = card.querySelector('.new-tag') !== null;
+
+      let showByTab = tab === 'all' || cardTab === tab || (tab === 'new' && isNew);
+      let showByFilter = filter === 'all' || cardFilter === filter;
+
+      if(showByTab && showByFilter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.cat-card').forEach(card => {
+      const name = card.querySelector('.cat-name').textContent.toLowerCase();
+      const sub = card.querySelector('.cat-sub').textContent.toLowerCase();
+      card.style.display = (name.includes(query) || sub.includes(query)) ? '' : 'none';
+    });
+  });
+
+  // View toggle (masonry vs list)
+  document.getElementById('viewList').addEventListener('click', function() {
+    document.getElementById('viewMasonry').classList.remove('active');
+    this.classList.add('active');
+    document.querySelectorAll('.masonry').forEach(g => {
+      g.style.columns = '1';
+    });
+    document.querySelectorAll('.cat-thumb').forEach(t => t.style.display = 'none');
+  });
+  document.getElementById('viewMasonry').addEventListener('click', function() {
+    document.getElementById('viewList').classList.remove('active');
+    this.classList.add('active');
+    document.querySelectorAll('.masonry').forEach(g => {
+      g.style.columns = '';
+    });
+    document.querySelectorAll('.cat-thumb').forEach(t => t.style.display = '');
+  });
+
+  // Stagger card animations
+  document.querySelectorAll('.cat-card').forEach((card, i) => {
+    card.style.animationDelay = `${i * 60}ms`;
+  });
+
+  // Close lightbox
+  document.getElementById('lbClose').addEventListener('click', () => {
+    document.getElementById('lightbox').classList.remove('open');
+  });
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if(e.target === this) this.classList.remove('open');
+  });
+</script>
+</body>
+</html>

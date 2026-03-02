@@ -52,6 +52,9 @@
     height: 50px !important;
     width: auto;
 }
+.excellence-hero-thumbnail-item {
+    font-size: 11px !important;
+}
 .tp-portfolio-details-thumb-main img {
     width: 100%;
     height: 250px !important;
@@ -241,7 +244,7 @@ width: 100% !important;
     margin-bottom: 5px !important;
 }
     .excellence-hero-heading {
-    font-size: 50px !important;
+    font-size: 42px !important;
     font-weight: 700;
     line-height: 0.94;
     letter-spacing: -3.6px;
@@ -639,6 +642,10 @@ width: 100% !important;
     }
 }
 @media screen and (min-width:1200px) and (max-width:1599px) {
+    .excellence-hero-left {
+    padding: 250px 0px 260px 100px !important;
+ 
+}
     .portfolio-showcase-wrapper {
     max-width: 1200px !important    ;
     margin: 0 auto;
@@ -730,7 +737,7 @@ width: 100% !important;
 .container-1288 {
     max-width: 1100px !important;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0  !important;
 }
 .ett-event-details {
     position: relative;
