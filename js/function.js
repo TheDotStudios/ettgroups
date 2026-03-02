@@ -254,14 +254,29 @@
 	new WOW().init();
 
 	/* Popup Video */
-	if ($('.popup-video').length) {
-		$('.popup-video').magnificPopup({
-			type: 'iframe',
-			mainClass: 'mfp-fade',
-			removalDelay: 160,
-			preloader: false,
-			fixedContentPos: true
-		});
-	}
-	
+/* Popup Video */
+/* Popup Video */
+/* Popup Video */
+if ($('.popup-video').length) {
+    $('.popup-video').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: true,
+        iframe: {
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/',
+                    id: function(url) {
+                        var m = url.match(/[?&]v=([^?&]+)/);
+                        if (!m || !m[1]) return null;
+                        return m[1];
+                    },
+                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                }
+            }
+        }
+    });
+}
 })(jQuery);
