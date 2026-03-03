@@ -18873,7 +18873,7 @@ font-size: 36px;
     display: flex;
     align-items: center;
     gap: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .ig-sec-num {
     font-size: 11px;
@@ -18990,4 +18990,5 @@ font-size: 36px;
     }
 
     .ig-img { border-radius: 10px; }
+
   }
