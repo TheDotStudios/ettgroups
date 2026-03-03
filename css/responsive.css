@@ -59,13 +59,22 @@
 .excellence-hero-counter strong{
     font-size: 13px !important;
 }
+.rs-about-twelve .rs-about-content{
+    height: 265px !important;
+}
  .excellence-hero-right {
     position: relative;
     width: 100%;
     height: 300px;
     overflow: hidden;
   }
-
+.history-desc {
+    margin: 20px 0;
+    max-width: 350px !important;
+    font-size: 16px;
+    color: #666;
+    margin:unset !important;
+}
   /* REMOVE any display:none for ::before */
 
   .excellence-hero-right::before {
@@ -685,8 +694,94 @@ width: 100% !important;
     }
 }
 @media screen and (min-width:1200px) and (max-width:1599px) {
+    .tp-service-sidebar-list ul li a {
+    padding: 10px 12px 10px 12px !important;
+    display: block;
+    font-size: 14px !important;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1.1;
+}
+    .lap-w-100{
+        width: 100% !important;
+    }
+    p{
+        font-size: 14px !important;
+    }
+       .job-openings-table {
+        font-size: 13px !important;
+    }
+
+    .job-openings-table thead th {
+        padding: 12px 10px !important;
+        font-size: 13px !important;
+        letter-spacing: 0 !important;
+    }
+
+    .job-openings-table tbody td {
+        padding: 14px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .job-openings-table tbody td:first-child {
+        width: 45px !important;
+    }
+
+    .job-openings-table .apply-btn {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+    }
+
+    .openings-title {
+        font-size: 17px !important;
+    }
+
+    /* Prevent table from overflowing its container */
+    .openings-section {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .job-openings-table {
+        /* table-layout: fixed; */
+        width: 100%;
+    }
+
+    /* Column width distribution */
+    .job-openings-table thead th:nth-child(1) { width: 8%; }
+    .job-openings-table thead th:nth-child(2) { width: 28%; }
+    .job-openings-table thead th:nth-child(3) { width: 28%; }
+    .job-openings-table thead th:nth-child(4) { width: 18%; }
+    .job-openings-table thead th:nth-child(5) { width: 18%; }
+    .excellence-hero-heading {
+    font-size: 42px !important;
+    }
+    .excellence-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh !important;
+    display: flex;
+    overflow: hidden;
+}
+
+
+    .excellence-hero-thumbnails {
+    margin-top: 30px !important;
+    }
+    .custom-button-1 {
+    font-size: 12px !important;
+    padding: 7px 7px !important;
+    }
+    .excellence-hero-subheading {
+    font-size: 14px !important;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 15px !important;
+    line-height: 1.6;
+    animation: excellenceHeroSlideUp 0.8s var(--excellence-hero-transition-easing) 0.25s both;
+}
     .excellence-hero-left {
-    padding: 250px 0px 260px 100px !important;
+    padding: 220px 0px 260px 200px !important;
  
 }
     .portfolio-showcase-wrapper {
@@ -767,9 +862,12 @@ width: 100% !important;
 }
 .rs-about-twelve .rs-about-content {
     padding: 25px 30px 25px 25px !important;
+height: 340px !important;
+    /* margin-inline-start: 120px !important; */
 
-    margin-inline-start: 120px !important;
-
+}
+.rs-about-twelve{
+    padding-top: 100px !important;
 }
 .ett-event-details {
     position: relative;
