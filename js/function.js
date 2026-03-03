@@ -27,7 +27,14 @@
 			$("header .header-sticky").toggleClass("active", (fromTop > 600));
 		});
 	}	
-	
+	  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".tp-service-details-ptb");
+    if (section) {
+      const offset = 80; // adjust based on your sticky header height
+      const top = section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  });
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',
