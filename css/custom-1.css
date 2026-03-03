@@ -18865,7 +18865,7 @@ font-size: 36px;
  /* ── PAGE WRAPPER ── */
    /* ── SECTION ── */
   .ig-section {
-    margin-bottom: 72px;
+    margin-bottom: 100px;
   }
 
   /* Section Title Row */
@@ -18992,3 +18992,4 @@ font-size: 36px;
     .ig-img { border-radius: 10px; }
 
   }
+
