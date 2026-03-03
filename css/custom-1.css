@@ -18989,8 +18989,9 @@ font-size: 36px;
     .ig-grid-5,
     .ig-grid-6,
     .ig-grid-many {
-     max-width: 390px;
+     max-width: 350px;
     }
 
     .ig-img { border-radius: 10px; }
+
   }
