@@ -12110,10 +12110,14 @@ right: 27%;
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 1024px) {
+  @media (max-width: 1025px) {
+    .excellence-hero-thumbnail-item{
+      width: 80% !important;
+    }
     .excellence-hero-left {
       width: 52%;
-      padding: 48px 40px 48px 48px;
+      padding: 80px 40px 48px 48px;
+      justify-content: center;
     }
     .excellence-hero-heading { font-size: 46px; }
   }
