@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
-    <!-- Meta -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -11,33 +10,22 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <!-- Page Title -->
     <title>Electro Tech Transformers</title>
-    <!-- Favicon Icon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon-01.png"> -->
-    <!-- Google Fonts Css-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-    <!-- SlickNav Css -->
     <link href="css/slicknav.min.css" rel="stylesheet" />
-    <!-- Swiper Css -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <!-- Font Awesome Icon Css-->
     <link href="css/all.css" rel="stylesheet" media="screen" />
-    <!-- Animated Css -->
-    <!-- <link href="css/animate.css" rel="stylesheet" /> -->
-    <!-- Magnific Popup Core Css File -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
-    <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <!-- Main Custom Css -->
+    <link rel="stylesheet" href="css/about.css" />
      
     <link href="css/custom-1.css" rel="stylesheet" media="screen" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -45,614 +33,10 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-   :root {
-            --color-primary-11: #1c1f3b;
-            --color-primary-22: #ffdc69;
-            --color-primary-33: #c5ceff;
-            --color-secondary-2: #fff9ed;
-            --color-white: white;
-      
-        }
-.section-line-white {
-    border: 1px dashed #fff;
-    opacity: .05;
-    width: 2px;
-    height: 100%;
-}
-      
-        .service-section {
-            position: relative;
-            overflow: clip;
-            /* background-color: #191919; */
-        }
-        /* .service-section .service-inner-wrap{
-            background-color: #0a0a0c;
-
-        } */
-
-         /* .swiper {
-            width: 100%;
-            padding-bottom: 80px;
-        } */
-
-        /* .swiper-slide {
-            width: 440px !important;
-            height: 600px;
-        } */
-
-        .service-slider-wrapper {
-            position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .service-slider-wrapper .swiper{
-          overflow: visible !important;
-        }
-
-        .service-slider {
-            flex: 1;
-            /* overflow: hidden; */
-            /* padding-bottom: 80px; */
-        }
-
-        .service-mask {
-            display: flex;
-            gap: 40px;
-            transition: transform 0.5s ease;
-        }
-
-        .service-slide {
-            min-width: 440px;
-            height: 600px;
-        }
-
-        .service-inline-item {
-            border-radius: 20px;
-            background-color: var(--color-primary-11);
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .service-inline-item:hover {
-            transform: translateY(-8px);
-        }
-
-        .service-inline-item.two {
-            background-color: var(--color-primary-22);
-        }
-
-        .service-inline-item.three {
-            background-color: var(--color-secondary-2);
-        }
-
-        .service-inline-item.four {
-            background-color: #c5ceff;
-        }
-
-        .service-inline-image-wrap {
-            width: auto;
-            margin: 30px;
-            padding: 2px;
-            position: relative;
-            transform: translate3d(130px, -60px, 0px);
-            transition: transform 0.4s ease;
-        }
-
-        .service-inline-item:hover .service-inline-image-wrap {
-            transform: translate3d(0px, 0px, 0px);
-        }
-
-        .service-inline-image-wrap.one {
-            background-color: var(--color-primary-11);
-        }
-
-        .service-inline-image-wrap.two {
-            background-color: var(--color-primary-22);
-        }
-
-        .service-inline-image-wrap.three {
-            background-color: var(--color-secondary-22);
-        }
-
-        .service-inline-image-wrap.four {
-            background-color: #c5ceff;
-        }
-
-        .service-inline-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 16px;
-        }
-
-        .service-inline-image-shape {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .service-inline-content {
-            padding: 0 40px 40px;
-            flex-grow: 1;
-        }
-
-        .service-inline-content.one {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-title {
-            font-family: var(--font-family-heading);
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--color-white);
-        }
-
-        .service-inline-title.one {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-title.two,
-        .service-inline-title.three,
-        .service-inline-title.four {
-            color: var(--color-primary-11);
-        }
-
-        .service-inline-content p {
-            font-size: 14px;
-            line-height: 20px;
-            margin: 0;
-            color: inherit;
-        }
-
-        .service-inline-content.one p {
-            color: var(--color-primary-33);
-        }
-
-        .service-inline-content.two p,
-        .service-inline-content.three p,
-        .service-inline-content.four p {
-            color: var(--color-primary-11);
-        }
-
-        .service-slider-arrow {
-            border-radius: 12px;
-            background-color: var(--color-primary-22);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: absolute;
-            bottom: 80px;
-            z-index: 10;
-        }
-
-        .service-slider-arrow.left {
-            left: -60px;
-        }
-
-        .service-slider-arrow.right {
-            right: -60px;
-        }
-
-        .service-slider-arrow:hover {
-            background-color: var(--color-primary-11);
-        }
-
-        .service-slider-arrow:hover .service-slider-icon {
-            color: var(--color-white);
-        }
-
-        .service-slider-icon {
-            color: #000;
-            font-size: 24px !important;
-            font-weight: 600;
-        }
-        .servicesSwiper .swiper-wrapper{
-          overflow: visible;
-        }
-  /* Custom Swiper Navigation Buttons */
-        .swiper-button-prev,
-        .swiper-button-next {
-            border-radius: 12px;
-            background-color: var(--white);
-            width: 50px;
-            height: 50px;
-            position: relative;
-            transition: all 0.3s ease;
-            /* bottom: 80px; */
-            top: 0;
-            /* right: 0; */
-        }
-        .pos-relative{
-          position: relative;
-    display: flex;
-   position: relative;
-    display: flex;
-    /* justify-content: center; */
-    gap: 10px;
-    padding-top: 25px;
-        }
-        /* .swiper-button-prev {
-            left: -60px;
-        }
-
-        .swiper-button-next {
-            right: -60px;
-        } */
-
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            background-color: var(--color-primary-1);
-        }
-
-        .swiper-button-prev:after,
-        .swiper-button-next:after {
-            font-size: 14px;
-            font-weight: 600;
-            color: #000;
-        }
-
-        .swiper-button-prev:hover:after,
-        .swiper-button-next:hover:after {
-            color: var(--color-white);
-        }
-
-        @media (max-width: 1200px) {
-            .service-slide {
-                min-width: 380px;
-            }
-            .swiper-slide {
-                width: 380px;
-            }
-
-            .swiper-button-prev {
-                left: 10px;
-            }
-
-            .swiper-button-next {
-                right: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .service-section {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .section-title h2 {
-                font-size: 36px;
-            }
-
-            .service-slide {
-                min-width: 320px;
-            }
- .swiper-slide {
-                width: 320px;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 40px;
-                height: 40px;
-            }
-
-            .swiper-button-prev:after,
-            .swiper-button-next:after {
-                font-size: 18px;
-            }
-            .service-slider-arrow {
-                display: none;
-            }
-        }
-        .service-inline-image-shape {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0%;
-}
-.service-pos-absolute{
-    position: absolute;
-    display: flex;
-    gap: 20px;
-    bottom: -100px;
-   
-    justify-content: center;
-}
-
-  .service-slider-wrapper {
-            display: flex;
-            justify-content: flex-start;
-            align-items: stretch;
-        }
-
-        .service-slider-wrap {
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 100px;
-            position: relative;
-        }
-
-        .service-slider {
-            background-color: transparent;
-            height: 100%;
-            overflow: visible;
-            position: relative;
-        }
-
-        .service-mask {
-            width: 30%;
-            height: 600px;
-            margin-bottom: 80px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: visible;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slides-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            perspective: 1200px;
-            white-space: nowrap;
-            transition: transform 500ms ease-in-out;
-        }
-
-        .service-slide {
-            display: inline-block;
-            width: 100%;
-            height: 550px;
-            perspective: 800px;
-            vertical-align: top;
-            white-space: normal;
-            flex-shrink: 0;
-            transition: all 500ms ease-in-out;
-        }
-
-        .service-slide-inner {
-            transform-style: preserve-3d;
-            width: 100%;
-            height: 100%;
-            transition: all 500ms ease-in-out;
-        }
-
-        /* Center slide - full opacity, no rotation */
-        .service-slide.center .service-slide-inner {
-            opacity: 1;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        /* Side slides - reduced opacity, rotated */
-        .service-slide:not(.center) .service-slide-inner {
-            opacity: 0.5;
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(-30deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        /* Left side slides get positive Y rotation */
-        .service-slide.left .service-slide-inner {
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(30deg) rotateZ(0deg) skew(0deg, 0deg);
-        }
-
-        .service-item1 {
-            /* border: 1px solid #1a1a1a; */
-            /* border-radius: 20px; */
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: #dedede;
-            transform: rotate(0);
-        }
-
-        .service-item1:hover {
-            transform: scale(1.02);
-        }
-
-        .service-image-wrap {
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .service-image {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .service-content-wrap {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 25px 20px;
-        }
-
-        .service-content-title {
-            color: #ffffff;
-            margin-bottom: 0;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        /* Arrow buttons */
-        .service-arrow {
-            border-radius: 50%;
-            /* background-color: #ffffff; */
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            /* position: absolute; */
-            z-index: 10;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            /* border: 1px solid #e0e0e0; */
-            /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
-        }
-
-        .service-arrow:hover {
-            background-color: #000;
-            transform: scale(1.1);
-        }
-        .service-arrow-icon.left{
-          transform: rotate(180deg);
-        }
-        /* .service-left-arrow {
-            left: -60px;
-            bottom: 40px;
-        }
-
-        .service-right-arrow {
-            right: -60px;
-            bottom: 40px;
-        } */
-
-        .service-arrow-icon {
-            width: 20px;
-            height: 20px;
-            color: #fff;
-        }
-
-        /* Navigation dots */
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #d0d0d0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .slider-dot.active {
-            background-color: #1a1a1a;
-            transform: scale(1.3);
-        }
-
-        .slider-dot:hover {
-            background-color: #666;
-        }
-
-        @media (max-width: 1200px) {
-            .service-mask {
-                width: 40%;
-            }
-
-            .service-left-arrow {
-                left: 20px;
-            }
-
-            .service-right-arrow {
-                right: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .section-title h1,
-            .section-title .services-text {
-                font-size: 36px;
-            }
-
-            .service-mask {
-                width: 80%;
-                /* height: 450px; */
-                height: 310px;
-            }
-
-            .service-slide {
-                height: 400px;
-            }
-
-            .service-slide[data-position="-1"],
-            .service-slide[data-position="1"] {
-                transform: translateX(0) translateZ(-200px) scale(0.7);
-                opacity: 0.3;
-            }
-
-            .service-slide[data-position="-2"],
-            .service-slide[data-position="2"] {
-                display: none;
-            }
-        }
-
-
-      .text {
-        font-weight: 800;
-        font-size: 280px;
-        line-height: 0.9;
-        text-transform: uppercase;
-        background-image: url("images/text-img.jpg"); /* Explicitly set background-image */
-        background-size: cover; /* Ensures the background covers the text */
-        background-repeat: no-repeat; /* Prevent tiling */
-        background-position: center; /* Centers the image on the text */
-        -webkit-text-fill-color: transparent; /* Makes text transparent to show the background */
-        -webkit-background-clip: text; /* Clips the background to the text area */
-        color: transparent; /* Fallback for browsers not supporting background-clip */
-        display: inline-block;
-      }
-      /* Update the active state to match hover state opacity */
-      .award-item.active::before {
-        opacity: 0.15;
-      }
-
-      /* Remove hover effect since we're using click instead */
-      .award-item:hover::before {
-        opacity: 0; /* Remove the hover effect */
-      }
-     
-    </style>
+    
   </head>
   <body>
-    <!-- Preloader Start -->
-    <!-- <div class="preloader">
-      <div class="loading-container">
-        <div class="loading"></div>
-        <div id="loading-icon"><img src="images/loader.svg" alt="loadericon" title="loadericon"/></div>
-      </div>
-    </div> -->
-    <!-- Preloader End -->
 
-   <!-- Header Top -->
     <div class="header-top">
         <div class="container">
             <div class="header-row">
@@ -664,17 +48,7 @@
                 </div>
 
                 <div class="header-right">
-                    <!-- <div class="header-lang">
-                        <button class="lang-selected" id="langToggle">
-                            <i class="fa-solid fa-globe"></i>
-                            English
-                        </button>
-                        <ul class="lang-list" id="langList">
-                            <li><a href="#">Spanish</a></li>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Canada</a></li>
-                        </ul>
-                    </div> -->
+                  
                    <div class="header-phone">
                      <a href="mailto:info@ettgroups.in " class="header-mail">
                         <i class="fa fa-envelope"></i>
@@ -686,10 +60,6 @@
     </a>
 </div>
 
-                    <!-- <div class="header-social">
-                     
-
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -699,13 +69,11 @@
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <!-- Logo Start -->
+
                     <a class="navbar-brand" href="home.html">
                         <img src="./images/ett-logo.png" alt="Logo" title="Logo"/>
                     </a>
-                    <!-- Logo End -->
-
-                    <!-- Main Menu Start -->
+             
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
@@ -724,11 +92,9 @@
                                        
                                     </ul>
                                 </li>
-                              
-                                
-                                <!-- MEGA MENU - Products -->
+                         
                                 <li class="nav-item mega-menu-item submenu">
-                                    <a class="nav-link " href="offload.html">Products</a>
+                                    <a class="nav-link " href="#!">Products</a>
                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a href="offload.html">Off-Load Distribution Transformer</a></li>
                                         <li class="nav-item"><a href="onload.html" >On-Load Distribution Transformer</a></li>
@@ -749,8 +115,7 @@
                                             <a href="compact-transformer.html" class="segment-tab" data-tab="tab6">Compact Substation Transformer</a>
                                             <a href="drytype-transformer.html" class="segment-tab" data-tab="tab7">Dry Type Transformers</a>
                                         </div>
-                                        
-                                        <!-- Tab 1: Power Segment -->
+                                  
                                         <div id="tab1" class="tabcontent active">
                                             <div class="row">
                                                 <div class="text-center">
@@ -789,46 +154,10 @@
                                                         <div>Dry Type Transformers</div>
                                                     </a>
                                                 </div>
-                                                 <!-- <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
-                                                        <div>Power Transformer</div>
-                                                    </a>
-                                                </div> -->
-                                                <!-- <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
-                                                        <div>Distribution Transformer</div>
-                                                    </a>
-                                                </div>
-                                                 <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
-                                                        <div>Power Transformer</div>
-                                                    </a>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
-                                                        <div>Distribution Transformer</div>
-                                                    </a>
-                                                </div>
-                                                 <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/susbstation.png" class="img-fluid" alt="Power Transformer"></div>
-                                                        <div>Power Transformer</div>
-                                                    </a>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#!">
-                                                        <div><img src="./images/25 KVA 11_433 EEL-1.jpeg" class="img-fluid" alt="Distribution Transformer"></div>
-                                                        <div>Distribution Transformer</div>
-                                                    </a>
-                                                </div> -->
+                                                 
                                             </div>
                                         </div>
-                                        
-                                        <!-- Tab 2: Renewable Energy Segment -->
+                                     
                                         <div id="tab2" class="tabcontent">
                                             <div class="row">
                                                   <div class="text-center">
@@ -864,7 +193,6 @@
                                             </div>
                                         </div>
                                         
-                                        <!-- Tab 3: Power Conditioning Segment -->
                                         <div id="tab3" class="tabcontent">
                                             <div class="row">
                                                  <div class="text-center">
@@ -905,8 +233,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Tab 4: Domestic Network Segment -->
+                                     
                                         <div id="tab4" class="tabcontent">
                                             <div class="row">
                                                  <div class="text-center">
@@ -947,8 +274,7 @@
                                 
                             </ul>
                         </div>
-                        <!-- Header Btn Start -->
-                     <!-- Default button -->
+                        
 <div class="header-btn header-sticky-btn d-inline-flex">
     <a href="contact.html" class="custom-button-1">
         Get in Touch
@@ -959,35 +285,11 @@
     </a>
 </div>
 
-<!-- Scroll button -->
-<!-- <div class="header-btn  header-default d-inline-flex">
-    <a href="contact.html" class="custom-button-1">
-        Get in Touch
-        <svg class="arrow" viewBox="0 0 24 24">
-            <line x1="7" y1="12" x2="21" y2="12"></line>
-            <polyline points="14 5 21 12 14 19"></polyline>
-        </svg>
-    </a>
-</div> -->
-
-                        <!-- Header Btn End -->
                     </div>
-                    <!-- Main Menu End -->
+                
 
                     <div class="navbar-toggle">
-              <!-- <a
-                  href="#"
-                  aria-haspopup="true"
-                  role="button"
-                  tabindex="0"
-                  class="slicknav_btn slicknav_collapsed"
-                  ><span class="slicknav_menutxt"></span
-                  ><span class="slicknav_icon slicknav_no-text"
-                    ><span class="slicknav_icon-bar"></span
-                    ><span class="slicknav_icon-bar"></span
-                    ><span class="slicknav_icon-bar"></span></span
-                ></a> -->
-            <!-- <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a> -->
+            
         </div>
                 </div>
             </nav>
@@ -1004,7 +306,7 @@
 
 
     <script>
-        // Segment tabs functionality - Switch on hover
+
         const tabs = document.querySelectorAll('.segment-tab');
         const tabContents = document.querySelectorAll('.tabcontent');
         
@@ -1012,26 +314,20 @@
             tab.addEventListener('mouseenter', function(e) {
                 e.preventDefault();
                 
-                // Get the target tab
                 const targetTab = this.getAttribute('data-tab');
                 
-                // Remove active class from all tabs
                 tabs.forEach(t => t.classList.remove('active'));
-                
-                // Add active to hovered tab
+              
                 this.classList.add('active');
-                
-                // Hide all tab contents
+          
                 tabContents.forEach(content => {
                     content.classList.remove('active');
                 });
-                
-                // Show target tab content
+      
                 document.getElementById(targetTab).classList.add('active');
             });
         });
 
-        // Prevent mega menu from closing when clicking inside
         document.querySelector('.mega-menu')?.addEventListener('click', function(e) {
             e.stopPropagation();
         });
@@ -1138,9 +434,19 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
                             <div class="rs-about-shape">
                                 <img src="./images/about-shape-06.png" alt="image">
                             </div>
-                            <div class="rs-about-thumb">
+                            <!-- <div class="rs-about-thumb">
                                 <img src="./images/about-mission.JPG" alt="image">
-                            </div>
+                            </div> -->
+                            <!-- ADD this -->
+<div class="rs-about-thumb rs-about-thumb-icon">
+    <div class="icon-bg-ring"></div>
+    <div class="icon-bg-ring two"></div>
+    <div class="icon-circle">
+        <i class="fa fa-bullseye"></i>
+    </div>
+    <span>Mission</span>
+</div>
+
                             <div class="rs-about-content">
                                 <h6 class="rs-about-title">Our Mission</h6>
                                 <p>At Electro-Tech Transmission Pvt. Ltd., our mission is to provide reliable, energy-efficient, and eco-friendly transformer solutions at competitive prices. We focus on delivering high-quality power and distribution transformers backed by dependable services. Our aim is to build long-term trust and grow as one of India’s most preferred transformer manufacturers, both locally and globally.</p>
@@ -1152,9 +458,17 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
                             <div class="rs-about-shape">
                                 <img src="./images/about-shape-07.png" alt="image">
                             </div>
-                            <div class="rs-about-thumb">
+                            <!-- <div class="rs-about-thumb">
                                 <img src="./images/about-vision.JPG" alt="image">
-                            </div>
+                            </div> -->
+                         <div class="rs-about-thumb rs-about-thumb-icon">
+    <div class="icon-bg-ring"></div>
+    <div class="icon-bg-ring two"></div>
+    <div class="icon-circle">
+        <i class="fa fa-eye"></i>
+    </div>
+    <span>Vision</span>
+</div>
                             <div class="rs-about-content">
                                 <h6 class="rs-about-title">Our Vision</h6>
                                 <p>Our vision is to become a globally recognized transformer manufacturing leader by delivering affordable, advanced, and high-performance solutions. We aspire to support industries worldwide with innovative transformer technology that meets today’s energy needs and tomorrow’s challenges.</p>
@@ -1611,7 +925,7 @@ Since 2014, we have focused on quality, safety, and performance, backed by BIS, 
                             <div class="tab-pane fade" id="ett-content-nabl" role="tabpanel" aria-labelledby="ett-tab-nabl">
                                 <div class="ett-awards-tabs-item">
                                     <div class="ett-awards-tabs-item-thumb">
-                                        <img src="./images/aw-ett-05.jpg" alt="NABL-Tested Products">
+                                        <img src="./images/nabl-awards.png" alt="NABL-Tested Products">
                                     </div>
                                     <div class="ett-awards-tabs-item-content">
                                         <h3 class="ett-awards-tabs-item-title">

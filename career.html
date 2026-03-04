@@ -14,7 +14,7 @@
     <!-- Page Title -->
     <title>Electro Tech Transformers</title>
     <!-- Favicon Icon -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon-01.png"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -730,7 +730,7 @@
                                 
                                 <!-- MEGA MENU - Products -->
                                 <li class="nav-item mega-menu-item submenu">
-                                    <a class="nav-link " href="offload.html">Products</a>
+                                    <a class="nav-link " href="#!">Products</a>
                                       <ul class="n-flex">                                        
                                         <li class="nav-item"><a href="offload.html">Off-Load Distribution Transformer</a></li>
                                         <li class="nav-item"><a href="onload.html" >On-Load Distribution Transformer</a></li>
@@ -1322,188 +1322,7 @@
   }
 </style>
 
-<script>
-  const MAX_FILE_SIZE_MB = 10;
-  const ALLOWED_TYPES = [
-    'application/pdf',
-    'application/msword',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'image/jpeg',
-    'image/jpg'
-  ];
-  const ALLOWED_EXT = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg'];
 
-  // ─── Auto-close helper (5 seconds) ───────────────────────────────────────────
-  const careerAlertTimers = {};
-
-  function showCareerAlert(el, duration = 5000) {
-    const id = el.id;
-    if (careerAlertTimers[id]) clearTimeout(careerAlertTimers[id]);
-
-    el.style.display = 'flex';
-    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-    careerAlertTimers[id] = setTimeout(() => {
-      el.style.display = 'none';
-    }, duration);
-  }
-
-  function hideCareerAlert(el) {
-    const id = el.id;
-    if (careerAlertTimers[id]) clearTimeout(careerAlertTimers[id]);
-    el.style.display = 'none';
-  }
-
-  // ─── File Upload Validation ───────────────────────────────────────────────────
-  document.getElementById('career_upload_btn').addEventListener('change', function () {
-    const fileSuccessMsg = document.getElementById('fileSuccessMsg');
-    const fileErrorMsg   = document.getElementById('fileErrorMsg');
-    const fileNameSpan   = document.getElementById('career_file_name');
-    const uploadBox      = document.getElementById('careerUploadBox');
-
-    hideCareerAlert(fileSuccessMsg);
-    hideCareerAlert(fileErrorMsg);
-    uploadBox.classList.remove('file-attached');
-
-    if (!this.files || this.files.length === 0) {
-      fileNameSpan.textContent = 'No file selected';
-      return;
-    }
-
-    const file      = this.files[0];
-    const ext       = '.' + file.name.split('.').pop().toLowerCase();
-    const sizeMB    = file.size / (1024 * 1024);
-    const validType = ALLOWED_TYPES.includes(file.type) || ALLOWED_EXT.includes(ext);
-
-    // ── Invalid file type ──
-    if (!validType) {
-      document.getElementById('fileErrorText').textContent =
-        'Invalid file type. Please upload PDF, DOC, or JPG only.';
-      showCareerAlert(fileErrorMsg);
-      fileNameSpan.textContent = 'No file selected';
-      this.value = '';
-      return;
-    }
-
-    // ── File too large ──
-    if (sizeMB > MAX_FILE_SIZE_MB) {
-      document.getElementById('fileErrorText').textContent =
-        `File too large (${sizeMB.toFixed(1)}MB). Maximum allowed size is 10MB.`;
-      showCareerAlert(fileErrorMsg);
-      fileNameSpan.textContent = 'No file selected';
-      this.value = '';
-      return;
-    }
-
-    // ── Valid file ──
-    document.getElementById('fileSuccessText').textContent =
-      `"${file.name}" attached (${sizeMB.toFixed(2)}MB)`;
-    showCareerAlert(fileSuccessMsg);
-    fileNameSpan.textContent = file.name;
-    uploadBox.classList.add('file-attached');
-  });
-
-  // ─── Remove File Helper ───────────────────────────────────────────────────────
-  function removeCareerFile() {
-    const input = document.getElementById('career_upload_btn');
-    input.value = '';
-    document.getElementById('career_file_name').textContent = 'No file selected';
-    hideCareerAlert(document.getElementById('fileSuccessMsg'));
-    document.getElementById('careerUploadBox').classList.remove('file-attached');
-  }
-
-  // ─── Form Submit Handler ──────────────────────────────────────────────────────
-  document.getElementById('careerContactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const form       = this;
-    const submitBtn  = document.getElementById('careerSubmitBtn');
-    const btnText    = document.getElementById('careerBtnText');
-    const btnLoader  = document.getElementById('careerBtnLoader');
-    const successMsg = document.getElementById('careerSuccessMsg');
-    const errorMsg   = document.getElementById('careerErrorMsg');
-
-    // Hide previous messages
-    hideCareerAlert(successMsg);
-    hideCareerAlert(errorMsg);
-
-    // ── Required field validation ──
-    const fname = document.getElementById('career_fname').value.trim();
-    const lname = document.getElementById('career_lname').value.trim();
-    const email = document.getElementById('career_email').value.trim();
-    const phone = document.getElementById('career_phone').value.trim();
-
-    if (!fname || !lname || !email || !phone) {
-      errorMsg.querySelector('span:nth-child(2)').textContent =
-        'Please fill in all required fields before submitting.';
-      showCareerAlert(errorMsg);
-      return;
-    }
-
-    // ── Email validation ──
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      errorMsg.querySelector('span:nth-child(2)').textContent =
-        'Please enter a valid email address.';
-      showCareerAlert(errorMsg);
-      return;
-    }
-
-    // ── Loading state ──
-    submitBtn.disabled      = true;
-    btnText.style.display   = 'none';
-    btnLoader.style.display = 'inline';
-
-    // ✅ Detect static form (no real backend)
-    const formAction   = form.getAttribute('action').trim();
-    const isStaticForm = !formAction || formAction === '#' || formAction === window.location.href;
-
-    if (isStaticForm) {
-      // ── No backend: show success immediately after brief delay ──
-      setTimeout(() => {
-        successMsg.querySelector('span:nth-child(2)').textContent =
-          "Thank you! Your application has been submitted successfully. We'll get back to you soon.";
-        showCareerAlert(successMsg);
-        form.reset();
-        removeCareerFile();
-
-        submitBtn.disabled      = false;
-        btnText.style.display   = 'inline';
-        btnLoader.style.display = 'none';
-      }, 800);
-
-    } else {
-      // ── Real backend: use fetch ──
-      const formData = new FormData(form);
-
-      fetch(formAction, {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          successMsg.querySelector('span:nth-child(2)').textContent =
-            "Thank you! Your application has been submitted successfully. We'll get back to you soon.";
-          showCareerAlert(successMsg);
-          form.reset();
-          removeCareerFile();
-        } else {
-          throw new Error('Server error');
-        }
-      })
-      .catch(() => {
-        errorMsg.querySelector('span:nth-child(2)').textContent =
-          'Oops! Something went wrong. Please try again or contact us directly.';
-        showCareerAlert(errorMsg);
-      })
-      .finally(() => {
-        submitBtn.disabled      = false;
-        btnText.style.display   = 'inline';
-        btnLoader.style.display = 'none';
-      });
-    }
-  });
-</script>
                 </div>
             </div>
         </div>
@@ -1783,7 +1602,292 @@
 </button>
 
     </div>
+<!-- Success Modal -->
+<style>
+  @keyframes modalOverlayIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes modalCardIn {
+    from { opacity: 0; transform: scale(0.85) translateY(20px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  @keyframes checkBounce {
+    from { opacity: 0; transform: scale(0.4); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+</style>
 
+<div id="careerSuccessModal" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  animation: modalOverlayIn 0.3s ease;
+">
+  <div style="
+    background: #fff;
+    border-radius: 20px;
+    padding: 48px 40px 40px;
+    max-width: 440px;
+    width: calc(100% - 40px);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.15);
+    animation: modalCardIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  ">
+    <button onclick="closeCareerModal()" style="
+      position: absolute;
+      top: 16px; right: 16px;
+      background: #f4f4f4;
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: #555;
+      transition: background 0.2s;
+    " onmouseover="this.style.background='#e0e0e0'" onmouseout="this.style.background='#f4f4f4'">✕</button>
+
+    <div style="
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, #eafaf1, #d5f5e3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 32px;
+      animation: checkBounce 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.1s both;
+    "><i class="fa fa-check"></i></div>
+
+    <h3 style="font-size: 22px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px;">
+      Application Submitted!
+    </h3>
+    <p style="font-size: 15px; color: #555; line-height: 1.6; margin: 0 0 28px;">
+      Thank you for applying! Our HR team will review your application and get back to you shortly.
+    </p>
+    <button onclick="closeCareerModal()" style="
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 13px 36px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.02em;
+    "
+    onmouseover="this.style.background='#333'; this.style.transform='scale(1.03)'"
+    onmouseout="this.style.background='#1a1a1a'; this.style.transform='scale(1)'">
+      Got it, thanks!
+    </button>
+  </div>
+</div>
+<script>
+  const MAX_FILE_SIZE_MB = 10;
+  const ALLOWED_TYPES = [
+    'application/pdf',
+    'application/msword',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'image/jpeg',
+    'image/jpg'
+  ];
+  const ALLOWED_EXT = ['.pdf', '.doc', '.docx', '.jpg', '.jpeg'];
+
+  // ─── Auto-close helper (5 seconds) ───────────────────────────────────────────
+  const careerAlertTimers = {};
+
+  function showCareerAlert(el, duration = 5000) {
+    const id = el.id;
+    if (careerAlertTimers[id]) clearTimeout(careerAlertTimers[id]);
+
+    el.style.display = 'flex';
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    careerAlertTimers[id] = setTimeout(() => {
+      el.style.display = 'none';
+    }, duration);
+  }
+
+  function hideCareerAlert(el) {
+    const id = el.id;
+    if (careerAlertTimers[id]) clearTimeout(careerAlertTimers[id]);
+    el.style.display = 'none';
+  }
+
+  // ─── File Upload Validation ───────────────────────────────────────────────────
+  document.getElementById('career_upload_btn').addEventListener('change', function () {
+    const fileSuccessMsg = document.getElementById('fileSuccessMsg');
+    const fileErrorMsg   = document.getElementById('fileErrorMsg');
+    const fileNameSpan   = document.getElementById('career_file_name');
+    const uploadBox      = document.getElementById('careerUploadBox');
+
+    hideCareerAlert(fileSuccessMsg);
+    hideCareerAlert(fileErrorMsg);
+    uploadBox.classList.remove('file-attached');
+
+    if (!this.files || this.files.length === 0) {
+      fileNameSpan.textContent = 'No file selected';
+      return;
+    }
+
+    const file      = this.files[0];
+    const ext       = '.' + file.name.split('.').pop().toLowerCase();
+    const sizeMB    = file.size / (1024 * 1024);
+    const validType = ALLOWED_TYPES.includes(file.type) || ALLOWED_EXT.includes(ext);
+
+    // ── Invalid file type ──
+    if (!validType) {
+      document.getElementById('fileErrorText').textContent =
+        'Invalid file type. Please upload PDF, DOC, or JPG only.';
+      showCareerAlert(fileErrorMsg);
+      fileNameSpan.textContent = 'No file selected';
+      this.value = '';
+      return;
+    }
+
+    // ── File too large ──
+    if (sizeMB > MAX_FILE_SIZE_MB) {
+      document.getElementById('fileErrorText').textContent =
+        `File too large (${sizeMB.toFixed(1)}MB). Maximum allowed size is 10MB.`;
+      showCareerAlert(fileErrorMsg);
+      fileNameSpan.textContent = 'No file selected';
+      this.value = '';
+      return;
+    }
+
+    // ── Valid file ──
+    document.getElementById('fileSuccessText').textContent =
+      `"${file.name}" attached (${sizeMB.toFixed(2)}MB)`;
+    showCareerAlert(fileSuccessMsg);
+    fileNameSpan.textContent = file.name;
+    uploadBox.classList.add('file-attached');
+  });
+
+  // ─── Remove File Helper ───────────────────────────────────────────────────────
+  function removeCareerFile() {
+    const input = document.getElementById('career_upload_btn');
+    input.value = '';
+    document.getElementById('career_file_name').textContent = 'No file selected';
+    hideCareerAlert(document.getElementById('fileSuccessMsg'));
+    document.getElementById('careerUploadBox').classList.remove('file-attached');
+  }
+
+  // ─── Form Submit Handler ──────────────────────────────────────────────────────
+  document.getElementById('careerContactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const form       = this;
+    const submitBtn  = document.getElementById('careerSubmitBtn');
+    const btnText    = document.getElementById('careerBtnText');
+    const btnLoader  = document.getElementById('careerBtnLoader');
+    const successMsg = document.getElementById('careerSuccessMsg');
+    const errorMsg   = document.getElementById('careerErrorMsg');
+
+    // Hide previous messages
+    hideCareerAlert(successMsg);
+    hideCareerAlert(errorMsg);
+
+    // ── Required field validation ──
+    const fname = document.getElementById('career_fname').value.trim();
+    const lname = document.getElementById('career_lname').value.trim();
+    const email = document.getElementById('career_email').value.trim();
+    const phone = document.getElementById('career_phone').value.trim();
+
+    if (!fname || !lname || !email || !phone) {
+      errorMsg.querySelector('span:nth-child(2)').textContent =
+        'Please fill in all required fields before submitting.';
+      showCareerAlert(errorMsg);
+      return;
+    }
+
+    // ── Email validation ──
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      errorMsg.querySelector('span:nth-child(2)').textContent =
+        'Please enter a valid email address.';
+      showCareerAlert(errorMsg);
+      return;
+    }
+
+    // ── Loading state ──
+    submitBtn.disabled      = true;
+    btnText.style.display   = 'none';
+    btnLoader.style.display = 'inline';
+
+    const formAction   = form.getAttribute('action').trim();
+    const isStaticForm = !formAction || formAction === '#' || formAction === window.location.href;
+
+    if (isStaticForm) {
+      // ── No backend: show success immediately after brief delay ──
+      setTimeout(() => {
+        successMsg.querySelector('span:nth-child(2)').textContent =
+          "Thank you! Your application has been submitted successfully. We'll get back to you soon.";
+        openCareerModal();
+        form.reset();
+        removeCareerFile();
+
+        submitBtn.disabled      = false;
+        btnText.style.display   = 'inline';
+        btnLoader.style.display = 'none';
+      }, 800);
+
+    } else {
+      // ── Real backend: use fetch ──
+      const formData = new FormData(form);
+
+      fetch(formAction, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          successMsg.querySelector('span:nth-child(2)').textContent =
+            "Thank you! Your application has been submitted successfully. We'll get back to you soon.";
+         openCareerModal();
+          form.reset();
+          removeCareerFile();
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(() => {
+        errorMsg.querySelector('span:nth-child(2)').textContent =
+          'Oops! Something went wrong. Please try again or contact us directly.';
+        showCareerAlert(errorMsg);
+      })
+      .finally(() => {
+        submitBtn.disabled      = false;
+        btnText.style.display   = 'inline';
+        btnLoader.style.display = 'none';
+      });
+    }
+  });
+</script>
+<script>
+  function openCareerModal() {
+    const modal = document.getElementById('careerSuccessModal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCareerModal() {
+    const modal = document.getElementById('careerSuccessModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('careerSuccessModal').addEventListener('click', function(e) {
+    if (e.target === this) closeCareerModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCareerModal();
+  });
+</script>
     <!-- RFQ Modal -->
     <div class="modal-overlay" id="rfqModal">
         <div class="rfq-modal">
