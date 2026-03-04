@@ -930,7 +930,7 @@ height: 340px !important;
 /* ── LAPTOP / WINDOWS SCREENS (height fix) ── */
 @media (min-width: 769px) and (max-height: 900px) {
   .excellence-hero-section {
-    height: 80vh !important;
+    height: 100vh !important;
   
   }
   .excellence-hero-left {
