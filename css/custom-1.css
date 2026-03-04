@@ -771,6 +771,10 @@ header.main-header.scroll-up .main-menu ul li .segment-tab:hover {
 .main-header .container-fluid {
     position: relative;
     max-width: 1300px;
+      background: rgba(0, 0, 0, 0.5);   /* Slight black overlay */
+    backdrop-filter: blur(10px);      /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 5px;
 }
 
 .navbar {
