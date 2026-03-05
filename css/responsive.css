@@ -685,6 +685,12 @@ width: 100% !important;
     .blog-card{
         width: 23% !important;
     }
+        .machinery-grid-wrapper {
+        grid-template-columns: 1fr;
+        margin-top: 0 !important;
+        /* overflow: hidden; */
+        max-width: 330px;
+    }
 }
 @media screen and (min-width:376px) and (max-width:599px) {
      .portfolio-item-swiper img{
@@ -694,6 +700,12 @@ width: 100% !important;
     }
     .blog-card{
         width: 26% !important;
+    }
+        .machinery-grid-wrapper {
+        grid-template-columns: 1fr;
+        margin-top: 0 !important;
+        /* overflow: hidden; */
+        max-width: 380px;
     }
 }
 @media screen and (min-width:1200px) and (max-width:1599px) {
