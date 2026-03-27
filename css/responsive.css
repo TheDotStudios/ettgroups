@@ -477,7 +477,7 @@ width: 100% !important;
     margin-bottom: 15px !important;
 }
 .navbar-brand img {
-    height: 45px !important;
+    /* height: 45px !important; */
     width: auto;
 }
 .about-footer img {
